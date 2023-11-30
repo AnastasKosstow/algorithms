@@ -2,18 +2,16 @@
 
 <sup>Special thanks to:</sup>
 
-<a href="https://www.warp.dev/?utm_source=github&utm_medium=referral&utm_campaign=zoxide_20231001">
+<a href="https://visualgo.net/en">
   <div>
     <img src="contrib/warp.png" width="230" alt="Warp" />
   </div>
   <b>
-    ..............................
+    Visit visualgo.net
   </b>
-  <div>
-    <sup>Visit <u>warp.dev</u> to learn more.</sup>
-  </div>
 </a>
 
 <hr />
 
 # Algorithms
+https://visualgo.net/en
