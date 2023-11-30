@@ -4,7 +4,7 @@
 
 <a href="https://visualgo.net/en">
   <div>
-    <img src="contrib/warp.png" width="230" alt="Warp" />
+    <img src="https://github.com/AnastasKosstow/algorithms/blob/main/resources/VisuAlgo.png" width="230" alt="visualgo" />
   </div>
   <b>
     Visit visualgo.net
