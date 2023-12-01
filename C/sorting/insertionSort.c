@@ -7,7 +7,7 @@ int main()
     int arr[ARR_LENGTH] = { 1, 7, 3, 2, 9, 5, 4, 2, 7, 3, 8, 6 };
         
     // Start the loop from the second element, since the first element is considered sorted in Insertion sort
-    for (int index = 1; index < arr.Length; index++)
+    for (int index = 1; index < ARR_LENGTH; index++)
     {
         // The current item to be placed in the correct position
         int currentItem = arr[index];
@@ -26,5 +26,10 @@ int main()
 
         // Insert the current item in its correct position.
         arr[insertionIndex + 1] = currentItem;
+    }
+
+    for (int index = 0; index < ARR_LENGTH; index++)
+    {
+        printf(arr[index] + " ");
     }
 }
