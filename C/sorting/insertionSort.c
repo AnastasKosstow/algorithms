@@ -1,5 +1,3 @@
-#include <stdio.h>
-
 #define ARR_LENGTH 12
 
 int main()
@@ -26,10 +24,5 @@ int main()
 
         // Insert the current item in its correct position.
         arr[insertionIndex + 1] = currentItem;
-    }
-
-    for (int index = 0; index < ARR_LENGTH; index++)
-    {
-        printf(arr[index] + " ");
     }
 }
