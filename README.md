@@ -35,5 +35,9 @@ This repository contains implementations of many popular algorithms and data str
 Types of sorting algorithms:
 
  - Bubble sort
- - Insertion sort - <a href="https://github.com/AnastasKosstow/algorithms/blob/main/C/sorting/insertionSort.c">C</a>, <a href="https://github.com/AnastasKosstow/algorithms/blob/main/C%23/InsertionSort/Program.cs">C#</a>
+   - Complexity: O(n<sup>2</sup>)
+   - Implementations: <a href="https://github.com/AnastasKosstow/algorithms/blob/main/C/sorting/bubbleSort.c">C</a>, <a href="https://github.com/AnastasKosstow/algorithms/blob/main/C%23/BubbleSort/Program.cs">C#</a>
+ - Insertion sort
+   - Complexity: O(n<sup>2</sup>)
+   - Implementations: <a href="https://github.com/AnastasKosstow/algorithms/blob/main/C/sorting/insertionSort.c">C</a>, <a href="https://github.com/AnastasKosstow/algorithms/blob/main/C%23/InsertionSort/Program.cs">C#</a>
  - Selection sort
