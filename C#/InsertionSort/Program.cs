@@ -1,17 +1,23 @@
 ﻿int[] arr = new[] { 1, 7, 3, 2, 9, 5, 4, 2, 7, 3, 8, 6 };
 
-for (int index = 0; index < arr.Length - 1; index++)
+// Start the loop from the second element, since the first element is considered sorted in Insertion sort
+for (int index = 1; index < arr.Length; index++)
 {
-    int swapIndex = index;
-    while (arr[swapIndex] > arr[swapIndex + 1])
+    // The current item to be placed in the correct position
+    int currentItem = arr[index];
+    
+    // Find the position where the current item should be inserted
+    // Start from the element before the current item and move backwards
+    int insertionIndex = index - 1;
+
+    // Move elements that are greater than the current item to one position ahead of their current position,
+    // to make space for inserting the current item.
+    while (insertionIndex >= 0 && arr[insertionIndex] > currentItem)
     {
-        if (swapIndex < 0) break;
-
-        Swap(ref arr[swapIndex], ref arr[swapIndex + 1]);
-        swapIndex--;
+        arr[insertionIndex + 1] = arr[insertionIndex];
+        insertionIndex--;
     }
-}
 
-void Swap(ref int x1, ref int x2)
-    =>
-    (x2, x1) = (x1, x2);
+    // Insert the current item in its correct position.
+    arr[insertionIndex + 1] = currentItem;
+}
