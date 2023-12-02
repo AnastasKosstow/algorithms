@@ -38,21 +38,17 @@ Types of sorting algorithms:
    - Implementations: <a href="https://github.com/AnastasKosstow/algorithms/blob/main/C/sorting/bubbleSort.c">C</a>, <a href="https://github.com/AnastasKosstow/algorithms/blob/main/C%23/BubbleSort/Program.cs">C#</a>
    <br>
    
-   > |                              | Worst                        | Average                      | Best &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
-   > | ---------------------------- | ---------------------------- | ---------------------------- | ---------------------------- |
-   > | Time Complexity              | O(n<sup>2</sup>)             | O(n<sup>2</sup>)             | O(n)                         |
-   > | Number of Comparisons        | O(n<sup>2</sup> - n)/2       | O(n<sup>2</sup> - n)/4       | n-1                          |
-   > | Number of Swaps              | O(n<sup>2</sup> - n)/2       | O(n<sup>2</sup> - n)/4       |                              |
+   > |                              | Worst &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Average &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Best &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
+   > | ---------------------------- | ------------------------------------------------------------------ | -------------------------------------------------- | ----------------------------------------------------------------- |
+   > | complexity                   | O(n<sup>2</sup>)                                                   | O(n<sup>2</sup>)                                   | O(n)                                                              |
 
  - Insertion sort
    - Implementations: <a href="https://github.com/AnastasKosstow/algorithms/blob/main/C/sorting/insertionSort.c">C</a>, <a href="https://github.com/AnastasKosstow/algorithms/blob/main/C%23/InsertionSort/Program.cs">C#</a>
    <br>
    
-   > |                              | Worst                        | Average                      | Best &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
-   > | ---------------------------- | ---------------------------- | ---------------------------- | ---------------------------- |
-   > | Time Complexity              | O(n<sup>2</sup>)             | O(n<sup>2</sup>)             | O(n)                         |
-   > | Number of Comparisons        | O(n<sup>2</sup> - n)/2       | O(n<sup>2</sup> - n)/4       |                              |
-   > | Number of Swaps              | O(n<sup>2</sup> - n)/2       | O(n<sup>2</sup> - n)/4       |                              |
+   > |                              | Worst &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Average &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Best &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
+   > | ---------------------------- | ------------------------------------------------------------------ | -------------------------------------------------- | ----------------------------------------------------------------- |
+   > | complexity                   | O(n<sup>2</sup>)                                                   | O(n<sup>2</sup>)                                   | O(n)                                                              |
 
 
    
