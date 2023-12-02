@@ -35,9 +35,32 @@ This repository contains implementations of many popular algorithms and data str
 Types of sorting algorithms:
 
  - Bubble sort
-   - Complexity: avr O(n<sup>2</sup>)
    - Implementations: <a href="https://github.com/AnastasKosstow/algorithms/blob/main/C/sorting/bubbleSort.c">C</a>, <a href="https://github.com/AnastasKosstow/algorithms/blob/main/C%23/BubbleSort/Program.cs">C#</a>
+   <br>
+   
+   > |                              | Worst                        | Average                      | Best &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
+   > | ---------------------------- | ---------------------------- | ---------------------------- | ---------------------------- |
+   > | Time Complexity              | O(n<sup>2</sup>)             | O(n<sup>2</sup>)             | O(n)                         |
+   > | Number of Comparisons        | O(n<sup>2</sup> - n)/2       | O(n<sup>2</sup> - n)/4       | n-1                          |
+   > | Number of Swaps              | O(n<sup>2</sup> - n)/2       | O(n<sup>2</sup> - n)/4       |                              |
+
  - Insertion sort
-   - Complexity: avr O(n<sup>2</sup>)
    - Implementations: <a href="https://github.com/AnastasKosstow/algorithms/blob/main/C/sorting/insertionSort.c">C</a>, <a href="https://github.com/AnastasKosstow/algorithms/blob/main/C%23/InsertionSort/Program.cs">C#</a>
- - Selection sort
+   <br>
+   
+   > |                              | Worst                        | Average                      | Best &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
+   > | ---------------------------- | ---------------------------- | ---------------------------- | ---------------------------- |
+   > | Time Complexity              | O(n<sup>2</sup>)             | O(n<sup>2</sup>)             | O(n)                         |
+   > | Number of Comparisons        | O(n<sup>2</sup> - n)/2       | O(n<sup>2</sup> - n)/4       |                              |
+   > | Number of Swaps              | O(n<sup>2</sup> - n)/2       | O(n<sup>2</sup> - n)/4       |                              |
+
+
+   
+
+
+
+ 
+
+
+
+
