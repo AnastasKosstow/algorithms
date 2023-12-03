@@ -10,12 +10,14 @@ for (int index = 0; index < arr.Length - 1; index++)
     // Iterate over the unsorted part of the array
     for (int compareIndex = index + 1; compareIndex < arr.Length; compareIndex++)
     {
+        // If a smaller element is found, update currentMinValue and currentMinIndex
         if (currentMinValue > arr[compareIndex])
         {
             currentMinValue = arr[compareIndex];
             currentMinIndex = compareIndex;
         }
     }
+    // Swap the found minimum element with the first element in the unsorted part
     Swap(ref arr[index], ref arr[currentMinIndex]);
 }
 
