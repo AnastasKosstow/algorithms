@@ -28,6 +28,4 @@ do
 
 } while (!sorted); // Repeat until no swaps occurs and sorted variable stay as true
 
-void Swap(ref int x1, ref int x2)
-    =>
-    (x2, x1) = (x1, x2);
+void Swap(ref int x1, ref int x2) => (x2, x1) = (x1, x2);
