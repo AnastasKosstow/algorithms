@@ -40,7 +40,7 @@ Types of sorting algorithms:
    
    > |                              | Worst &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Average &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Best &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
    > | ---------------------------- | ------------------------------------------------------------------ | -------------------------------------------------- | ----------------------------------------------------------------- |
-   > | complexity                   | O(n<sup>2</sup>)                                                   | O(n<sup>2</sup>)                                   | O(n)                                                              |
+   > | complexity                   | O(<i>n</i><sup>2</sup>)                                            | O(<i>n</i><sup>2</sup>)                            | O(<i>n</i>)                                                       |
 
  - Selection sort
    - Implementations: <a href="https://github.com/AnastasKosstow/algorithms/blob/main/C/sorting/selectionSort.c">C</a>, <a href="https://github.com/AnastasKosstow/algorithms/blob/main/C%23/SelectionSort/Program.cs">C#</a>
@@ -48,7 +48,7 @@ Types of sorting algorithms:
    
    > |                              | Worst &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Average &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Best &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
    > | ---------------------------- | ------------------------------------------------------------------ | -------------------------------------------------- | ----------------------------------------------------------------- |
-   > | complexity                   | O(n<sup>2</sup>)                                                   | O(n<sup>2</sup>)                                   | O(n<sup>2</sup>)                                                  |
+   > | complexity                   | O(<i>n</i><sup>2</sup>)                                            | O(<i>n</i><sup>2</sup>)                            | O(<i>n</i><sup>2</sup>)                                           |
 
  - Insertion sort
    - Implementations: <a href="https://github.com/AnastasKosstow/algorithms/blob/main/C/sorting/insertionSort.c">C</a>, <a href="https://github.com/AnastasKosstow/algorithms/blob/main/C%23/InsertionSort/Program.cs">C#</a>
@@ -56,9 +56,15 @@ Types of sorting algorithms:
    
    > |                              | Worst &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Average &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Best &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
    > | ---------------------------- | ------------------------------------------------------------------ | -------------------------------------------------- | ----------------------------------------------------------------- |
-   > | complexity                   | O(n<sup>2</sup>)                                                   | O(n<sup>2</sup>)                                   | O(n)                                                              |
+   > | complexity                   | O(<i>n</i><sup>2</sup>)                                            | O(<i>n</i><sup>2</sup>)                            | O(<i>n</i>)                                                       |
    
-
+ - Shell sort
+   - Implementations: <a href="https://github.com/AnastasKosstow/algorithms/blob/main/C/sorting/shellSort.c">C</a>, <a href="https://github.com/AnastasKosstow/algorithms/blob/main/C%23/ShellSort/Program.cs">C#</a>
+   <br>
+   
+   > |                              | Worst &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Average &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Best &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
+   > | ---------------------------- | ------------------------------------------------------------------ | -------------------------------------------------- | ----------------------------------------------------------------- |
+   > | complexity                   | O(<i>n</i><sup>(3/2)</sup>)                                        | O(<i>n</i><sup>2</sup>)                            | O(<i>n</i> log(<i>n</i>))                                         |
 
 
  
