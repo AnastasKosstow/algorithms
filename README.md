@@ -66,6 +66,13 @@ Types of sorting algorithms:
    > | ---------------------------- | ------------------------------------------------------------------ | -------------------------------------------------- | ----------------------------------------------------------------- |
    > | complexity                   | O(<i>n</i><sup>(3/2)</sup>)                                        | O(<i>n</i><sup>2</sup>)                            | O(<i>n</i> log(<i>n</i>))                                         |
 
+ - Merge sort
+   - Implementations: <a href="https://github.com/AnastasKosstow/algorithms/blob/main/C%23/MergeSort/Program.cs">C#</a>
+   <br>
+   
+   > |                              | Worst &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Average &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Best &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
+   > | ---------------------------- | ------------------------------------------------------------------ | -------------------------------------------------- | ----------------------------------------------------------------- |
+   > | complexity                   | O(<i>n</i> log(<i>n</i>))                                          | O(<i>n</i> log(<i>n</i>))                          | O(<i>n</i> log(<i>n</i>))                                         |
 
  
 
