@@ -22,7 +22,7 @@ This repository contains implementations of many popular algorithms and data str
 
 <h4 align="left">Languages used for implementation:</h4>
 <p align="left"> 
-  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/rust/rust-original.svg" alt="rust" width="40" height="40"/>
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/rust/rust-plain.svg" alt="rust" width="40" height="40"/>
   <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/csharp/csharp-original.svg" alt="csharp" width="40" height="40"/>
 </p>
 
