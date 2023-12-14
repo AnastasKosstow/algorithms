@@ -44,7 +44,7 @@ Types of sorting algorithms:
    > | complexity                   | O(<i>n</i><sup>2</sup>)                                            | O(<i>n</i><sup>2</sup>)                            | O(<i>n</i>)                                                       |
 
  - Selection sort
-   - Implementations: <a href="">Rust</a>, <a href="https://github.com/AnastasKosstow/algorithms/blob/main/C%23/SelectionSort/Program.cs">C#</a>
+   - Implementations: <a href="https://github.com/AnastasKosstow/algorithms/blob/main/rust/src/sorting/selection_sort.rs">Rust</a>, <a href="https://github.com/AnastasKosstow/algorithms/blob/main/C%23/SelectionSort/Program.cs">C#</a>
    <br>
    
    > |                              | Worst &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Average &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Best &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
@@ -60,7 +60,7 @@ Types of sorting algorithms:
    > | complexity                   | O(<i>n</i><sup>2</sup>)                                            | O(<i>n</i><sup>2</sup>)                            | O(<i>n</i>)                                                       |
    
  - Shell sort
-   - Implementations: <a href="">Rust</a>, <a href="https://github.com/AnastasKosstow/algorithms/blob/main/C%23/ShellSort/Program.cs">C#</a>
+   - Implementations: <a href="https://github.com/AnastasKosstow/algorithms/blob/main/rust/src/sorting/shell_sort.rs">Rust</a>, <a href="https://github.com/AnastasKosstow/algorithms/blob/main/C%23/ShellSort/Program.cs">C#</a>
    <br>
    
    > |                              | Worst &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Average &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Best &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
