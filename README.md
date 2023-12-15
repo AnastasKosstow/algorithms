@@ -68,7 +68,7 @@ Types of sorting algorithms:
    > | complexity                   | O(<i>n</i><sup>(3/2)</sup>)                                        | O(<i>n</i><sup>2</sup>)                            | O(<i>n</i> log(<i>n</i>))                                         |
 
  - Merge sort
-   - Implementations: <a href="https://github.com/AnastasKosstow/algorithms/blob/main/csharp/MergeSort/Program.cs">C#</a>
+   - Implementations: <a href="https://github.com/AnastasKosstow/algorithms/blob/main/rust/src/sorting/merge_sort.rs">Rust</a> <a href="https://github.com/AnastasKosstow/algorithms/blob/main/csharp/MergeSort/Program.cs">C#</a>
    <br>
    
    > |                              | Worst &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Average &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Best &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
