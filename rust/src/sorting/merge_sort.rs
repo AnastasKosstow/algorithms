@@ -16,11 +16,7 @@ fn sort(arr: &mut [i32]) {
 
         let merged = merge(left_array, right_array);
         arr.copy_from_slice(&merged);
-    } 
-
-    // Use recursion to sort the left and right sub-arrays
-
-    // After the two sub-arrays are sorted, Merge() method will merge/combine sub-arrays into one array
+    }
 }
 
 fn merge(left_array: &[i32], right_array: &[i32]) -> Vec<i32> {
