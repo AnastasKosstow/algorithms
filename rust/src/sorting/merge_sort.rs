@@ -1,29 +1,32 @@
-fn merge_sort() {
-    let mut arr: [i32; 12] = [1, 0, 3, 2, 9, 5, 4, 0, 7, 3, 8, 6];
-    sort(&mut arr);
+pub fn merge_sort<T: Ord + Clone + Copy>(arr: &mut [T]) {
+    if arr.is_empty() {
+        return;
+    }
+    sort(arr);
 }
 
-fn sort(arr: &mut [i32]) {
+fn sort<T: Ord + Clone + Copy>(arr: &mut [T]) {
     if arr.len() == 1 {
         return; // If the array has only one element, it's already sorted
-    } else {
-        // Finding the middle index of the array to split it into two halves
-        let middle_index: usize = arr.len() / 2;
-        let (left_array, right_array) = arr.split_at_mut(middle_index);
+    }
+    
+    // Finding the middle index of the array to split it into two halves
+    let middle_index: usize = arr.len() / 2;
+    let (left_array, right_array) = arr.split_at_mut(middle_index);
 
-        sort(left_array);
-        sort(right_array);
+    sort(left_array);
+    sort(right_array);
 
-        let merged = merge(left_array, right_array);
-        arr.copy_from_slice(&merged);
+    let merged = merge(left_array, right_array);
+    for (index, item) in merged.iter().enumerate() {
+        arr[index] = item.clone();
     }
 }
 
-fn merge(left_array: &[i32], right_array: &[i32]) -> Vec<i32> {
-    
+fn merge<T: Ord + Clone + Copy>(left_array: &[T], right_array: &[T]) -> Vec<T> {    
     let mut left_array_index: usize = 0;
     let mut right_array_index: usize = 0;
-    let mut merged_vector: Vec<i32> = Vec::with_capacity(left_array.len() + right_array.len());
+    let mut merged_vector: Vec<T> = Vec::with_capacity(left_array.len() + right_array.len());
 
     // Merging the two arrays until one of them is fully traversed
     while left_array_index < left_array.len() && right_array_index < right_array.len() {

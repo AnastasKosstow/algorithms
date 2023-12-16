@@ -1,12 +1,14 @@
-fn shell_sort() {
-    let mut arr: [i32; 36] = [ 1, 7, 3, 2, 9, 5, 4, 2, 7, 3, 8, 6, 1, 7, 3, 2, 9, 5, 4, 2, 7, 3, 8, 6, 1, 7, 3, 2, 9, 5, 4, 2, 7, 3, 8, 6 ];
+pub fn shell_sort<T: Ord + Copy>(arr: &mut [T]) {
+    if arr.is_empty() {
+        return;
+    }
     let sequence: Vec<i32> = generate_knuth_sequence(arr.len());
 
     for seq_value in sequence.iter() {
         let seq_value = *seq_value as usize; // Dereference to get the i32 value
 
         for index in seq_value..arr.len() {
-            let current_item: i32 = arr[index];
+            let current_item: T = arr[index];
             let mut compare_index: usize = index;
     
             while compare_index >= seq_value && arr[compare_index - seq_value] > current_item {

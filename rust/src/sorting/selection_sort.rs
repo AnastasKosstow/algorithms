@@ -1,7 +1,7 @@
-
-fn selection_sort() {
-    let mut arr: [i32; 12] = [1, 0, 3, 2, 9, 5, 4, 0, 7, 3, 8, 6];
-
+pub fn selection_sort<T: Ord>(arr: &mut [T]) {
+    if arr.is_empty() {
+        return;
+    }
     let mut index: usize = 0;
     while index < arr.len() {
         let mut min_index: usize = index;

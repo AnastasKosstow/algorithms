@@ -1,8 +1,9 @@
-fn insertion_sort() {
-    let mut arr: [i32; 12] = [1, 0, 3, 2, 9, 5, 4, 0, 7, 3, 8, 6];
-
+pub fn insertion_sort<T: Ord + Copy>(arr: &mut [T]) {
+    if arr.is_empty() {
+        return;
+    }
     for index in 1..arr.len() {
-        let current_item: i32 = arr[index];
+        let current_item: T = arr[index];
         let mut insertion_index: usize = index;
 
         while insertion_index > 0 && arr[insertion_index - 1] > current_item {
