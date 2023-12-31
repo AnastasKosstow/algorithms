@@ -1,3 +1,4 @@
+#![allow(dead_code)]
 pub fn merge_sort<T: Ord + Clone + Copy>(arr: &mut [T]) {
     if arr.is_empty() {
         return;
@@ -52,4 +53,27 @@ fn merge<T: Ord + Clone + Copy>(left_array: &[T], right_array: &[T]) -> Vec<T> {
     }   
 
     merged_vector
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn empty() {
+        let mut empty_vec: Vec<i32> = Vec::new();
+
+        merge_sort(&mut empty_vec);
+        
+        assert!(empty_vec.is_empty());
+    }
+
+    #[test]
+    fn sort() {
+        let mut arr: Vec<i32> = vec![3, -2, 9, 0, 12, -5, 8, 0];
+
+        merge_sort(&mut arr);
+        
+        assert_eq!(arr, vec![-5, -2, 0, 0, 3, 8, 9, 12]);
+    }
 }

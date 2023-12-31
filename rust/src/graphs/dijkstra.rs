@@ -1,3 +1,5 @@
+#![allow(dead_code)]
+
 use std::collections::{ BinaryHeap, HashMap };
 use std::cmp::Reverse;
 

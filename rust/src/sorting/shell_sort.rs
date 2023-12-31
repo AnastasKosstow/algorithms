@@ -1,3 +1,4 @@
+#![allow(dead_code)]
 pub fn shell_sort<T: Ord + Copy>(arr: &mut [T]) {
     if arr.is_empty() {
         return;
@@ -27,12 +28,36 @@ fn generate_knuth_sequence(array_size: usize) -> Vec<i32> {
 
     let mut knuth_sequence: Vec<i32> = Vec::with_capacity(gap_sequence_length);
     let mut value: i32 = 1;
+    knuth_sequence.push(value);
 
     for _index in 0..gap_sequence_length {
-        knuth_sequence.push(value);
         value = 3 * value + 1; // Calculate the next gap size
+        knuth_sequence.push(value);
     }
 
     knuth_sequence.reverse(); // Reverse the sequence as per Knuth's suggestion
     knuth_sequence
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn empty() {
+        let mut empty_vec: Vec<i32> = Vec::new();
+
+        shell_sort(&mut empty_vec);
+        
+        assert!(empty_vec.is_empty());
+    }
+
+    #[test]
+    fn sort() {
+        let mut arr: Vec<i32> = vec![3, -2, 9, 0, 12, -5, 8, 0];
+
+        shell_sort(&mut arr);
+        
+        assert_eq!(arr, vec![-5, -2, 0, 0, 3, 8, 9, 12]);
+    }
 }
