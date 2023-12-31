@@ -47,7 +47,7 @@ This repository contains implementations of many popular algorithms and data str
 <br>
 
 > <b>For more information about 'Big O notation'</b> - <a href="https://cooervo.github.io/Algorithms-DataStructures-BigONotation/big-O-notation.html">cooervo.github.io</a>
-<a href="[https://visualgo.net/en](https://cooervo.github.io/Algorithms-DataStructures-BigONotation/index.html)">
+<a href="https://cooervo.github.io/Algorithms-DataStructures-BigONotation/index.html">
   <div>
     <img src="https://github.com/AnastasKosstow/algorithms/blob/main/assets/logo-algos.svg" width="270" alt="visualgo" />
   </div>
