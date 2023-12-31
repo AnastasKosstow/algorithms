@@ -26,7 +26,6 @@ This repository contains implementations of many popular algorithms and data str
 <h4 align="left">Languages used for implementation:</h4>
 <p align="left">
   <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/rust/rust-plain.svg" alt="rust" width="50" height="50"/>
-  <br>
   <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/csharp/csharp-original.svg" alt="csharp" width="40" height="40"/>
 </p>
 
@@ -82,5 +81,25 @@ Types of sorting algorithms:
 Graphs
 ==========================
 
+<img src="https://github.com/AnastasKosstow/algorithms/blob/main/assets/graphs.gif" width="270" alt="graphs" />
 
+### Key Concepts
+ - <b><i>Nodes (Vertices):</i></b> The individual items or entities in a graph.
+ - <b><i>Edges (Links):</i></b> The connections between nodes.
 
+### Types of Graphs
+ - <b><i>Undirected Graphs:</b></i> Symmetric relationships
+ - <b><i>Directed Graphs:</b></i> Asymmetric relationships, like web links
+ - <b><i>Weighted Graphs:</b></i> Graphs with edge weights, useful in routing problems
+
+Implementations:
+<br>
+<a href="https://github.com/AnastasKosstow/algorithms/blob/main/rust/src/graphs/graph.rs">Graph Implementation in Rust</a>
+<br>
+<a href="">Graph Implementation in C#</a>
+
+### Dijkstra's algorithm
+An algorithm for finding the shortest paths between nodes in a weighted graph.
+
+- Concept: Understand the <a href="https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm">Dijkstra's Algorithm</a>
+- Implementations: <a href="https://github.com/AnastasKosstow/algorithms/blob/main/rust/src/graphs/dijkstra.rs">Rust</a>, <a href="">C#</a>
