@@ -44,6 +44,8 @@ This repository contains implementations of many popular algorithms and data str
  - <b>*Time Complexity:*</b> How the time to complete the algorithm increases as the size of the input (number of elements to be sorted) increases.
  - <b>*Space Complexity:*</b> How much extra storage space the algorithm needs beyond the original input. This is less often discussed with sorting algorithms but is still a relevant factor.
 
+> <b>For more information about 'Big O notation'</b> - <a href="https://cooervo.github.io/Algorithms-DataStructures-BigONotation/big-O-notation.html">cooervo.github.io</a>
+<img src="https://github.com/AnastasKosstow/algorithms/blob/main/assets/logo-algos.svg" width="100" alt="cooervo.github.io" />
 
 #### Sorting Algorithms: 
    > |                              | Worst case | Average case | Best case | Implementations |
