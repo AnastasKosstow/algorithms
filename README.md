@@ -25,8 +25,8 @@ This repository contains implementations of many popular algorithms and data str
 
 <h4 align="left">Languages used for implementation:</h4>
 <p align="left">
-  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/rust/rust-plain.svg" alt="rust" width="50" height="50"/>
-  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/csharp/csharp-original.svg" alt="csharp" width="40" height="40"/>
+  <img src="https://github.com/AnastasKosstow/algorithms/blob/main/assets/logo/rust-logo.png" alt="rust" width="50" height="50"/>
+  <img src="https://github.com/AnastasKosstow/algorithms/blob/main/assets/logo/csharp-logo.png" alt="csharp" width="40" height="40"/>
 </p>
 
 <h4 align="left">For visual representation of the flow of each algorithm use  <a href="https://visualgo.net/en">VisuAlgo.net</a></h4>
