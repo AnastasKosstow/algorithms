@@ -7,8 +7,8 @@
 ##
 ## Get latest from https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
 
-/target
-/.vscode
+/rust/target
+/rust/.vscode
 
 # User-specific files
 *.rsuser
