@@ -17,6 +17,9 @@
 # Algorithms
 This repository contains implementations of many popular algorithms and data structures.
 
+* [Sorting](#sorting)
+* [Graphs](#graphs)
+
 *☝ Note that this project is meant to be used for learning and researching purposes only.*
 <br />
 
@@ -76,7 +79,8 @@ Types of sorting algorithms:
    > | complexity                   | O(<i>n</i> log(<i>n</i>))                                          | O(<i>n</i> log(<i>n</i>))                          | O(<i>n</i> log(<i>n</i>))                                         |
 
  
-
+Graphs
+==========================
 
 
 
