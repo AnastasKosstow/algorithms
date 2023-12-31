@@ -54,13 +54,13 @@ This repository contains implementations of many popular algorithms and data str
 </a>
 
 #### Sorting Algorithms: 
-   > |                              | Worst case | Average case | Best case | Implementations |
-   > | ---------------------------- | ---------- | ------------ | --------- | --------------- |
-   > | <b>Bubble sort</b>                  | O(<i>n</i><sup>2</sup>)      | O(<i>n</i><sup>2</sup>)         | O(<i>n</i>)               | <a href="https://github.com/AnastasKosstow/algorithms/blob/main/rust/src/sorting/bubble_sort.rs">Rust</a>, <a href="https://github.com/AnastasKosstow/algorithms/blob/main/csharp/BubbleSort/Program.cs">C#</a>    |
-   > | <b>Selection sort</b>              | O(<i>n</i><sup>2</sup>)      | O(<i>n</i><sup>2</sup>)          | O(<i>n</i><sup>2</sup>)   | <a href="https://github.com/AnastasKosstow/algorithms/blob/main/rust/src/sorting/selection_sort.rs">Rust</a>, <a href="https://github.com/AnastasKosstow/algorithms/blob/main/csharp/SelectionSort/Program.cs">C#</a> |
-   > | <b>Insertion sort</b>              | O(<i>n</i><sup>2</sup>)      | O(<i>n</i><sup>2</sup>)          | O(<i>n</i>)               | <a href="https://github.com/AnastasKosstow/algorithms/blob/main/rust/src/sorting/insertion_sort.rs">Rust</a>, <a href="https://github.com/AnastasKosstow/algorithms/blob/main/csharp/InsertionSort/Program.cs">C#</a> |
-   > | <b>Shell sort</b>                  | O(<i>n</i><sup>(3/2)</sup>)  | O(<i>n</i><sup>2</sup>)          | O(<i>n</i> log(<i>n</i>)) | <a href="https://github.com/AnastasKosstow/algorithms/blob/main/rust/src/sorting/shell_sort.rs">Rust</a>, <a href="https://github.com/AnastasKosstow/algorithms/blob/main/csharp/ShellSort/Program.cs">C#</a>     |
-   > | <b>Merge sort</b>                  | O(<i>n</i> log(<i>n</i>))    | O(<i>n</i> log(<i>n</i>))        | O(<i>n</i> log(<i>n</i>)) | <a href="https://github.com/AnastasKosstow/algorithms/blob/main/rust/src/sorting/merge_sort.rs">Rust</a>, <a href="https://github.com/AnastasKosstow/algorithms/blob/main/csharp/MergeSort/Program.cs">C#</a>     |
+ |                              | Worst case | Average case | Best case | Implementations |
+ | ---------------------------- | ---------- | ------------ | --------- | --------------- |
+ | <b>Bubble sort</b>                  | O(<i>n</i><sup>2</sup>)      | O(<i>n</i><sup>2</sup>)         | O(<i>n</i>)               | <a href="https://github.com/AnastasKosstow/algorithms/blob/main/rust/src/sorting/bubble_sort.rs">Rust</a> - <a href="https://github.com/AnastasKosstow/algorithms/blob/main/csharp/BubbleSort/Program.cs">C#</a>    |
+ | <b>Selection sort</b>              | O(<i>n</i><sup>2</sup>)      | O(<i>n</i><sup>2</sup>)          | O(<i>n</i><sup>2</sup>)   | <a href="https://github.com/AnastasKosstow/algorithms/blob/main/rust/src/sorting/selection_sort.rs">Rust</a> - <a href="https://github.com/AnastasKosstow/algorithms/blob/main/csharp/SelectionSort/Program.cs">C#</a> |
+ | <b>Insertion sort</b>              | O(<i>n</i><sup>2</sup>)      | O(<i>n</i><sup>2</sup>)          | O(<i>n</i>)               | <a href="https://github.com/AnastasKosstow/algorithms/blob/main/rust/src/sorting/insertion_sort.rs">Rust</a> - <a href="https://github.com/AnastasKosstow/algorithms/blob/main/csharp/InsertionSort/Program.cs">C#</a> |
+ | <b>Shell sort</b>                  | O(<i>n</i><sup>(3/2)</sup>)  | O(<i>n</i><sup>2</sup>)          | O(<i>n</i> log(<i>n</i>)) | <a href="https://github.com/AnastasKosstow/algorithms/blob/main/rust/src/sorting/shell_sort.rs">Rust</a> - <a href="https://github.com/AnastasKosstow/algorithms/blob/main/csharp/ShellSort/Program.cs">C#</a>     |
+ | <b>Merge sort</b>                  | O(<i>n</i> log(<i>n</i>))    | O(<i>n</i> log(<i>n</i>))        | O(<i>n</i> log(<i>n</i>)) | <a href="https://github.com/AnastasKosstow/algorithms/blob/main/rust/src/sorting/merge_sort.rs">Rust</a> - <a href="https://github.com/AnastasKosstow/algorithms/blob/main/csharp/MergeSort/Program.cs">C#</a>     |
 
 <br>
  
