@@ -62,7 +62,6 @@ mod tests {
     #[test]
     fn empty() {
         let mut empty_vec: Vec<i32> = Vec::new();
-
         merge_sort(&mut empty_vec);
         
         assert!(empty_vec.is_empty());
@@ -70,10 +69,9 @@ mod tests {
 
     #[test]
     fn sort() {
-        let mut arr: Vec<i32> = vec![3, -2, 9, 0, 12, -5, 8, 0];
-
+        let mut arr: Vec<i32> = vec![4, -3, 7, 0, 10, -6, 7, 1];
         merge_sort(&mut arr);
         
-        assert_eq!(arr, vec![-5, -2, 0, 0, 3, 8, 9, 12]);
+        assert_eq!(arr, vec![-6, -3, 0, 1, 4, 7, 7, 10]);
     }
 }
