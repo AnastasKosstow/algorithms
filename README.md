@@ -82,10 +82,10 @@ Implementations:
 <br>
 <a href="https://github.com/AnastasKosstow/algorithms/blob/main/rust/src/graphs/graph.rs">Graph Implementation in Rust</a>
 <br>
-<a href="">Graph Implementation in C#</a>
+<a href="https://github.com/AnastasKosstow/algorithms/blob/main/csharp/Graphs/Graph.cs">Graph Implementation in C#</a>
 
 ### Dijkstra's algorithm
 An algorithm for finding the shortest paths between nodes in a weighted graph.
 
 - Concept: Understand the <a href="https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm">Dijkstra's Algorithm</a>
-- Implementations: <a href="https://github.com/AnastasKosstow/algorithms/blob/main/rust/src/graphs/dijkstra.rs">Rust</a>, <a href="">C#</a>
+- Implementations: <a href="https://github.com/AnastasKosstow/algorithms/blob/main/rust/src/graphs/dijkstra.rs">Rust</a> - <a href="https://github.com/AnastasKosstow/algorithms/tree/main/csharp/Dijkstra">C#</a>
