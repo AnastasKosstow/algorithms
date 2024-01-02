@@ -89,3 +89,8 @@ An algorithm for finding the shortest paths between nodes in a weighted graph.
 
 - Concept: Understand the <a href="https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm">Dijkstra's Algorithm</a>
 - Implementations: <a href="https://github.com/AnastasKosstow/algorithms/blob/main/rust/src/graphs/dijkstra.rs">Rust</a> - <a href="https://github.com/AnastasKosstow/algorithms/blob/main/csharp/Dijkstra/GraphExtensions.cs">C#</a>
+
+### DFS (depth-first search)
+
+- Concept: Understand the <a href="https://en.wikipedia.org/wiki/Depth-first_search">Depth-first search</a>
+- Implementations: <a href="https://github.com/AnastasKosstow/algorithms/blob/main/rust/src/graphs/dfs.rs">Rust</a> - <a href="">C#</a>
