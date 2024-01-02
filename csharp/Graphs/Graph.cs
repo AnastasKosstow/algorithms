@@ -60,7 +60,7 @@ public class Graph<T>
 
         if (this.GraphType == GraphType.Undirected)
         {
-            AddEdge(toNode, fromNode, cost);
+            Add(toNode, fromNode, cost);
         }
 
         void Add(Node<T> from, Node<T> to, int cost)
