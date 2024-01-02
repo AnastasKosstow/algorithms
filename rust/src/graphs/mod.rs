@@ -1,4 +1,4 @@
 mod dijkstra;
 mod graph;
 
-pub use graph::{Graph, Node, NodeIndex};
+pub use graph::{Graph, GraphType, Node, NodeIndex};
