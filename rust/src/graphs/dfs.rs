@@ -17,7 +17,7 @@ use std::collections::HashSet;
 use crate::graphs::graph::{ Graph, Node, NodeIndex };
 
 impl<N: Eq + PartialEq + std::hash::Hash> Graph<N> {
-    pub fn are_nodes_connected(&self, root_node: &Node<N>) {
+    pub fn dfs(&self, root_node: &Node<N>) {
 
         let mut stack: Vec<&NodeIndex> = vec![];
         stack.push(&root_node.index);
