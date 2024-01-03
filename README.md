@@ -92,7 +92,7 @@ Implementations:
 ### BFS (breadth-first search)
 
 - Concept: Understand the <a href="https://en.wikipedia.org/wiki/Breadth-first_search">Breadth-first search</a>
-- Implementations: <a href="">Rust</a> - <a href="">C#</a>
+- Implementations: <a href="https://github.com/AnastasKosstow/algorithms/blob/main/rust/src/graphs/bfs.rs">Rust</a> - <a href="">C#</a>
 
 ### Dijkstra's algorithm
 An algorithm for finding the shortest paths between nodes in a weighted graph.
