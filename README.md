@@ -19,6 +19,7 @@ This repository contains implementations of many popular algorithms and data str
 
 * [Sorting](#sorting)
 * [Graphs](#graphs)
+* [LinkedList](#linkedlist)
 
 *☝ Note that this project is meant to be used for learning and researching purposes only.*
 <br />
@@ -100,3 +101,22 @@ An algorithm for finding the shortest paths between nodes in a weighted graph.
 - Concept: Understand the <a href="https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm">Dijkstra's Algorithm</a>
 - Implementations: <a href="https://github.com/AnastasKosstow/algorithms/blob/main/rust/src/graphs/dijkstra.rs">Rust</a> - <a href="https://github.com/AnastasKosstow/algorithms/blob/main/csharp/Dijkstra/GraphExtensions.cs">C#</a>
 
+
+LinkedList
+==========================
+
+<img src="https://github.com/AnastasKosstow/algorithms/blob/main/assets/list.gif" width="270" alt="list" />
+
+### Key Concepts
+ - <b><i>Nodes:</i></b> The individual item or entity in a linked list. Nodes are linked using pointers, making the structure flexible for insertions and deletions.
+
+### Types of LinkedLists
+ - <b><i>Singly Linked List:</b></i> Each node has only one pointer to the next node
+ - <b><i>Doubly Linked List:</b></i> Each node has two pointers, one to the next node and one to the previous node
+ - <b><i>Circular Linked List:</b></i> The last node points back to the first node, forming a circle (it can be singly or doubly)
+
+Implementations (for singly linked list):
+<br>
+<a href="https://github.com/AnastasKosstow/algorithms/blob/main/rust/src/collections/linked_list.rs">LinkedList Implementation in Rust</a>
+<br>
+<a href="">LinkedList Implementation in C#</a>
