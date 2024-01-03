@@ -1,14 +1,26 @@
 #![allow(dead_code)]
 
+/*  
+for graph with nodes: A, B, C, D
+    where: A -> B and C; B and C -> D
+      A
+     / \
+    B   C
+     \ /
+      D
+
+    DFS traversal sequence: A -> C -> D -> B
+*/
+
 use std::collections::HashSet;
 
 use crate::graphs::graph::{ Graph, Node, NodeIndex };
 
 impl<N: Eq + PartialEq + std::hash::Hash> Graph<N> {
-    pub fn are_nodes_connected(&self, from_node: &Node<N>, to_node: &Node<N>) -> bool {
+    pub fn are_nodes_connected(&self, root_node: &Node<N>) {
 
         let mut stack: Vec<&NodeIndex> = vec![];
-        stack.push(&from_node.index);
+        stack.push(&root_node.index);
 
         let mut visited: HashSet<&NodeIndex> = HashSet::new();
 
@@ -24,15 +36,10 @@ impl<N: Eq + PartialEq + std::hash::Hash> Graph<N> {
             };
 
             for edge in edges {
-                if edge.node_index == to_node.index {
-                    return true;
-                }
-
                 if !visited.contains(&edge.node_index) {
                     stack.push(&edge.node_index);
                 }
             }
         }
-        false
     }
 }
