@@ -37,14 +37,14 @@
 <img src="https://github.com/AnastasKosstow/algorithms/blob/main/assets/sorting.gif" width="230" alt="sorting" />
 
 ### Big O Notation
-Iɴ ᴀ ɴᴜᴛꜱʜᴇʟʟ, Bɪɢ-O ɪꜱ ᴀ ʀᴀᴛɪɴɢ ꜰᴏʀ ᴛʜᴇ ᴄᴏᴍᴘʟᴇxɪᴛʏ ᴏꜰ ᴛʜᴇ ᴀʟɢᴏʀɪᴛʜᴍ ʙᴀꜱᴇᴅ ᴏɴ ᴛʜᴇ ᴄᴏꜱᴛ ᴏʀ ᴘʀᴏᴄᴇꜱꜱɪɴɢ ᴛɪᴍᴇ.
+In a nutshell, Big-O is a rating for the complexity of the algorithm based on the cost or processing time.
 <br>
-Sᴘᴇᴄɪꜰɪᴄᴀʟʟʏ, ɪᴛ ᴅᴇꜱᴄʀɪʙᴇꜱ ᴛʜᴇ ᴡᴏʀꜱᴛ-ᴄᴀꜱᴇ ꜱᴄᴇɴᴀʀɪᴏ ᴀɴᴅ ᴄᴀɴ ʙᴇ ᴜꜱᴇᴅ ᴛᴏ ᴅᴇꜱᴄʀɪʙᴇ ᴛʜᴇ ᴇxᴇᴄᴜᴛɪᴏɴ ᴛɪᴍᴇ ʀᴇqᴜɪʀᴇᴅ ᴏʀ ᴛʜᴇ ꜱᴘᴀᴄᴇ ᴜꜱᴇᴅ (ᴇ.ɢ., ᴍᴇᴍᴏʀʏ) ʙʏ ᴀɴ ᴀʟɢᴏʀɪᴛʜᴍ.
+Specifically, it describes the worst-case scenario and can be used to describe the execution time required or the space used (e.g., memory) by an algorithm.
 
 ### Big O key points:
- - <b>𝚃𝚒𝚖𝚎 𝙲𝚘𝚖𝚙𝚕𝚎𝚡𝚒𝚝𝚢:</b> Hᴏᴡ ᴛʜᴇ ᴛɪᴍᴇ ᴛᴏ ᴄᴏᴍᴘʟᴇᴛᴇ ᴛʜᴇ ᴀʟɢᴏʀɪᴛʜᴍ ɪɴᴄʀᴇᴀꜱᴇꜱ ᴀꜱ ᴛʜᴇ ꜱɪᴢᴇ ᴏꜰ ᴛʜᴇ ɪɴᴘᴜᴛ (ɴᴜᴍʙᴇʀ ᴏꜰ ᴇʟᴇᴍᴇɴᴛꜱ ᴛᴏ ʙᴇ ꜱᴏʀᴛᴇᴅ) ɪɴᴄʀᴇᴀꜱᴇꜱ.
- - <b>𝚂𝚙𝚊𝚌𝚎 𝙲𝚘𝚖𝚙𝚕𝚎𝚡𝚒𝚝𝚢:</b> Hᴏᴡ ᴍᴜᴄʜ ᴇxᴛʀᴀ ꜱᴛᴏʀᴀɢᴇ ꜱᴘᴀᴄᴇ ᴛʜᴇ ᴀʟɢᴏʀɪᴛʜᴍ ɴᴇᴇᴅꜱ ʙᴇʏᴏɴᴅ ᴛʜᴇ ᴏʀɪɢɪɴᴀʟ ɪɴᴘᴜᴛ. Tʜɪꜱ ɪꜱ ʟᴇꜱꜱ ᴏꜰᴛᴇɴ ᴅɪꜱᴄᴜꜱꜱᴇᴅ ᴡɪᴛʜ ꜱᴏʀᴛɪɴɢ ᴀʟɢᴏʀɪᴛʜᴍꜱ ʙᴜᴛ ɪꜱ ꜱᴛɪʟʟ ᴀ ʀᴇʟᴇᴠᴀɴᴛ ꜰᴀᴄᴛᴏʀ.
-
+ - 𝚃𝚒𝚖𝚎 𝙲𝚘𝚖𝚙𝚕𝚎𝚡𝚒𝚝𝚢: How the time to complete the algorithm increases as the size of the input (number of elements to be sorted) increases.
+ - 𝚂𝚙𝚊𝚌𝚎 𝙲𝚘𝚖𝚙𝚕𝚎𝚡𝚒𝚝𝚢: How much extra storage space the algorithm needs beyond the original input. This is less often discussed with sorting algorithms but is still a relevant factor.
+ - 
 <br>
 
 > <b>Fᴏʀ ᴍᴏʀᴇ ɪɴꜰᴏʀᴍᴀᴛɪᴏɴ ᴀʙᴏᴜᴛ 'Bɪɢ O ɴᴏᴛᴀᴛɪᴏɴ'</b> - <a href="https://cooervo.github.io/Algorithms-DataStructures-BigONotation/big-O-notation.html">cooervo.github.io</a>
@@ -123,15 +123,15 @@ Graphs
 <img src="https://github.com/AnastasKosstow/algorithms/blob/main/assets/graphs.gif" width="270" alt="graphs" />
 
 ### Key Concepts
- - <b><i>Nodes (Vertices):</i></b> The individual items or entities in a graph.
- - <b><i>Edges (Links):</i></b> The connections between nodes.
+ - 𝙽𝚘𝚍𝚎𝚜 (𝚅𝚎𝚛𝚝𝚒𝚌𝚎𝚜): *The individual items or entities in a graph*
+ - 𝙴𝚍𝚐𝚎𝚜 (𝙻𝚒𝚗𝚔𝚜): *The connections between nodes*
 
 ### Types of Graphs
- - <b><i>Undirected Graphs:</b></i> Symmetric relationships
- - <b><i>Directed Graphs:</b></i> Asymmetric relationships, like web links
- - <b><i>Weighted Graphs:</b></i> Graphs with edge weights, useful in routing problems
+ - 𝚄𝚗𝚍𝚒𝚛𝚎𝚌𝚝𝚎𝚍 𝙶𝚛𝚊𝚙𝚑𝚜: *Symmetric relationships*
+ - 𝙳𝚒𝚛𝚎𝚌𝚝𝚎𝚍 𝙶𝚛𝚊𝚙𝚑𝚜: *Asymmetric relationships, like web links*
+ - 𝚆𝚎𝚒𝚐𝚑𝚝𝚎𝚍 𝙶𝚛𝚊𝚙𝚑𝚜: *Graphs with edge weights, useful in routing problems*
 
-Implementations:
+𝙸𝚖𝚙𝚕𝚎𝚖𝚎𝚗𝚝𝚊𝚝𝚒𝚘𝚗𝚜:
 <br>
 <a href="https://github.com/AnastasKosstow/algorithms/blob/main/rust/src/graphs/graph.rs">Graph Implementation in Rust</a>
 <br>
@@ -139,19 +139,19 @@ Implementations:
 
 ### DFS (depth-first search)
 
-- Concept: Understand the <a href="https://en.wikipedia.org/wiki/Depth-first_search">Depth-first search</a>
-- Implementations: <a href="https://github.com/AnastasKosstow/algorithms/blob/main/rust/src/graphs/dfs.rs">Rust</a> - <a href="">C#</a>
+- 𝙲𝚘𝚗𝚌𝚎𝚙𝚝: Understand the <a href="https://en.wikipedia.org/wiki/Depth-first_search">Depth-first search</a>
+- 𝙸𝚖𝚙𝚕𝚎𝚖𝚎𝚗𝚝𝚊𝚝𝚒𝚘𝚗𝚜: <a href="https://github.com/AnastasKosstow/algorithms/blob/main/rust/src/graphs/dfs.rs">Rust</a> - <a href="">C#</a>
 
 ### BFS (breadth-first search)
 
-- Concept: Understand the <a href="https://en.wikipedia.org/wiki/Breadth-first_search">Breadth-first search</a>
-- Implementations: <a href="https://github.com/AnastasKosstow/algorithms/blob/main/rust/src/graphs/bfs.rs">Rust</a> - <a href="">C#</a>
+- 𝙲𝚘𝚗𝚌𝚎𝚙𝚝: Understand the <a href="https://en.wikipedia.org/wiki/Breadth-first_search">Breadth-first search</a>
+- 𝙸𝚖𝚙𝚕𝚎𝚖𝚎𝚗𝚝𝚊𝚝𝚒𝚘𝚗𝚜: <a href="https://github.com/AnastasKosstow/algorithms/blob/main/rust/src/graphs/bfs.rs">Rust</a> - <a href="">C#</a>
 
 ### Dijkstra's algorithm
-An algorithm for finding the shortest paths between nodes in a weighted graph.
+*An algorithm for finding the shortest paths between nodes in a weighted graph.*
 
-- Concept: Understand the <a href="https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm">Dijkstra's Algorithm</a>
-- Implementations: <a href="https://github.com/AnastasKosstow/algorithms/blob/main/rust/src/graphs/dijkstra.rs">Rust</a> - <a href="https://github.com/AnastasKosstow/algorithms/blob/main/csharp/Dijkstra/GraphExtensions.cs">C#</a>
+- 𝙲𝚘𝚗𝚌𝚎𝚙𝚝: Understand the <a href="https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm">Dijkstra's Algorithm</a>
+- 𝙸𝚖𝚙𝚕𝚎𝚖𝚎𝚗𝚝𝚊𝚝𝚒𝚘𝚗𝚜: <a href="https://github.com/AnastasKosstow/algorithms/blob/main/rust/src/graphs/dijkstra.rs">Rust</a> - <a href="https://github.com/AnastasKosstow/algorithms/blob/main/csharp/Dijkstra/GraphExtensions.cs">C#</a>
 
 
 LinkedList
@@ -160,14 +160,14 @@ LinkedList
 <img src="https://github.com/AnastasKosstow/algorithms/blob/main/assets/list.gif" width="270" alt="list" />
 
 ### Key Concepts
- - <b><i>Nodes:</i></b> The individual item or entity in a linked list. Nodes are linked using pointers, making the structure flexible for insertions and deletions.
+ - 𝙽𝚘𝚍𝚎𝚜: *The individual item or entity in a linked list. Nodes are linked using pointers, making the structure flexible for insertions and deletions.*
 
 ### Types of LinkedLists
- - <b><i>Singly Linked List:</b></i> Each node has only one pointer to the next node
- - <b><i>Doubly Linked List:</b></i> Each node has two pointers, one to the next node and one to the previous node
- - <b><i>Circular Linked List:</b></i> The last node points back to the first node, forming a circle (it can be singly or doubly)
+ - 𝚂𝚒𝚗𝚐𝚕𝚢 𝙻𝚒𝚗𝚔𝚎𝚍 𝙻𝚒𝚜𝚝: *Each node has only one pointer to the next node*
+ - 𝙳𝚘𝚞𝚋𝚕𝚢 𝙻𝚒𝚗𝚔𝚎𝚍 𝙻𝚒𝚜𝚝: *Each node has two pointers, one to the next node and one to the previous node*
+ - 𝙲𝚒𝚛𝚌𝚞𝚕𝚊𝚛 𝙻𝚒𝚗𝚔𝚎𝚍 𝙻𝚒𝚜𝚝: *The last node points back to the first node, forming a circle (it can be singly or doubly)*
 
-Implementations (for singly linked list):
+𝙸𝚖𝚙𝚕𝚎𝚖𝚎𝚗𝚝𝚊𝚝𝚒𝚘𝚗𝚜 (for singly linked list):
 <br>
 <a href="https://github.com/AnastasKosstow/algorithms/blob/main/rust/src/collections/linked_list.rs">LinkedList Implementation in Rust</a>
 <br>
