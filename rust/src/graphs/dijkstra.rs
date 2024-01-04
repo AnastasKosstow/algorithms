@@ -39,6 +39,56 @@ impl<N: Ord + Eq + PartialEq + std::hash::Hash> Graph<N> {
             }
             visited.push(&node_ix);
         }
-        distances.get(&to_node.index).copied()
+
+        distances.get(&to_node.index)
+            .copied()
+            .filter(|&distance| distance != usize::MAX)
+        
+    }
+}
+
+
+#[cfg(test)]
+mod tests {
+    use crate::graphs::GraphType;
+
+    use super::*;
+
+    #[test]
+    fn test_shortest_path_simple() {
+        let mut graph = Graph::new(GraphType::Directed);
+        let n1 = graph.add_node(1);
+        let n2 = graph.add_node(2);
+        let n3 = graph.add_node(3);
+
+        graph.add_edge(n1, n2, 1);
+        graph.add_edge(n2, n3, 1);
+        
+        let node1 = graph.get_node(n1).unwrap();
+        let node3 = graph.get_node(n3).unwrap();
+
+        assert_eq!(graph.shortest_path(node1, node3), Some(2));
+    }
+
+    #[test]
+    fn test_no_path_exists() {
+        let mut graph = Graph::new(GraphType::Directed);
+        let n1 = graph.add_node(1);
+        let n2 = graph.add_node(2);
+
+        let node1 = graph.get_node(n1).unwrap();
+        let node2 = graph.get_node(n2).unwrap();
+
+        assert_eq!(graph.shortest_path(node1, node2), None);
+    }
+
+    #[test]
+    fn test_path_to_self() {
+        let mut graph = Graph::new(GraphType::Directed);
+        let n1 = graph.add_node(1);
+
+        let node1 = graph.get_node(n1).unwrap();
+
+        assert_eq!(graph.shortest_path(node1, node1), Some(0));
     }
 }
