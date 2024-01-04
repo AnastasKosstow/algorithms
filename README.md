@@ -14,8 +14,8 @@
 <hr />
 </div>
 
-# Algorithms
-This repository contains implementations of many popular algorithms and data structures.
+# 𝙰𝚕𝚐𝚘𝚛𝚒𝚝𝚑𝚖𝚜
+𝚃𝚑𝚒𝚜 𝚛𝚎𝚙𝚘𝚜𝚒𝚝𝚘𝚛𝚢 𝚌𝚘𝚗𝚝𝚊𝚒𝚗𝚜 𝚒𝚖𝚙𝚕𝚎𝚖𝚎𝚗𝚝𝚊𝚝𝚒𝚘𝚗𝚜 𝚘𝚏 𝚖𝚊𝚗𝚢 𝚙𝚘𝚙𝚞𝚕𝚊𝚛 𝚊𝚕𝚐𝚘𝚛𝚒𝚝𝚑𝚖𝚜 𝚊𝚗𝚍 𝚍𝚊𝚝𝚊 𝚜𝚝𝚛𝚞𝚌𝚝𝚞𝚛𝚎𝚜．
 
 * [Sorting](#sorting)
 * [Graphs](#graphs)
@@ -24,30 +24,30 @@ This repository contains implementations of many popular algorithms and data str
 *☝ Note that this project is meant to be used for learning and researching purposes only.*
 <br />
 
-<h4 align="left">Languages used for implementations:</h4>
+<h4 align="left">𝙻𝚊𝚗𝚐𝚞𝚊𝚐𝚎𝚜 𝚞𝚜𝚎𝚍 𝚏𝚘𝚛 𝚒𝚖𝚙𝚕𝚎𝚖𝚎𝚗𝚝𝚊𝚝𝚒𝚘𝚗𝚜:</h4>
 <p align="left">
   <img src="https://github.com/AnastasKosstow/algorithms/blob/main/assets/logo/rust-logo.png" alt="rust" width="55" height="55"/>
   <img src="https://github.com/AnastasKosstow/algorithms/blob/main/assets/logo/csharp-logo.png" alt="csharp" width="55" height="55"/>
 </p>
 
-<h4 align="left">For visual representation of the flow of each algorithm use  <a href="https://visualgo.net/en">VisuAlgo.net</a></h4>
+<h4 align="left">For visual representation of the flow of each algorithm use  <a href="https://visualgo.net/en">𝚅𝚒𝚜𝚞𝙰𝚕𝚐𝚘.𝚗𝚎𝚝</a></h4>
 
 
 # Sorting
 <img src="https://github.com/AnastasKosstow/algorithms/blob/main/assets/sorting.gif" width="230" alt="sorting" />
 
 ### Big O Notation
-*In a nutshell, Big-O is a rating for the complexity of the algorithm based on the cost or processing time.*
+Iɴ ᴀ ɴᴜᴛꜱʜᴇʟʟ, Bɪɢ-O ɪꜱ ᴀ ʀᴀᴛɪɴɢ ꜰᴏʀ ᴛʜᴇ ᴄᴏᴍᴘʟᴇxɪᴛʏ ᴏꜰ ᴛʜᴇ ᴀʟɢᴏʀɪᴛʜᴍ ʙᴀꜱᴇᴅ ᴏɴ ᴛʜᴇ ᴄᴏꜱᴛ ᴏʀ ᴘʀᴏᴄᴇꜱꜱɪɴɢ ᴛɪᴍᴇ.
 <br>
-*Specifically, it describes the worst-case scenario and can be used to describe the execution time required or the space used (e.g., memory) by an algorithm.*
+Sᴘᴇᴄɪꜰɪᴄᴀʟʟʏ, ɪᴛ ᴅᴇꜱᴄʀɪʙᴇꜱ ᴛʜᴇ ᴡᴏʀꜱᴛ-ᴄᴀꜱᴇ ꜱᴄᴇɴᴀʀɪᴏ ᴀɴᴅ ᴄᴀɴ ʙᴇ ᴜꜱᴇᴅ ᴛᴏ ᴅᴇꜱᴄʀɪʙᴇ ᴛʜᴇ ᴇxᴇᴄᴜᴛɪᴏɴ ᴛɪᴍᴇ ʀᴇqᴜɪʀᴇᴅ ᴏʀ ᴛʜᴇ ꜱᴘᴀᴄᴇ ᴜꜱᴇᴅ (ᴇ.ɢ., ᴍᴇᴍᴏʀʏ) ʙʏ ᴀɴ ᴀʟɢᴏʀɪᴛʜᴍ.
 
 ### Big O key points:
- - <b>*Time Complexity:*</b> How the time to complete the algorithm increases as the size of the input (number of elements to be sorted) increases.
- - <b>*Space Complexity:*</b> How much extra storage space the algorithm needs beyond the original input. This is less often discussed with sorting algorithms but is still a relevant factor.
+ - <b>𝚃𝚒𝚖𝚎 𝙲𝚘𝚖𝚙𝚕𝚎𝚡𝚒𝚝𝚢:</b> Hᴏᴡ ᴛʜᴇ ᴛɪᴍᴇ ᴛᴏ ᴄᴏᴍᴘʟᴇᴛᴇ ᴛʜᴇ ᴀʟɢᴏʀɪᴛʜᴍ ɪɴᴄʀᴇᴀꜱᴇꜱ ᴀꜱ ᴛʜᴇ ꜱɪᴢᴇ ᴏꜰ ᴛʜᴇ ɪɴᴘᴜᴛ (ɴᴜᴍʙᴇʀ ᴏꜰ ᴇʟᴇᴍᴇɴᴛꜱ ᴛᴏ ʙᴇ ꜱᴏʀᴛᴇᴅ) ɪɴᴄʀᴇᴀꜱᴇꜱ.
+ - <b>𝚂𝚙𝚊𝚌𝚎 𝙲𝚘𝚖𝚙𝚕𝚎𝚡𝚒𝚝𝚢:</b> Hᴏᴡ ᴍᴜᴄʜ ᴇxᴛʀᴀ ꜱᴛᴏʀᴀɢᴇ ꜱᴘᴀᴄᴇ ᴛʜᴇ ᴀʟɢᴏʀɪᴛʜᴍ ɴᴇᴇᴅꜱ ʙᴇʏᴏɴᴅ ᴛʜᴇ ᴏʀɪɢɪɴᴀʟ ɪɴᴘᴜᴛ. Tʜɪꜱ ɪꜱ ʟᴇꜱꜱ ᴏꜰᴛᴇɴ ᴅɪꜱᴄᴜꜱꜱᴇᴅ ᴡɪᴛʜ ꜱᴏʀᴛɪɴɢ ᴀʟɢᴏʀɪᴛʜᴍꜱ ʙᴜᴛ ɪꜱ ꜱᴛɪʟʟ ᴀ ʀᴇʟᴇᴠᴀɴᴛ ꜰᴀᴄᴛᴏʀ.
 
 <br>
 
-> <b>For more information about 'Big O notation'</b> - <a href="https://cooervo.github.io/Algorithms-DataStructures-BigONotation/big-O-notation.html">cooervo.github.io</a>
+> <b>Fᴏʀ ᴍᴏʀᴇ ɪɴꜰᴏʀᴍᴀᴛɪᴏɴ ᴀʙᴏᴜᴛ 'Bɪɢ O ɴᴏᴛᴀᴛɪᴏɴ'</b> - <a href="https://cooervo.github.io/Algorithms-DataStructures-BigONotation/big-O-notation.html">cooervo.github.io</a>
 <a href="https://cooervo.github.io/Algorithms-DataStructures-BigONotation/index.html">
   <div>
     <img src="https://github.com/AnastasKosstow/algorithms/blob/main/assets/logo-algos.svg" width="270" alt="visualgo" />
@@ -55,15 +55,67 @@ This repository contains implementations of many popular algorithms and data str
 </a>
 
 #### Sorting Algorithms: 
- |                              | Worst case | Average case | Best case | Implementations |
- | ---------------------------- | ---------- | ------------ | --------- | --------------- |
- | <b>Bubble sort</b>                  | O(<i>n</i><sup>2</sup>)      | O(<i>n</i><sup>2</sup>)         | O(<i>n</i>)               | <a href="https://github.com/AnastasKosstow/algorithms/blob/main/rust/src/sorting/bubble_sort.rs">Rust</a> - <a href="https://github.com/AnastasKosstow/algorithms/blob/main/csharp/BubbleSort/Program.cs">C#</a>    |
- | <b>Selection sort</b>              | O(<i>n</i><sup>2</sup>)      | O(<i>n</i><sup>2</sup>)          | O(<i>n</i><sup>2</sup>)   | <a href="https://github.com/AnastasKosstow/algorithms/blob/main/rust/src/sorting/selection_sort.rs">Rust</a> - <a href="https://github.com/AnastasKosstow/algorithms/blob/main/csharp/SelectionSort/Program.cs">C#</a> |
- | <b>Insertion sort</b>              | O(<i>n</i><sup>2</sup>)      | O(<i>n</i><sup>2</sup>)          | O(<i>n</i>)               | <a href="https://github.com/AnastasKosstow/algorithms/blob/main/rust/src/sorting/insertion_sort.rs">Rust</a> - <a href="https://github.com/AnastasKosstow/algorithms/blob/main/csharp/InsertionSort/Program.cs">C#</a> |
- | <b>Shell sort</b>                  | O(<i>n</i><sup>(3/2)</sup>)  | O(<i>n</i><sup>2</sup>)          | O(<i>n</i> log(<i>n</i>)) | <a href="https://github.com/AnastasKosstow/algorithms/blob/main/rust/src/sorting/shell_sort.rs">Rust</a> - <a href="https://github.com/AnastasKosstow/algorithms/blob/main/csharp/ShellSort/Program.cs">C#</a>     |
- | <b>Merge sort</b>                  | O(<i>n</i> log(<i>n</i>))    | O(<i>n</i> log(<i>n</i>))        | O(<i>n</i> log(<i>n</i>)) | <a href="https://github.com/AnastasKosstow/algorithms/blob/main/rust/src/sorting/merge_sort.rs">Rust</a> - <a href="https://github.com/AnastasKosstow/algorithms/blob/main/csharp/MergeSort/Program.cs">C#</a>     |
 
-<br>
+<table>
+  <thead>
+    <tr>
+      <th width="170"></th>
+      <th width="170">Wᴏʀꜱᴛ ᴄᴀꜱᴇ</th>
+      <th width="170">Aᴠᴇʀᴀɢᴇ ᴄᴀꜱᴇ</th>
+      <th width="170">Bᴇꜱᴛ ᴄᴀꜱᴇ</th>
+      <th width="170">Iᴍᴘʟᴇᴍᴇɴᴛᴀᴛɪᴏɴꜱ</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><b>Bᴜʙʙʟᴇ ꜱᴏʀᴛ</b></td>
+      <td>O(<i>n</i><sup>2</sup>)</td>
+      <td>O(<i>n</i><sup>2</sup>)</td>
+      <td>O(<i>n</i>)</td>
+      <td>
+        <a href="https://github.com/AnastasKosstow/algorithms/blob/main/rust/src/sorting/bubble_sort.rs">Rust</a> - 
+        <a href="https://github.com/AnastasKosstow/algorithms/blob/main/csharp/BubbleSort/Program.cs">C#</a></td>
+    </tr>
+    <tr>
+      <td><b>Sᴇʟᴇᴄᴛɪᴏɴ ꜱᴏʀᴛ</b></td>
+      <td>O(<i>n</i><sup>2</sup>)</td>
+      <td>O(<i>n</i><sup>2</sup>)</td>
+      <td>O(<i>n</i><sup>2</sup>)</td>
+      <td>
+        <a href="https://github.com/AnastasKosstow/algorithms/blob/main/rust/src/sorting/selection_sort.rs">Rust</a> - 
+        <a href="https://github.com/AnastasKosstow/algorithms/blob/main/csharp/SelectionSort/Program.cs">C#</a></td>
+    </tr>
+    <tr>
+      <td><b>Iɴꜱᴇʀᴛɪᴏɴ ꜱᴏʀᴛ</b></td>
+      <td>O(<i>n</i><sup>2</sup>)</td>
+      <td>O(<i>n</i><sup>2</sup>)</td>
+      <td>O(<i>n</i>)</td>
+      <td>
+        <a href="https://github.com/AnastasKosstow/algorithms/blob/main/rust/src/sorting/insertion_sort.rs">Rust</a> - 
+        <a href="https://github.com/AnastasKosstow/algorithms/blob/main/csharp/InsertionSort/Program.cs">C#</a></td>
+    </tr>
+    <tr>
+      <td><b>Sʜᴇʟʟ ꜱᴏʀᴛ</b></td>
+      <td>O(<i>n</i><sup>(3/2)</sup>)</td>
+      <td>O(<i>n</i><sup>2</sup>)</td>
+      <td>O(<i>n</i> log(<i>n</i>))</td>
+      <td>
+        <a href="https://github.com/AnastasKosstow/algorithms/blob/main/rust/src/sorting/shell_sort.rs">Rust</a> -
+        <a href="https://github.com/AnastasKosstow/algorithms/blob/main/csharp/ShellSort/Program.cs">C#</a></td>
+    </tr>
+    <tr>
+      <td><b>Mᴇʀɢᴇ ꜱᴏʀᴛ</b></td>
+      <td>O(<i>n</i> log(<i>n</i>))</td>
+      <td>O(<i>n</i> log(<i>n</i>))</td>
+      <td>O(<i>n</i> log(<i>n</i>))</td>
+      <td>
+        <a href="https://github.com/AnastasKosstow/algorithms/blob/main/rust/src/sorting/merge_sort.rs">Rust</a> - 
+        <a href="https://github.com/AnastasKosstow/algorithms/blob/main/csharp/MergeSort/Program.cs">C#</a></td>
+    </tr>
+  </tbody>
+</table>
+
+
  
 Graphs
 ==========================
