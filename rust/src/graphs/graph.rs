@@ -17,6 +17,7 @@ pub enum GraphType {
     Undirected
 }
 
+#[derive(PartialEq)]
 pub struct Edge {
     pub cost: usize,
     pub node_index: NodeIndex
@@ -73,7 +74,40 @@ impl<N: Eq + std::hash::Hash + PartialEq> Graph<N> {
                 });
         }
     }
-    
+
+    pub fn delete_node(&mut self, node_index: NodeIndex) {
+        for (_, edges) in self.edges.iter_mut() {
+            edges.retain(|edge| edge.node_index != node_index);
+        }
+     
+        self.edges.remove(&node_index);     
+        self.nodes.remove(node_index.ix);
+
+        for node in self.nodes.iter_mut() {
+            if node.index.ix > node_index.ix {
+                if let Some(edges) = self.edges.remove(&node.index) {
+                    self.edges.insert(NodeIndex { 
+                        ix: node.index.ix - 1 
+                    }, 
+                    edges);
+                } 
+                node.index.ix -= 1;
+            }
+        }
+
+        self.lenght -= 1;
+    }
+
+    pub fn delete_edge(&mut self, from: NodeIndex, to: NodeIndex) {
+        if let Some(edges) = self.edges.get_mut(&from) {
+            
+            let pos = edges.iter().position(|edge| edge.node_index == to);
+            if let Some(pos) = pos {
+                edges.remove(pos);
+            }
+        }
+    }
+
     pub fn get_node(&self, node_index: NodeIndex) -> Option<&Node<N>> {
         self.nodes.get(node_index.ix)
     }
@@ -124,9 +158,35 @@ mod tests {
         let edges = graph.edges.get(&node1).unwrap();
         assert_eq!(edges[0].cost, 10);
         assert_eq!(edges[0].node_index.ix, node2.ix);
-
-        // For directed graphs, there should be no reverse edge
         assert!(graph.edges.get(&node2).is_none());
+    }
+
+    #[test]
+    fn test_delete_node() {
+        let mut graph: Graph<i32> = Graph::new(GraphType::Undirected);
+        let node1 = graph.add_node(1);
+        let node2 = graph.add_node(2);
+
+        graph.add_edge(node1, node2, 10);
+        graph.delete_node(node1);
+
+        assert!(graph.get_node(node2).is_none());
+        assert_eq!(graph.get_node(node1).unwrap().value, 2);
+        assert_eq!(graph.edges.get(&node1).unwrap().len(), 0);
+        assert_eq!(graph.lenght, 1);
+    }
+
+    #[test]
+    fn test_delete_edge() {
+        let mut graph: Graph<i32> = Graph::new(GraphType::Undirected);
+        let node1 = graph.add_node(1);
+        let node2 = graph.add_node(2);
+
+        graph.add_edge(node1, node2, 10);
+        graph.delete_edge(node1, node2);
+
+        let edges = graph.edges.get(&node1).unwrap();
+        assert!(edges.is_empty());
     }
 
     #[test]
