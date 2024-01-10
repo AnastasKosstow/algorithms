@@ -37,14 +37,17 @@
 <img src="https://github.com/AnastasKosstow/algorithms/blob/main/assets/sorting.gif" width="230" alt="sorting" />
 
 ### Big O Notation
-In a nutshell, Big-O is a rating for the complexity of the algorithm based on the cost or processing time.
+In a nutshell, we use Big O to describe the efficiency of algorithms.
 <br>
-Specifically, it describes the worst-case scenario and can be used to describe the execution time required or the space used (e.g., memory) by an algorithm.
+It represents an upper bound on the time complexity of an algorithm, indicating how the runtime increases with the size of the input. 
+<br>
+For example, O(N) suggests a linear increase in time with the size of the input, while O(1) indicates constant time regardless of input size
 
-### Big O key points:
- - 𝚃𝚒𝚖𝚎 𝙲𝚘𝚖𝚙𝚕𝚎𝚡𝚒𝚝𝚢: How the time to complete the algorithm increases as the size of the input (number of elements to be sorted) increases.
- - 𝚂𝚙𝚊𝚌𝚎 𝙲𝚘𝚖𝚙𝚕𝚎𝚡𝚒𝚝𝚢: How much extra storage space the algorithm needs beyond the original input. This is less often discussed with sorting algorithms but is still a relevant factor.
- - 
+### Key points:
+There are three main mathematical notations used to describe the upper, tight, and lower bounds of algorithm complexity
+ - Bɪɢ O (O-ɴᴏᴛᴀᴛɪᴏɴ): It describes the upper bound of the time complexity of an algorithm. (worst-case)
+ - Bɪɢ Tʜᴇᴛᴀ (Θ-ɴᴏᴛᴀᴛɪᴏɴ): Big Theta provides a tight bound on the time complexity. (average-case)
+ - Bɪɢ Oᴍᴇɢᴀ (Ω-ɴᴏᴛᴀᴛɪᴏɴ): Big Omega describes the lower bound of the time complexity of an algorithm. (best-case)
 <br>
 
 > <b>Fᴏʀ ᴍᴏʀᴇ ɪɴꜰᴏʀᴍᴀᴛɪᴏɴ ᴀʙᴏᴜᴛ 'Bɪɢ O ɴᴏᴛᴀᴛɪᴏɴ'</b> - <a href="https://cooervo.github.io/Algorithms-DataStructures-BigONotation/big-O-notation.html">cooervo.github.io</a>
@@ -60,9 +63,9 @@ Specifically, it describes the worst-case scenario and can be used to describe t
   <thead>
     <tr>
       <th width="170"></th>
-      <th width="170">Wᴏʀꜱᴛ ᴄᴀꜱᴇ</th>
-      <th width="170">Aᴠᴇʀᴀɢᴇ ᴄᴀꜱᴇ</th>
-      <th width="170">Bᴇꜱᴛ ᴄᴀꜱᴇ</th>
+      <th width="170">O wᴏʀꜱᴛ ᴄᴀꜱᴇ</th>
+      <th width="170">Θ aᴠᴇʀᴀɢᴇ ᴄᴀꜱᴇ</th>
+      <th width="170">Ω bᴇꜱᴛ ᴄᴀꜱᴇ</th>
       <th width="170">Iᴍᴘʟᴇᴍᴇɴᴛᴀᴛɪᴏɴꜱ</th>
     </tr>
   </thead>
