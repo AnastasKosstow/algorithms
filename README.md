@@ -63,9 +63,9 @@ There are three main mathematical notations used to describe the upper, tight, a
   <thead>
     <tr>
       <th width="170"></th>
-      <th width="170">O wᴏʀꜱᴛ ᴄᴀꜱᴇ</th>
-      <th width="170">Θ aᴠᴇʀᴀɢᴇ ᴄᴀꜱᴇ</th>
-      <th width="170">Ω bᴇꜱᴛ ᴄᴀꜱᴇ</th>
+      <th width="170">wᴏʀꜱᴛ ᴄᴀꜱᴇ</th>
+      <th width="170">aᴠᴇʀᴀɢᴇ ᴄᴀꜱᴇ</th>
+      <th width="170">bᴇꜱᴛ ᴄᴀꜱᴇ</th>
       <th width="170">Iᴍᴘʟᴇᴍᴇɴᴛᴀᴛɪᴏɴꜱ</th>
     </tr>
   </thead>
@@ -73,8 +73,8 @@ There are three main mathematical notations used to describe the upper, tight, a
     <tr>
       <td><b>Bᴜʙʙʟᴇ ꜱᴏʀᴛ</b></td>
       <td>O(<i>n</i><sup>2</sup>)</td>
-      <td>O(<i>n</i><sup>2</sup>)</td>
-      <td>O(<i>n</i>)</td>
+      <td>Θ(<i>n</i><sup>2</sup>)</td>
+      <td>Ω(<i>n</i>)</td>
       <td>
         <a href="https://github.com/AnastasKosstow/algorithms/blob/main/rust/src/sorting/bubble_sort.rs">Rust</a> - 
         <a href="https://github.com/AnastasKosstow/algorithms/blob/main/csharp/BubbleSort/Program.cs">C#</a></td>
@@ -82,8 +82,8 @@ There are three main mathematical notations used to describe the upper, tight, a
     <tr>
       <td><b>Sᴇʟᴇᴄᴛɪᴏɴ ꜱᴏʀᴛ</b></td>
       <td>O(<i>n</i><sup>2</sup>)</td>
-      <td>O(<i>n</i><sup>2</sup>)</td>
-      <td>O(<i>n</i><sup>2</sup>)</td>
+      <td>Θ(<i>n</i><sup>2</sup>)</td>
+      <td>Ω(<i>n</i><sup>2</sup>)</td>
       <td>
         <a href="https://github.com/AnastasKosstow/algorithms/blob/main/rust/src/sorting/selection_sort.rs">Rust</a> - 
         <a href="https://github.com/AnastasKosstow/algorithms/blob/main/csharp/SelectionSort/Program.cs">C#</a></td>
@@ -91,8 +91,8 @@ There are three main mathematical notations used to describe the upper, tight, a
     <tr>
       <td><b>Iɴꜱᴇʀᴛɪᴏɴ ꜱᴏʀᴛ</b></td>
       <td>O(<i>n</i><sup>2</sup>)</td>
-      <td>O(<i>n</i><sup>2</sup>)</td>
-      <td>O(<i>n</i>)</td>
+      <td>Θ(<i>n</i><sup>2</sup>)</td>
+      <td>Ω(<i>n</i>)</td>
       <td>
         <a href="https://github.com/AnastasKosstow/algorithms/blob/main/rust/src/sorting/insertion_sort.rs">Rust</a> - 
         <a href="https://github.com/AnastasKosstow/algorithms/blob/main/csharp/InsertionSort/Program.cs">C#</a></td>
@@ -100,8 +100,8 @@ There are three main mathematical notations used to describe the upper, tight, a
     <tr>
       <td><b>Sʜᴇʟʟ ꜱᴏʀᴛ</b></td>
       <td>O(<i>n</i><sup>(3/2)</sup>)</td>
-      <td>O(<i>n</i><sup>2</sup>)</td>
-      <td>O(<i>n</i> log(<i>n</i>))</td>
+      <td>Θ(<i>n</i><sup>2</sup>)</td>
+      <td>Ω(<i>n</i> log(<i>n</i>))</td>
       <td>
         <a href="https://github.com/AnastasKosstow/algorithms/blob/main/rust/src/sorting/shell_sort.rs">Rust</a> -
         <a href="https://github.com/AnastasKosstow/algorithms/blob/main/csharp/ShellSort/Program.cs">C#</a></td>
@@ -109,16 +109,25 @@ There are three main mathematical notations used to describe the upper, tight, a
     <tr>
       <td><b>Mᴇʀɢᴇ ꜱᴏʀᴛ</b></td>
       <td>O(<i>n</i> log(<i>n</i>))</td>
-      <td>O(<i>n</i> log(<i>n</i>))</td>
-      <td>O(<i>n</i> log(<i>n</i>))</td>
+      <td>Θ(<i>n</i> log(<i>n</i>))</td>
+      <td>Ω(<i>n</i> log(<i>n</i>))</td>
       <td>
         <a href="https://github.com/AnastasKosstow/algorithms/blob/main/rust/src/sorting/merge_sort.rs">Rust</a> - 
         <a href="https://github.com/AnastasKosstow/algorithms/blob/main/csharp/MergeSort/Program.cs">C#</a></td>
     </tr>
+    <tr>
+      <td><b>Qᴜɪᴄᴋꜱᴏʀᴛ</b></td>
+      <td>O(<i>n</i> log(<i>n</i>))</td>
+      <td>Θ(<i>n</i> log(<i>n</i>))</td>
+      <td>Ω(<i>n</i> log(<i>n</i>))</td>
+      <td>
+        <a href="">Rust</a> - 
+        <a href="https://github.com/AnastasKosstow/algorithms/blob/main/csharp/QuickSort/Program.cs">C#</a></td>
+    </tr>
   </tbody>
 </table>
 
-
+Quicksort
  
 Graphs
 ==========================
