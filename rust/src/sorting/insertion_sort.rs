@@ -67,4 +67,12 @@ mod tests {
         
         assert_eq!(arr, vec![-6, -3, 0, 1, 4, 7, 7, 10]);
     }
+
+    #[test]
+    fn sort_with_rotate_right() {
+        let mut arr: Vec<i32> = vec![4, -3, 7, 0, 10, -6, 7, 1];
+        insertion_sort_with_rotate_right(&mut arr);
+        
+        assert_eq!(arr, vec![-6, -3, 0, 1, 4, 7, 7, 10]);
+    }
 }
