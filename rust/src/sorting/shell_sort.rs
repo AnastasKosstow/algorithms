@@ -1,4 +1,3 @@
-#![allow(dead_code)]
 pub fn shell_sort<T: Ord + Copy>(arr: &mut [T]) {
     if arr.is_empty() {
         return;

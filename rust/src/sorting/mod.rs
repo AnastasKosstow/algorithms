@@ -1,3 +1,4 @@
+#![allow(dead_code)]
 mod bubble_sort;
 mod selection_sort;
 mod insertion_sort;

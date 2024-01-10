@@ -1,4 +1,3 @@
-#![allow(dead_code)]
 pub fn merge_sort<T: Ord + Clone + Copy>(arr: &mut [T]) {
     if arr.is_empty() {
         return;
