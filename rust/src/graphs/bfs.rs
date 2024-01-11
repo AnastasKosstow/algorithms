@@ -1,4 +1,3 @@
-#![allow(dead_code)]
 
 /*  
 for graph with nodes: A, B, C, D

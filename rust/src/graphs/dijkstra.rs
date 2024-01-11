@@ -1,12 +1,10 @@
-#![allow(dead_code)]
-
 use std::collections::{ BinaryHeap, HashMap };
 use std::cmp::Reverse;
 
 use crate::graphs::graph::{ Graph, Edge, Node, NodeIndex };
 
 impl<N: Ord + Eq + PartialEq + std::hash::Hash> Graph<N> {
-    pub fn shortest_path(&self, from_node: &Node<N>, to_node: &Node<N>) -> Option<usize> {
+    pub fn dijkstra_shortest_path(&self, from_node: &Node<N>, to_node: &Node<N>) -> Option<usize> {
         
         let mut distances: HashMap<&NodeIndex, usize> = self.nodes.iter()
             .map(|node| {
@@ -67,7 +65,7 @@ mod tests {
         let node1 = graph.get_node(n1).unwrap();
         let node3 = graph.get_node(n3).unwrap();
 
-        assert_eq!(graph.shortest_path(node1, node3), Some(2));
+        assert_eq!(graph.dijkstra_shortest_path(node1, node3), Some(2));
     }
 
     #[test]
@@ -79,7 +77,7 @@ mod tests {
         let node1 = graph.get_node(n1).unwrap();
         let node2 = graph.get_node(n2).unwrap();
 
-        assert_eq!(graph.shortest_path(node1, node2), None);
+        assert_eq!(graph.dijkstra_shortest_path(node1, node2), None);
     }
 
     #[test]
@@ -89,6 +87,6 @@ mod tests {
 
         let node1 = graph.get_node(n1).unwrap();
 
-        assert_eq!(graph.shortest_path(node1, node1), Some(0));
+        assert_eq!(graph.dijkstra_shortest_path(node1, node1), Some(0));
     }
 }

@@ -1,5 +1,3 @@
-#![allow(dead_code)]
-
 #[derive(Ord, PartialOrd, Eq, Hash, PartialEq, Clone, Copy)]
 pub struct NodeIndex {
     pub ix: usize
