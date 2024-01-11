@@ -18,13 +18,20 @@
 𝚃𝚑𝚒𝚜 𝚛𝚎𝚙𝚘𝚜𝚒𝚝𝚘𝚛𝚢 𝚌𝚘𝚗𝚝𝚊𝚒𝚗𝚜 𝚒𝚖𝚙𝚕𝚎𝚖𝚎𝚗𝚝𝚊𝚝𝚒𝚘𝚗𝚜 𝚘𝚏 𝚖𝚊𝚗𝚢 𝚙𝚘𝚙𝚞𝚕𝚊𝚛 𝚊𝚕𝚐𝚘𝚛𝚒𝚝𝚑𝚖𝚜 𝚊𝚗𝚍 𝚍𝚊𝚝𝚊 𝚜𝚝𝚛𝚞𝚌𝚝𝚞𝚛𝚎𝚜．
 
 * [Sorting](#sorting)
-* [Graphs](#graphs)
+  * [Bubble sort](#sorting-algorithms)
+  * [Selection sort](#sorting-algorithms)
+  * [Insertions sort](#sorting-algorithms)
+  * [Shell sort](#sorting-algorithms)
+  * [Merge sort](#sorting-algorithms)
+  * [Quicksort](#sorting-algorithms)
+* [Graph](#graph)
+* [Graph Algorithms](#graph-algorithms)
   * [Graph Implementation](#implementations)
   * [Depth-First Search](#dfs-depth-first-search)
   * [Breadth-First Search](#bfs-breadth-first-search)
   * [Dijkstra's algorithm](#dijkstras-algorithm)
+  * [Bellman-Ford algorithm](#bellman-ford-algorithm)
 * [LinkedList](#linkedlist)
-  * [LinkedList Implementation](#implementations-for-singly-linked-list)
 
 *☝ Note that this project is meant to be used for learning and researching purposes only.*
 <br />
@@ -131,13 +138,11 @@ There are three main mathematical notations used to describe the upper, tight, a
     </tr>
   </tbody>
 </table>
-
-Quicksort
  
-Graphs
+Graph
 ==========================
 
-<img src="https://github.com/AnastasKosstow/algorithms/blob/main/assets/graphs.gif" width="270" alt="graphs" />
+<img src="https://github.com/AnastasKosstow/algorithms/blob/main/assets/graphds.gif" width="270" alt="graphs" />
 
 ### Key Concepts
  - 𝙽𝚘𝚍𝚎𝚜 (𝚅𝚎𝚛𝚝𝚒𝚌𝚎𝚜): *The individual items or entities in a graph*
@@ -152,6 +157,13 @@ Graphs
 <a href="https://github.com/AnastasKosstow/algorithms/blob/main/rust/src/graphs/graph.rs">Graph Implementation in Rust</a>
 <br>
 <a href="https://github.com/AnastasKosstow/algorithms/blob/main/csharp/Graphs/Graph.cs">Graph Implementation in C#</a>
+
+
+Graph Algorithms
+==========================
+
+<img src="https://github.com/AnastasKosstow/algorithms/blob/main/assets/graphs.gif" width="270" alt="graphs" />
+
 
 ### DFS (depth-first search)
 
