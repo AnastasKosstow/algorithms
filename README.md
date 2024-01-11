@@ -33,8 +33,11 @@
   * [Bellman-Ford algorithm](#bellman-ford-algorithm)
 * [LinkedList](#linkedlist)
 
-*☝ Note that this project is meant to be used for learning and researching purposes only.*
 <br />
+
+> [!IMPORTANT]  
+> Note that this project is meant to be used for learning and researching purposes only. Most optimal implementation for each algorithm depends on the use case.
+
 
 <h4 align="left">𝙻𝚊𝚗𝚐𝚞𝚊𝚐𝚎𝚜 𝚞𝚜𝚎𝚍 𝚏𝚘𝚛 𝚒𝚖𝚙𝚕𝚎𝚖𝚎𝚗𝚝𝚊𝚝𝚒𝚘𝚗𝚜:</h4>
 <p align="left">
@@ -62,12 +65,13 @@ There are three main mathematical notations used to describe the upper, tight, a
  - Bɪɢ Oᴍᴇɢᴀ (Ω-ɴᴏᴛᴀᴛɪᴏɴ): Big Omega describes the lower bound of the time complexity of an algorithm. (best-case)
 <br>
 
+> [!NOTE]
 > <b>Fᴏʀ ᴍᴏʀᴇ ɪɴꜰᴏʀᴍᴀᴛɪᴏɴ ᴀʙᴏᴜᴛ 'Bɪɢ O ɴᴏᴛᴀᴛɪᴏɴ'</b> - <a href="https://cooervo.github.io/Algorithms-DataStructures-BigONotation/big-O-notation.html">cooervo.github.io</a>
-<a href="https://cooervo.github.io/Algorithms-DataStructures-BigONotation/index.html">
-  <div>
-    <img src="https://github.com/AnastasKosstow/algorithms/blob/main/assets/logo-algos.svg" width="270" alt="visualgo" />
-  </div>
-</a>
+> <a href="https://cooervo.github.io/Algorithms-DataStructures-BigONotation/index.html">
+>  <div>
+>    <img src="https://github.com/AnastasKosstow/algorithms/blob/main/assets/logo-algos.svg" width="270" alt="visualgo" />
+>  </div>
+> </a>
 
 #### Sorting Algorithms: 
 
@@ -147,13 +151,13 @@ Graph
 <img src="https://github.com/AnastasKosstow/algorithms/blob/main/assets/graphds.gif" width="270" alt="graphs" />
 
 ### Key Concepts
- - 𝙽𝚘𝚍𝚎𝚜 (𝚅𝚎𝚛𝚝𝚒𝚌𝚎𝚜): *The individual items or entities in a graph*
- - 𝙴𝚍𝚐𝚎𝚜 (𝙻𝚒𝚗𝚔𝚜): *The connections between nodes*
+- 𝙽𝚘𝚍𝚎𝚜 (𝚅𝚎𝚛𝚝𝚒𝚌𝚎𝚜): *The individual items or entities in a graph*
+- 𝙴𝚍𝚐𝚎𝚜 (𝙻𝚒𝚗𝚔𝚜): *The connections between nodes*
 
 ### Types of Graphs
- - 𝚄𝚗𝚍𝚒𝚛𝚎𝚌𝚝𝚎𝚍 𝙶𝚛𝚊𝚙𝚑𝚜: *Symmetric relationships*
- - 𝙳𝚒𝚛𝚎𝚌𝚝𝚎𝚍 𝙶𝚛𝚊𝚙𝚑𝚜: *Asymmetric relationships, like web links*
- - 𝚆𝚎𝚒𝚐𝚑𝚝𝚎𝚍 𝙶𝚛𝚊𝚙𝚑𝚜: *Graphs with edge weights, useful in routing problems*
+- 𝚄𝚗𝚍𝚒𝚛𝚎𝚌𝚝𝚎𝚍 𝙶𝚛𝚊𝚙𝚑𝚜: *Symmetric relationships*
+- 𝙳𝚒𝚛𝚎𝚌𝚝𝚎𝚍 𝙶𝚛𝚊𝚙𝚑𝚜: *Asymmetric relationships, like web links*
+- 𝚆𝚎𝚒𝚐𝚑𝚝𝚎𝚍 𝙶𝚛𝚊𝚙𝚑𝚜: *Graphs with edge weights, useful in routing problems*
 
 ### Implementations:
 <a href="https://github.com/AnastasKosstow/algorithms/blob/main/rust/src/graphs/graph.rs">Graph Implementation in Rust</a>
