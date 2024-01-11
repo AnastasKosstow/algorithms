@@ -138,6 +138,8 @@ There are three main mathematical notations used to describe the upper, tight, a
     </tr>
   </tbody>
 </table>
+
+<br>
  
 Graph
 ==========================
@@ -158,12 +160,12 @@ Graph
 <br>
 <a href="https://github.com/AnastasKosstow/algorithms/blob/main/csharp/Graphs/Graph.cs">Graph Implementation in C#</a>
 
+<br>
 
 Graph Algorithms
 ==========================
 
 <img src="https://github.com/AnastasKosstow/algorithms/blob/main/assets/graphs.gif" width="270" alt="graphs" />
-
 
 ### DFS (depth-first search)
 
@@ -193,6 +195,7 @@ Finds shortest path between all node pairs.
 - 𝙲𝚘𝚗𝚌𝚎𝚙𝚝: Understand the <a href="https://en.wikipedia.org/wiki/Floyd%E2%80%93Warshall_algorithm">Floyd Warshall Algorithm</a>
 - 𝙸𝚖𝚙𝚕𝚎𝚖𝚎𝚗𝚝𝚊𝚝𝚒𝚘𝚗𝚜: <a href="">Rust</a> - <a href="">C#</a>
 
+<br>
 
 LinkedList
 ==========================
