@@ -19,10 +19,12 @@
 
 * [Sorting](#sorting)
 * [Graphs](#graphs)
+  * [Graph Implementation](#implementations)
   * [Depth-First Search](#dfs-depth-first-search)
   * [Breadth-First Search](#bfs-breadth-first-search)
   * [Dijkstra's algorithm](#dijkstras-algorithm)
 * [LinkedList](#linkedlist)
+  * [LinkedList Implementation](#implementations-for-singly-linked-list)
 
 *☝ Note that this project is meant to be used for learning and researching purposes only.*
 <br />
@@ -147,7 +149,6 @@ Graphs
  - 𝚆𝚎𝚒𝚐𝚑𝚝𝚎𝚍 𝙶𝚛𝚊𝚙𝚑𝚜: *Graphs with edge weights, useful in routing problems*
 
 ### Implementations:
-<br>
 <a href="https://github.com/AnastasKosstow/algorithms/blob/main/rust/src/graphs/graph.rs">Graph Implementation in Rust</a>
 <br>
 <a href="https://github.com/AnastasKosstow/algorithms/blob/main/csharp/Graphs/Graph.cs">Graph Implementation in C#</a>
@@ -195,7 +196,6 @@ LinkedList
  - 𝙲𝚒𝚛𝚌𝚞𝚕𝚊𝚛 𝙻𝚒𝚗𝚔𝚎𝚍 𝙻𝚒𝚜𝚝: *The last node points back to the first node, forming a circle (it can be singly or doubly)*
 
 ### Implementations (for singly linked list):
-<br>
 <a href="https://github.com/AnastasKosstow/algorithms/blob/main/rust/src/collections/linked_list.rs">LinkedList Implementation in Rust</a>
 <br>
 <a href="">LinkedList Implementation in C#</a>
