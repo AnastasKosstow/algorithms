@@ -19,7 +19,9 @@
 
 * [Sorting](#sorting)
 * [Graphs](#graphs)
-  * [DFS](#DFS (depth-first search))
+  * [Depth-First Search](#dfs-depth-first-search)
+  * [Breadth-First Search](#bfs-breadth-first-search)
+  * [Dijkstra's algorithm](#dijkstras-algorithm)
 * [LinkedList](#linkedlist)
 
 *☝ Note that this project is meant to be used for learning and researching purposes only.*
