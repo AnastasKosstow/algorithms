@@ -121,7 +121,7 @@ There are three main mathematical notations used to describe the upper, tight, a
       <td>Θ(<i>n</i> log(<i>n</i>))</td>
       <td>Ω(<i>n</i> log(<i>n</i>))</td>
       <td>
-        <a href="">Rust</a> - 
+        <a href="https://github.com/AnastasKosstow/algorithms/blob/main/rust/src/sorting/quicksort.rs">Rust</a> - 
         <a href="https://github.com/AnastasKosstow/algorithms/blob/main/csharp/QuickSort/Program.cs">C#</a></td>
     </tr>
   </tbody>
