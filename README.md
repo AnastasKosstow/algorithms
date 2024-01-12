@@ -36,7 +36,7 @@
 <br />
 
 > [!IMPORTANT]  
-> Note that this project is meant to be used for learning and researching purposes only. Most optimal implementation for each algorithm depends on the use case.
+> Note that this project is meant to be used for learning and researching purposes only. Most optimal implementation for each algorithm or data structure depends on the use case.
 
 
 <h4 align="left">𝙻𝚊𝚗𝚐𝚞𝚊𝚐𝚎𝚜 𝚞𝚜𝚎𝚍 𝚏𝚘𝚛 𝚒𝚖𝚙𝚕𝚎𝚖𝚎𝚗𝚝𝚊𝚝𝚒𝚘𝚗𝚜:</h4>
