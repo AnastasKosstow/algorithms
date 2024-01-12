@@ -161,7 +161,7 @@ Graph
  - 𝙴𝚍𝚐𝚎𝚜 (𝙻𝚒𝚗𝚔𝚜): *The connections between nodes*
  - Loop: *Loops connect a vertex to itself. This means that edge from vertex Ａ points to the same vertex Ａ*
 
-<br>
+---
 
 ### Representing graphs:
 
@@ -213,7 +213,7 @@ Graph
   </tbody>
 </table>
 
-<br>
+---
 
 ### Algorithm runtime
 Graph algorithm runtime depents on <b>|V|</b> and <b>|E|</b>
@@ -222,16 +222,17 @@ Graph algorithm runtime depents on <b>|V|</b> and <b>|E|</b>
 
 Graph performance depends on the *density*.
 Graph density is a measure of how many edges are in the graph compared to the maximum possible number of edges between vertices.
-<br>
-In a dense graph - <b>|E| &asymp; |V|<sup>2</sup></b>
-Sparse graph - <b>|E| &asymp; |V|</b>
+ - Dense graph - <b>|E| &asymp; |V|<sup>2</sup></b>
+ - Sparse graph - <b>|E| &asymp; |V|</b>
 
 ### Types of Graphs
 - 𝚄𝚗𝚍𝚒𝚛𝚎𝚌𝚝𝚎𝚍 𝙶𝚛𝚊𝚙𝚑𝚜: *Symmetric relationships*
 - 𝙳𝚒𝚛𝚎𝚌𝚝𝚎𝚍 𝙶𝚛𝚊𝚙𝚑𝚜: *Asymmetric relationships, like web links*
 - 𝚆𝚎𝚒𝚐𝚑𝚝𝚎𝚍 𝙶𝚛𝚊𝚙𝚑𝚜: *Graphs with edge weights, useful in routing problems*
 
-### Implementations:
+---
+
+### Graph Implementations:
 <a href="https://github.com/AnastasKosstow/algorithms/blob/main/rust/src/graphs/graph.rs">Graph Implementation in Rust</a>
 <br>
 <a href="https://github.com/AnastasKosstow/algorithms/blob/main/csharp/Graphs/Graph.cs">Graph Implementation in C#</a>
