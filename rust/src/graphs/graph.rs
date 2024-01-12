@@ -17,7 +17,7 @@ pub enum GraphType {
 
 #[derive(PartialEq)]
 pub struct Edge {
-    pub cost: usize,
+    pub cost: isize,
     pub node_index: NodeIndex
 }
 
@@ -51,7 +51,7 @@ impl<N: Eq + std::hash::Hash + PartialEq> Graph<N> {
         index
     }
 
-    pub fn add_edge(&mut self, from: NodeIndex, to: NodeIndex, cost: usize) {
+    pub fn add_edge(&mut self, from: NodeIndex, to: NodeIndex, cost: isize) {
         if from.ix >= self.nodes.len() || to.ix >= self.nodes.len() {
             return; // Invalid node index
         }

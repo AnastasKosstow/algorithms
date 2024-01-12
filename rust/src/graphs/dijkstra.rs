@@ -4,20 +4,20 @@ use std::cmp::Reverse;
 use crate::graphs::graph::{ Graph, Edge, Node, NodeIndex };
 
 impl<N: Ord + Eq + PartialEq + std::hash::Hash> Graph<N> {
-    pub fn dijkstra_shortest_path(&self, from_node: &Node<N>, to_node: &Node<N>) -> Option<usize> {
+    pub fn dijkstra_shortest_path(&self, from_node: &Node<N>, to_node: &Node<N>) -> Option<isize> {
         
-        let mut distances: HashMap<&NodeIndex, usize> = self.nodes.iter()
+        let mut distances: HashMap<&NodeIndex, isize> = self.nodes.iter()
             .map(|node| {
-                return if node == from_node { (&node.index, 0) } else { (&node.index, usize::MAX) };
+                return if node == from_node { (&node.index, 0) } else { (&node.index, isize::MAX) };
             })
             .collect();
 
         let mut visited: Vec<&NodeIndex> = vec![];
-        let mut heap: BinaryHeap<Reverse<(usize, &NodeIndex)>> = BinaryHeap::new();
+        let mut heap: BinaryHeap<Reverse<(isize, &NodeIndex)>> = BinaryHeap::new();
         heap.push(Reverse((0, &from_node.index)));
 
         while let Some(Reverse((cost, node_ix))) = heap.pop() {
-            if &cost > distances.get(&node_ix).unwrap_or(&usize::MAX) {
+            if &cost > distances.get(&node_ix).unwrap_or(&isize::MAX) {
                 continue;
             }
 
@@ -27,7 +27,7 @@ impl<N: Ord + Eq + PartialEq + std::hash::Hash> Graph<N> {
             };
 
             for edge in edges {
-                if cost + edge.cost < *distances.get(&edge.node_index).unwrap_or(&usize::MAX) {
+                if cost + edge.cost < *distances.get(&edge.node_index).unwrap_or(&isize::MAX) {
 
                     distances.insert(&edge.node_index, cost + edge.cost);
                     if !visited.contains(&&edge.node_index) {
@@ -40,7 +40,7 @@ impl<N: Ord + Eq + PartialEq + std::hash::Hash> Graph<N> {
 
         distances.get(&to_node.index)
             .copied()
-            .filter(|&distance| distance != usize::MAX)
+            .filter(|&distance| distance != isize::MAX)
         
     }
 }

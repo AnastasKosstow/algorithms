@@ -4,7 +4,7 @@ namespace Dijkstra;
 
 public static class GraphExtensions
 {
-    public static int ShortestPath<T>(this Graph<T> graph, Node<T> from, Node<T> to)
+    public static int DijkstraShortestPath<T>(this Graph<T> graph, Node<T> from, Node<T> to)
     {
         // Initialize a dictionary to store the shortest distance from the 'from' node to every other node.
         // Initially, the distance to the 'from' node is 0 and infinity (int.MaxValue) to all other nodes.
