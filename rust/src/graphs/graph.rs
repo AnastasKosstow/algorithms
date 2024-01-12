@@ -123,7 +123,7 @@ mod tests {
     }
 
     #[test]
-    fn test_add_node() {
+    fn add_node() {
         let mut graph: Graph<i32> = Graph::new(GraphType::Undirected);
         assert_eq!(graph.lenght, 0);
 
@@ -133,7 +133,7 @@ mod tests {
     }
 
     #[test]
-    fn test_add_edge() {
+    fn add_edge() {
         let mut graph: Graph<i32> = Graph::new(GraphType::Undirected);
         let node1 = graph.add_node(1);
         let node2 = graph.add_node(2);
@@ -146,7 +146,7 @@ mod tests {
     }
 
     #[test]
-    fn test_directed_edges() {
+    fn directed_edges() {
         let mut graph: Graph<i32> = Graph::new(GraphType::Directed);
         let node1 = graph.add_node(1);
         let node2 = graph.add_node(2);
@@ -160,7 +160,7 @@ mod tests {
     }
 
     #[test]
-    fn test_delete_node() {
+    fn delete_node() {
         let mut graph: Graph<i32> = Graph::new(GraphType::Undirected);
         let node1 = graph.add_node(1);
         let node2 = graph.add_node(2);
@@ -175,7 +175,7 @@ mod tests {
     }
 
     #[test]
-    fn test_delete_edge() {
+    fn delete_edge() {
         let mut graph: Graph<i32> = Graph::new(GraphType::Undirected);
         let node1 = graph.add_node(1);
         let node2 = graph.add_node(2);
@@ -188,7 +188,7 @@ mod tests {
     }
 
     #[test]
-    fn test_get_node() {
+    fn get_node() {
         let mut graph: Graph<i32> = Graph::new(GraphType::Undirected);
         let node1 = graph.add_node(1);
 
@@ -197,13 +197,13 @@ mod tests {
     }
 
     #[test]
-    fn test_invalid_node_index() {
+    fn invalid_node_index() {
         let graph: Graph<i32> = Graph::new(GraphType::Undirected);
         assert!(graph.get_node(NodeIndex { ix: 999 }).is_none());
     }
 
     #[test]
-    fn test_graph_length() {
+    fn graph_length() {
         let mut graph: Graph<i32> = Graph::new(GraphType::Undirected);
         graph.add_node(1);
         graph.add_node(2);

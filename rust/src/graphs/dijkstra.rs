@@ -53,7 +53,7 @@ mod tests {
     use super::*;
 
     #[test]
-    fn test_shortest_path_simple() {
+    fn find_path() {
         let mut graph = Graph::new(GraphType::Directed);
         let n1 = graph.add_node(1);
         let n2 = graph.add_node(2);
@@ -69,7 +69,7 @@ mod tests {
     }
 
     #[test]
-    fn test_no_path_exists() {
+    fn no_path_exists() {
         let mut graph = Graph::new(GraphType::Directed);
         let n1 = graph.add_node(1);
         let n2 = graph.add_node(2);
@@ -81,7 +81,7 @@ mod tests {
     }
 
     #[test]
-    fn test_path_to_self() {
+    fn path_to_self() {
         let mut graph = Graph::new(GraphType::Directed);
         let n1 = graph.add_node(1);
 

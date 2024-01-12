@@ -69,7 +69,7 @@ mod tests {
     }
 
     #[test]
-    fn test_dfs_simple_graph() {
+    fn dfs_simple_graph() {
         let graph = create_test_graph();
         let root = graph.get_node(NodeIndex { ix: 0 }).unwrap();
 
@@ -78,7 +78,7 @@ mod tests {
     }
 
     #[test]
-    fn test_dfs_empty_graph() {
+    fn dfs_empty_graph() {
         let graph: Graph<char> = Graph::new(GraphType::Directed);
 
         if let Some(root) = graph.nodes.get(0) {
