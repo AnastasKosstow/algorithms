@@ -24,7 +24,7 @@
   * [Shell sort](#sorting-algorithms)
   * [Merge sort](#sorting-algorithms)
   * [Quicksort](#sorting-algorithms)
-* [Graph](#graph)
+* [Graph Theory](#graph-theory)
 * [Graph Algorithms](#graph-algorithms)
   * [Graph Implementation](#implementations)
   * [Depth-First Search](#dfs-depth-first-search)
@@ -145,7 +145,7 @@ There are three main mathematical notations used to describe the upper, tight, a
 
 <br>
  
-Graph
+Graph Theory
 ==========================
 
 <img src="https://github.com/AnastasKosstow/algorithms/blob/main/assets/graphds.gif" width="270" alt="graphs" />
@@ -230,19 +230,17 @@ Graph density is a measure of how many edges are in the graph compared to the ma
 - 𝙳𝚒𝚛𝚎𝚌𝚝𝚎𝚍 𝙶𝚛𝚊𝚙𝚑𝚜: *Asymmetric relationships, like web links*
 - 𝚆𝚎𝚒𝚐𝚑𝚝𝚎𝚍 𝙶𝚛𝚊𝚙𝚑𝚜: *Graphs with edge weights, useful in routing problems*
 
----
-
-### Graph Implementations:
-<a href="https://github.com/AnastasKosstow/algorithms/blob/main/rust/src/graphs/graph.rs">Graph Implementation in Rust</a>
-<br>
-<a href="https://github.com/AnastasKosstow/algorithms/blob/main/csharp/Graphs/Graph.cs">Graph Implementation in C#</a>
-
 <br>
 
 Graph Algorithms
 ==========================
 
 <img src="https://github.com/AnastasKosstow/algorithms/blob/main/assets/graphs.gif" width="270" alt="graphs" />
+
+### Graph Implementations:
+<a href="https://github.com/AnastasKosstow/algorithms/blob/main/rust/src/graphs/graph.rs">Graph Implementation in Rust</a>
+<br>
+<a href="https://github.com/AnastasKosstow/algorithms/blob/main/csharp/Graphs/Graph.cs">Graph Implementation in C#</a>
 
 ### DFS (depth-first search)
 
