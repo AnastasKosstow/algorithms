@@ -26,7 +26,7 @@
   * [Quicksort](#sorting-algorithms)
 * [Graph Theory](#graph-theory)
 * [Graph Algorithms](#graph-algorithms)
-  * [Graph Implementation](#implementations)
+  * [Graph Implementation](#graph-implementations)
   * [Depth-First Search](#dfs-depth-first-search)
   * [Breadth-First Search](#bfs-breadth-first-search)
   * [Dijkstra's algorithm](#dijkstras-algorithm)
