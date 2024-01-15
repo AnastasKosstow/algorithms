@@ -3,6 +3,7 @@ mod bfs;
 mod dfs;
 mod dijkstra;
 mod bellman_ford;
+mod kruskal;
 mod graph;
 
-pub use graph::{Graph, GraphType, Node, NodeIndex};
+pub use graph::{Graph, GraphType, Node, NodeIndex, Edge};
