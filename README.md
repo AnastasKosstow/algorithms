@@ -48,7 +48,7 @@
   <img src="https://github.com/AnastasKosstow/algorithms/blob/main/assets/logo/csharp-logo.png" alt="csharp" width="55" height="55"/>
 </p>
 
-<h4 align="left">For visual representation of the flow of each algorithm use  <a href="https://visualgo.net/en">𝚅𝚒𝚜𝚞𝙰𝚕𝚐𝚘.𝚗𝚎𝚝</a></h4>
+<h4 align="left">For visual representation of the flow of each algorithm or data structure use  <a href="https://visualgo.net/en">𝚅𝚒𝚜𝚞𝙰𝚕𝚐𝚘.𝚗𝚎𝚝</a></h4>
 
 
 # Sorting
