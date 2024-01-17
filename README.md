@@ -31,7 +31,10 @@
   * [Breadth-First Search](#bfs-breadth-first-search)
   * [Dijkstra's algorithm](#dijkstras-algorithm)
   * [Bellman-Ford algorithm](#bellman-ford-algorithm)
-* [LinkedList](#linkedlist)
+  * [Kruskal algorithm](#kruskal-algorithm)
+* [Data Structures](#data-structures)
+  * [LinkedList](#linkedlist)
+  * [Disjoint-set](#disjointset)
 
 <br />
 
@@ -270,10 +273,18 @@ Finds shortest path between all node pairs.
 - 𝙲𝚘𝚗𝚌𝚎𝚙𝚝: Understand the <a href="https://en.wikipedia.org/wiki/Floyd%E2%80%93Warshall_algorithm">Floyd Warshall Algorithm</a>
 - 𝙸𝚖𝚙𝚕𝚎𝚖𝚎𝚗𝚝𝚊𝚝𝚒𝚘𝚗𝚜: <a href="">Rust</a> - <a href="">C#</a>
 
+### Kruskal algorithm
+Find the minimum spanning tree of a connected, undirected graph.
+
+- 𝙲𝚘𝚗𝚌𝚎𝚙𝚝: Understand the <a href="https://en.wikipedia.org/wiki/Kruskal%27s_algorithm">Kruskal Algorithm</a>
+- 𝙸𝚖𝚙𝚕𝚎𝚖𝚎𝚗𝚝𝚊𝚝𝚒𝚘𝚗𝚜: <a href="https://github.com/AnastasKosstow/algorithms/blob/main/rust/src/graphs/kruskal.rs">Rust</a> - <a href="https://github.com/AnastasKosstow/algorithms/blob/main/csharp/Kruskal/GraphExtensions.cs">C#</a>
+
 <br>
 
-LinkedList
+Data Structures
 ==========================
+
+### LinkedList
 
 <img src="https://github.com/AnastasKosstow/algorithms/blob/main/assets/list.gif" width="270" alt="list" />
 
@@ -289,3 +300,15 @@ LinkedList
 <a href="https://github.com/AnastasKosstow/algorithms/blob/main/rust/src/data_structures/linked_list.rs">LinkedList Implementation in Rust</a>
 <br>
 <a href="">LinkedList Implementation in C#</a>
+
+<br>
+
+### Disjoint-set
+
+### Key Concepts
+
+### Implementations
+<a href="https://github.com/AnastasKosstow/algorithms/blob/main/rust/src/data_structures/disjoint_set.rs">Disjoint-set(Union-Find) Implementation in Rust</a>
+<br>
+<a href="https://github.com/AnastasKosstow/algorithms/blob/main/csharp/UnionFind/UnionFindSet.cs">Disjoint-set(Union-Find) Implementation in C#</a>
+
