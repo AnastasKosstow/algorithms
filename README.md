@@ -301,8 +301,9 @@ Data Structures
 <br>
 <a href="">LinkedList Implementation in C#</a>
 
+<br>
 
-### Disjoint-set
+## Disjoint-set
 Disjoint-set Data Structure also known as a union-find, keeps track of a set of elements partitioned into several non-overlapping subsets. 
 
 ### Key Concepts
