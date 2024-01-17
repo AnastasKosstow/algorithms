@@ -286,6 +286,6 @@ LinkedList
  - 𝙲𝚒𝚛𝚌𝚞𝚕𝚊𝚛 𝙻𝚒𝚗𝚔𝚎𝚍 𝙻𝚒𝚜𝚝: *The last node points back to the first node, forming a circle (it can be singly or doubly)*
 
 ### Implementations (for singly linked list):
-<a href="https://github.com/AnastasKosstow/algorithms/blob/main/rust/src/collections/linked_list.rs">LinkedList Implementation in Rust</a>
+<a href="https://github.com/AnastasKosstow/algorithms/blob/main/rust/src/data_structures/linked_list.rs">LinkedList Implementation in Rust</a>
 <br>
 <a href="">LinkedList Implementation in C#</a>
