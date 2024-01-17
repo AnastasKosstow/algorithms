@@ -301,11 +301,14 @@ Data Structures
 <br>
 <a href="">LinkedList Implementation in C#</a>
 
-<br>
 
 ### Disjoint-set
+Disjoint-set Data Structure also known as a union-find, keeps track of a set of elements partitioned into several non-overlapping subsets. 
 
 ### Key Concepts
+It provides two primary operations:
+ - Fɪɴᴅ: *Determines which subset a particular element is in. This can be used for determining if two elements are in the same subset*
+ - Uɴɪᴏɴ: *Joins two subsets into a single subset*
 
 ### Implementations
 <a href="https://github.com/AnastasKosstow/algorithms/blob/main/rust/src/data_structures/disjoint_set.rs">Disjoint-set(Union-Find) Implementation in Rust</a>
