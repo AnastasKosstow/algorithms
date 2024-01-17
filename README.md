@@ -34,7 +34,7 @@
   * [Kruskal algorithm](#kruskal-algorithm)
 * [Data Structures](#data-structures)
   * [LinkedList](#linkedlist)
-  * [Disjoint-set](#disjointset)
+  * [Disjoint-set](#disjoint-set)
 
 <br />
 
