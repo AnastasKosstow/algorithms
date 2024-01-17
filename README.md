@@ -303,7 +303,10 @@ Data Structures
 
 <br>
 
-## Disjoint-set
+### Disjoint-set
+
+<img src="https://github.com/AnastasKosstow/algorithms/blob/main/assets/list.gif" width="270" alt="list" />
+
 Disjoint-set Data Structure also known as a union-find, keeps track of a set of elements partitioned into several non-overlapping subsets. 
 
 ### Key Concepts
