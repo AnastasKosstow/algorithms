@@ -353,7 +353,6 @@ Graph Algorithms
 - 𝙲𝚘𝚗𝚌𝚎𝚙𝚝: Understand the <a href="https://en.wikipedia.org/wiki/Kruskal%27s_algorithm">Kruskal Algorithm</a>
 - 𝙸𝚖𝚙𝚕𝚎𝚖𝚎𝚗𝚝𝚊𝚝𝚒𝚘𝚗𝚜: <a href="https://github.com/AnastasKosstow/algorithms/blob/main/rust/src/graphs/kruskal.rs">Rust</a> - <a href="https://github.com/AnastasKosstow/algorithms/blob/main/csharp/Kruskal/GraphExtensions.cs">C#</a>
 
-
 1. **Sort Edges:**
    - Sort all edges of the graph in non-decreasing order of their weight.
 2. **Initialize Forest:**
@@ -363,6 +362,27 @@ Graph Algorithms
      - If not, add it to the forest.
 4. **Complete:**
    - Continue until the forest has (V-1) edges (V is the number of vertices).
+
+---
+
+### Prim's algorithm
+> [!NOTE]
+> Prim's Algorithm is a minimum spanning tree algorithm used in a connected, weighted graph.
+> It builds the spanning tree by adding the next cheapest vertex to the existing tree until all vertices are included.
+
+- 𝙲𝚘𝚗𝚌𝚎𝚙𝚝: Understand the <a href="https://en.wikipedia.org/wiki/Prim%27s_algorithm">Prim's Algorithm</a>
+- 𝙸𝚖𝚙𝚕𝚎𝚖𝚎𝚗𝚝𝚊𝚝𝚒𝚘𝚗𝚜: <a href="">Rust</a> - <a href="">C#</a>
+
+1. **Initialize Priority Queue:**
+   - Start from a root vertex and add all its edges to a `priority queue`.
+2. **Select Cheapest Edge:**
+   - Repeatedly choose the edge with the smallest weight that connects a vertex in the tree to a vertex outside.
+3. **Check for Cycles:**
+   - Ensure that adding the chosen edge doesn’t create a cycle. (use Disjoint-set/Union-Find)
+4. **Expand the Tree:**
+   - Add the selected edge and vertex to the `spanning tree`.
+5. **Repeat:**
+   - Continue the process until all vertices are included in the `spanning tree`.
 
 <br>
 
