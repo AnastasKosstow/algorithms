@@ -32,6 +32,7 @@
   * [Dijkstra's algorithm](#dijkstras-algorithm)
   * [Bellman-Ford algorithm](#bellman-ford-algorithm)
   * [Kruskal algorithm](#kruskal-algorithm)
+  * [Prim's algorithm](#prims-algorithm)
 * [Data Structures](#data-structures)
   * [LinkedList](#linkedlist)
   * [Disjoint-set](#disjoint-set)
