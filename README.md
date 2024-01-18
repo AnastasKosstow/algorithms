@@ -14,7 +14,7 @@
 <hr />
 </div>
 
-# 𝙰𝚕𝚐𝚘𝚛𝚒𝚝𝚑𝚖𝚜
+# 𝙰𝚕𝚐𝚘𝚛𝚒𝚝𝚑𝚖𝚜 & 𝙳𝚊𝚝𝚊 𝚂𝚝𝚛𝚞𝚌𝚝𝚞𝚛𝚎𝚜
 𝚃𝚑𝚒𝚜 𝚛𝚎𝚙𝚘𝚜𝚒𝚝𝚘𝚛𝚢 𝚌𝚘𝚗𝚝𝚊𝚒𝚗𝚜 𝚒𝚖𝚙𝚕𝚎𝚖𝚎𝚗𝚝𝚊𝚝𝚒𝚘𝚗𝚜 𝚘𝚏 𝚖𝚊𝚗𝚢 𝚙𝚘𝚙𝚞𝚕𝚊𝚛 𝚊𝚕𝚐𝚘𝚛𝚒𝚝𝚑𝚖𝚜 𝚊𝚗𝚍 𝚍𝚊𝚝𝚊 𝚜𝚝𝚛𝚞𝚌𝚝𝚞𝚛𝚎𝚜．
 
 * [Sorting](#sorting)
@@ -32,6 +32,7 @@
   * [Dijkstra's algorithm](#dijkstras-algorithm)
   * [Bellman-Ford algorithm](#bellman-ford-algorithm)
   * [Kruskal algorithm](#kruskal-algorithm)
+  * [Prim's algorithm](#prims-algorithm)
 * [Data Structures](#data-structures)
   * [LinkedList](#linkedlist)
   * [Disjoint-set](#disjoint-set)
@@ -48,7 +49,7 @@
   <img src="https://github.com/AnastasKosstow/algorithms/blob/main/assets/logo/csharp-logo.png" alt="csharp" width="55" height="55"/>
 </p>
 
-<h4 align="left">For visual representation of the flow of each algorithm use  <a href="https://visualgo.net/en">𝚅𝚒𝚜𝚞𝙰𝚕𝚐𝚘.𝚗𝚎𝚝</a></h4>
+<h4 align="left">For visual representation of the flow of each algorithm or data structure use  <a href="https://visualgo.net/en">𝚅𝚒𝚜𝚞𝙰𝚕𝚐𝚘.𝚗𝚎𝚝</a></h4>
 
 
 # Sorting
@@ -245,39 +246,144 @@ Graph Algorithms
 <br>
 <a href="https://github.com/AnastasKosstow/algorithms/blob/main/csharp/Graphs/Graph.cs">Graph Implementation in C#</a>
 
+---
+
 ### DFS (depth-first search)
+> [!NOTE]
+> Depth-First Search (DFS) is an algorithm used for traversing or searching tree or graph data structures. 
+> It starts at a selected node (root) and explores as far as possible along each branch before backtracking.
 
 - 𝙲𝚘𝚗𝚌𝚎𝚙𝚝: Understand the <a href="https://en.wikipedia.org/wiki/Depth-first_search">Depth-first search</a>
 - 𝙸𝚖𝚙𝚕𝚎𝚖𝚎𝚗𝚝𝚊𝚝𝚒𝚘𝚗𝚜: <a href="https://github.com/AnastasKosstow/algorithms/blob/main/rust/src/graphs/dfs.rs">Rust</a> - <a href="https://github.com/AnastasKosstow/algorithms/blob/main/csharp/DepthFirstSearch/GraphExtensions.cs">C#</a>
 
+1. **Initialize:**
+   - Start at the root node (or any node in a graph).
+   - Create a `Stack` to keep track of the path.
+   - Add the starting node to the `Stack` and mark it as visited.
+2. **DFS Loop:**
+   - While the `Stack` is not empty:
+     - Pop a node from the `Stack`.
+     - For each unvisited neighbor of this node:
+       - Mark the neighbor as visited.
+       - Add the neighbor to the `Stack`.
+3. **Complete:**
+   - Repeat until all reachable nodes are visited.
+  
+---
+
 ### BFS (breadth-first search)
+> [!NOTE]
+> Breadth-First Search (BFS) is an algorithm used for traversing or searching tree or graph data structures. 
+> It starts at a selected node and explores all neighbor nodes at the present depth before moving on to nodes at the next depth level.
 
 - 𝙲𝚘𝚗𝚌𝚎𝚙𝚝: Understand the <a href="https://en.wikipedia.org/wiki/Breadth-first_search">Breadth-first search</a>
 - 𝙸𝚖𝚙𝚕𝚎𝚖𝚎𝚗𝚝𝚊𝚝𝚒𝚘𝚗𝚜: <a href="https://github.com/AnastasKosstow/algorithms/blob/main/rust/src/graphs/bfs.rs">Rust</a> - <a href="https://github.com/AnastasKosstow/algorithms/blob/main/csharp/BreadthFirstSearch/GraphExtensions.cs">C#</a>
 
+1. **Initialize:**
+   - Start at the root node (or any node in a graph).
+   - Create a `Queue` to keep track of the nodes to visit.
+   - Add the starting node to the `Queue` and mark it as visited.
+2. **BFS Loop:**
+   - While the `Queue` is not empty:
+     - Dequeue a node from the `Queue`.
+     - For each unvisited neighbor of this node:
+       - Mark the neighbor as visited.
+       - Add the neighbor to the `Queue`.
+3. **Complete:**
+   - Repeat until all reachable nodes are visited.
+
+---
+
 ### Dijkstra's algorithm
-Finds shortest path froma single source. Does not work with negative weight edges.
+> [!NOTE]
+> Dijkstra's Algorithm is a pathfinding algorithm that finds the shortest path from a starting node to all other nodes in a weighted graph.
 
 - 𝙲𝚘𝚗𝚌𝚎𝚙𝚝: Understand the <a href="https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm">Dijkstra's Algorithm</a>
 - 𝙸𝚖𝚙𝚕𝚎𝚖𝚎𝚗𝚝𝚊𝚝𝚒𝚘𝚗𝚜: <a href="https://github.com/AnastasKosstow/algorithms/blob/main/rust/src/graphs/dijkstra.rs">Rust</a> - <a href="https://github.com/AnastasKosstow/algorithms/blob/main/csharp/Dijkstra/GraphExtensions.cs">C#</a>
 
+1. **Initialize:**
+   - Set initial distances to all nodes as infinity, except the start node which should be zero.
+   - Create a `priority queue` and add the start node with distance 0.
+2. **Algorithm Loop:**
+   - While the `priority queue` is not empty:
+     - Remove the node with the smallest distance.
+     - For each neighbor, calculate the new distance and update if it's smaller.
+3. **Complete:**
+   - All shortest paths from the start node are determined.
+
+---
+
 ### Bellman-Ford algorithm
-Finds shortest path from a single source. Works with negative weight edges and reports negative-weight cycles.
+> [!NOTE]
+> The Bellman-Ford algorithm is used for computing shortest paths in a weighted graph. Unlike Dijkstra's, it can handle graphs with negative weight edges.
 
 - 𝙲𝚘𝚗𝚌𝚎𝚙𝚝: Understand the <a href="https://en.wikipedia.org/wiki/Bellman%E2%80%93Ford_algorithm">Bellman-Ford Algorithm</a>
 - 𝙸𝚖𝚙𝚕𝚎𝚖𝚎𝚗𝚝𝚊𝚝𝚒𝚘𝚗𝚜: <a href="https://github.com/AnastasKosstow/algorithms/blob/main/rust/src/graphs/bellman_ford.rs">Rust</a> - <a href="https://github.com/AnastasKosstow/algorithms/blob/main/csharp/BellmanFord/GraphExtensions.cs">C#</a>
 
+1. **Initialize:**
+   - Set the distance to the source as 0 and all other distances as infinite.
+2. **Relaxation Loop:**
+   - For each edge `(u, v)`, update the distance to v if a shorter path is found via u.
+   - Repeat this for all edges `|V|-1` times (`|V|` is the number of vertices).
+3. **Negative Cycle Check:**
+   - Check for further distance improvements; if found, a negative cycle exists.
+
+---
+
 ### Floyd Warshall algorithm
-Finds shortest path between all node pairs.
+> [!NOTE]
+> The Floyd-Warshall algorithm is used for finding shortest paths in a weighted graph with positive or negative edge weights (but with no negative cycles).
 
 - 𝙲𝚘𝚗𝚌𝚎𝚙𝚝: Understand the <a href="https://en.wikipedia.org/wiki/Floyd%E2%80%93Warshall_algorithm">Floyd Warshall Algorithm</a>
 - 𝙸𝚖𝚙𝚕𝚎𝚖𝚎𝚗𝚝𝚊𝚝𝚒𝚘𝚗𝚜: <a href="">Rust</a> - <a href="">C#</a>
 
+1. **Matrix Setup:**
+   - Initialize a matrix with distances between all pairs of vertices. Set 0 for self-loops and infinity for no direct path.
+2. **Dynamic Programming:**
+   - Update the matrix to find the shortest distance between each pair using an intermediate vertex.
+3. **Complete:**
+   - The matrix now contains the shortest distances between all pairs of nodes.
+
+---
+
 ### Kruskal algorithm
-Find the minimum spanning tree of a connected, undirected graph.
+> [!NOTE]
+> Kruskal's Algorithm is a minimum spanning tree algorithm that finds an edge subset of a connected, weighted graph
+> that connects all the vertices together, without any cycles and with the minimum possible total edge weight.
 
 - 𝙲𝚘𝚗𝚌𝚎𝚙𝚝: Understand the <a href="https://en.wikipedia.org/wiki/Kruskal%27s_algorithm">Kruskal Algorithm</a>
 - 𝙸𝚖𝚙𝚕𝚎𝚖𝚎𝚗𝚝𝚊𝚝𝚒𝚘𝚗𝚜: <a href="https://github.com/AnastasKosstow/algorithms/blob/main/rust/src/graphs/kruskal.rs">Rust</a> - <a href="https://github.com/AnastasKosstow/algorithms/blob/main/csharp/Kruskal/GraphExtensions.cs">C#</a>
+
+1. **Sort Edges:**
+   - Sort all edges of the graph in non-decreasing order of their weight.
+2. **Initialize Forest:**
+   - Create a forest, initially with each vertex as an individual tree. (use Disjoint-set/Union-Find)
+3. **Edge Selection:**
+   - For each edge, check if it forms a cycle in the forest.
+     - If not, add it to the forest.
+4. **Complete:**
+   - Continue until the forest has (V-1) edges (V is the number of vertices).
+
+---
+
+### Prim's algorithm
+> [!NOTE]
+> Prim's Algorithm is a minimum spanning tree algorithm used in a connected, weighted graph.
+> It builds the spanning tree by adding the next cheapest vertex to the existing tree until all vertices are included.
+
+- 𝙲𝚘𝚗𝚌𝚎𝚙𝚝: Understand the <a href="https://en.wikipedia.org/wiki/Prim%27s_algorithm">Prim's Algorithm</a>
+- 𝙸𝚖𝚙𝚕𝚎𝚖𝚎𝚗𝚝𝚊𝚝𝚒𝚘𝚗𝚜: <a href="">Rust</a> - <a href="">C#</a>
+
+1. **Initialize Priority Queue:**
+   - Start from a root vertex and add all its edges to a `priority queue`.
+2. **Select Cheapest Edge:**
+   - Repeatedly choose the edge with the smallest weight that connects a vertex in the tree to a vertex outside.
+3. **Check for Cycles:**
+   - Ensure that adding the chosen edge doesn’t create a cycle. (use Disjoint-set/Union-Find)
+4. **Expand the Tree:**
+   - Add the selected edge and vertex to the `spanning tree`.
+5. **Repeat:**
+   - Continue the process until all vertices are included in the `spanning tree`.
 
 <br>
 
@@ -305,7 +411,7 @@ Data Structures
 
 ### Disjoint-set
 
-<img src="https://github.com/AnastasKosstow/algorithms/blob/main/assets/list.gif" width="270" alt="list" />
+<img src="https://github.com/AnastasKosstow/algorithms/blob/main/assets/ufds.gif" width="270" alt="list" />
 
 Disjoint-set Data Structure also known as a union-find, keeps track of a set of elements partitioned into several non-overlapping subsets. 
 
