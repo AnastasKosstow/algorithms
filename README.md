@@ -302,9 +302,9 @@ Graph Algorithms
 
 1. **Initialize:**
    - Set initial distances to all nodes as infinity, except the start node which should be zero.
-   - Create a priority queue and add the start node with distance 0.
+   - Create a `priority queue` and add the start node with distance 0.
 2. **Algorithm Loop:**
-   - While the priority queue is not empty:
+   - While the `priority queue` is not empty:
      - Remove the node with the smallest distance.
      - For each neighbor, calculate the new distance and update if it's smaller.
 3. **Complete:**
@@ -322,8 +322,8 @@ Graph Algorithms
 1. **Initialize:**
    - Set the distance to the source as 0 and all other distances as infinite.
 2. **Relaxation Loop:**
-   - For each edge (u, v), update the distance to v if a shorter path is found via u.
-   - Repeat this for all edges |V|-1 times (|V| is the number of vertices).
+   - For each edge `(u, v)`, update the distance to v if a shorter path is found via u.
+   - Repeat this for all edges `|V|-1` times (`|V|` is the number of vertices).
 3. **Negative Cycle Check:**
    - Check for further distance improvements; if found, a negative cycle exists.
 
