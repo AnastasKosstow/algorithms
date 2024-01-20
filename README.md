@@ -29,10 +29,11 @@
   * [Graph Implementation](#graph-implementations)
   * [Depth-First Search (graph traversal)](#dfs-depth-first-search)
   * [Breadth-First Search (graph traversal)](#bfs-breadth-first-search)
-  * [Dijkstra's algorithm (shortest path)](#dijkstras-algorithm)
-  * [Bellman-Ford algorithm (shortest path)](#bellman-ford-algorithm)
-  * [Kruskal algorithm (minimum spanning tree)](#kruskal-algorithm)
-  * [Prim's algorithm (minimum spanning tree)](#prims-algorithm)
+  * [Dijkstra (shortest path)](#dijkstras-algorithm)
+  * [Bellman-Ford (shortest path)](#bellman-ford-algorithm)
+  * [Kruskal (minimum spanning tree)](#kruskal-algorithm)
+  * [Prim (minimum spanning tree)](#prims-algorithm)
+  * [Tarjan (strongly connected components)](#tarjans-algorithm)
 * [Data Structures](#data-structures)
   * [LinkedList](#linkedlist)
   * [Disjoint-set](#disjoint-set)
@@ -384,6 +385,35 @@ Graph Algorithms
    - Add the selected edge and vertex to the `spanning tree`.
 5. **Repeat:**
    - Continue the process until all vertices are included in the `spanning tree`.
+
+---
+
+### Tarjan's algorithm
+> [!NOTE]
+> Tarjan's algorithm is a depth-first search based algorithm used to find strongly connected components (SCCs) in a directed graph.
+> An SCC is a component where every vertex is reachable from every other vertex in the same component.
+> This algorithm is efficient and can find all SCCs in a graph in linear time.
+
+- 𝙲𝚘𝚗𝚌𝚎𝚙𝚝: Understand the <a href="https://emre.me/algorithms/tarjans-algorithm/#articulation-point">Tarjan's SCCs Algorithm (emre.me)</a>
+- 𝙸𝚖𝚙𝚕𝚎𝚖𝚎𝚗𝚝𝚊𝚝𝚒𝚘𝚗𝚜: <a href="">Rust</a> - <a href="">C#</a>
+
+
+- **Initialize:**
+   - Start with an empty `stack`.
+   - Assign a unique integer index to each node, initially undefined.
+   - Define a low-link value for each node, initially set to its index.
+- **DFS Loop:**
+   - Perform a DFS from an arbitrary start node.
+   - On visiting a node, assign it an index and a low-link value, and push it onto the `stack`.
+   - Consider successors of the node; if a successor has not been visited, recursively apply the DFS on it.
+- **Low-Link Update:**
+   - After visiting all successors of a node, if any of them are still in the stack, update the node's low-link value to the minimum of its current low-link value and the low-link values of these successors.
+- **Identify SCCs:**
+   - If the node's index is equal to its low-link value, pop nodes from the stack and add them to a new SCC until the current node is popped.
+- **Repeat:**
+   - Repeat this process for all nodes in the graph.
+- **Complete:**
+   - The algorithm terminates when all nodes have been processed, yielding all the strongly connected components of the graph.
 
 <br>
 
