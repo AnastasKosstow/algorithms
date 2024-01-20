@@ -373,7 +373,7 @@ Graph Algorithms
 > It builds the spanning tree by adding the next cheapest vertex to the existing tree until all vertices are included.
 
 - 𝙲𝚘𝚗𝚌𝚎𝚙𝚝: Understand the <a href="https://en.wikipedia.org/wiki/Prim%27s_algorithm">Prim's Algorithm</a>
-- 𝙸𝚖𝚙𝚕𝚎𝚖𝚎𝚗𝚝𝚊𝚝𝚒𝚘𝚗𝚜: <a href="">Rust</a> - <a href="">C#</a>
+- 𝙸𝚖𝚙𝚕𝚎𝚖𝚎𝚗𝚝𝚊𝚝𝚒𝚘𝚗𝚜: <a href="https://github.com/AnastasKosstow/algorithms/blob/main/rust/src/graphs/prim.rs">Rust</a> - <a href="">C#</a>
 
 1. **Initialize Priority Queue:**
    - Start from a root vertex and add all its edges to a `priority queue`.
@@ -395,7 +395,7 @@ Graph Algorithms
 > This algorithm is efficient and can find all SCCs in a graph in linear time.
 
 - 𝙲𝚘𝚗𝚌𝚎𝚙𝚝: Understand the <a href="https://emre.me/algorithms/tarjans-algorithm/#articulation-point">Tarjan's SCCs Algorithm (emre.me)</a>
-- 𝙸𝚖𝚙𝚕𝚎𝚖𝚎𝚗𝚝𝚊𝚝𝚒𝚘𝚗𝚜: <a href="">Rust</a> - <a href="">C#</a>
+- 𝙸𝚖𝚙𝚕𝚎𝚖𝚎𝚗𝚝𝚊𝚝𝚒𝚘𝚗𝚜: <a href="https://github.com/AnastasKosstow/algorithms/blob/main/rust/src/graphs/tarjan.rs">Rust</a> - <a href="">C#</a>
 
 
 - **Initialize:**
