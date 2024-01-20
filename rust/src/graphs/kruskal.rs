@@ -33,6 +33,7 @@ impl<N: Ord + Eq + PartialEq + std::hash::Hash + Clone> Graph<N> {
     }
 }
 
+
 #[cfg(test)]
 mod tests {
     use crate::graphs::graph::{ Graph, GraphType };

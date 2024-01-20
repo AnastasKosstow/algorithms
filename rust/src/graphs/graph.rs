@@ -25,7 +25,7 @@ pub struct Graph<N> {
     pub nodes: Vec<Node<N>>,
     pub edges: std::collections::HashMap<NodeIndex, Vec<Edge>>,
     pub ty: GraphType,
-    pub lenght: usize
+    pub length: usize
 }
 
 impl<N: Eq + std::hash::Hash + PartialEq> Graph<N> {
@@ -34,7 +34,7 @@ impl<N: Eq + std::hash::Hash + PartialEq> Graph<N> {
             nodes: Vec::new(),
             edges: std::collections::HashMap::new(),
             ty: graph_type,
-            lenght: 0
+            length: 0
         }
     }
 
@@ -47,7 +47,7 @@ impl<N: Eq + std::hash::Hash + PartialEq> Graph<N> {
             value: value,
             index: index
         });
-        self.lenght += 1;
+        self.length += 1;
         index
     }
 
@@ -93,7 +93,7 @@ impl<N: Eq + std::hash::Hash + PartialEq> Graph<N> {
             }
         }
 
-        self.lenght -= 1;
+        self.length -= 1;
     }
 
     pub fn delete_edge(&mut self, from: NodeIndex, to: NodeIndex) {
@@ -119,16 +119,16 @@ mod tests {
     #[test]
     fn empty() {
         let empty_graph: Graph<i32> = Graph::new(GraphType::Undirected);
-        assert_eq!(empty_graph.lenght, 0);
+        assert_eq!(empty_graph.length, 0);
     }
 
     #[test]
     fn add_node() {
         let mut graph: Graph<i32> = Graph::new(GraphType::Undirected);
-        assert_eq!(graph.lenght, 0);
+        assert_eq!(graph.length, 0);
 
         let node_index = graph.add_node(5);
-        assert_eq!(graph.lenght, 1);
+        assert_eq!(graph.length, 1);
         assert_eq!(graph.get_node(node_index).unwrap().value, 5);
     }
 
@@ -171,7 +171,7 @@ mod tests {
         assert!(graph.get_node(node2).is_none());
         assert_eq!(graph.get_node(node1).unwrap().value, 2);
         assert_eq!(graph.edges.get(&node1).unwrap().len(), 0);
-        assert_eq!(graph.lenght, 1);
+        assert_eq!(graph.length, 1);
     }
 
     #[test]
@@ -208,6 +208,6 @@ mod tests {
         graph.add_node(1);
         graph.add_node(2);
 
-        assert_eq!(graph.lenght, 2);
+        assert_eq!(graph.length, 2);
     }
 }

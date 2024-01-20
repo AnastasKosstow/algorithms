@@ -5,6 +5,7 @@ mod dijkstra;
 mod bellman_ford;
 mod kruskal;
 mod prim;
+mod tarjan;
 mod graph;
 
 pub use graph::{Graph, GraphType, Node, NodeIndex, Edge};
