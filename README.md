@@ -398,22 +398,22 @@ Graph Algorithms
 - 𝙸𝚖𝚙𝚕𝚎𝚖𝚎𝚗𝚝𝚊𝚝𝚒𝚘𝚗𝚜: <a href="https://github.com/AnastasKosstow/algorithms/blob/main/rust/src/graphs/tarjan.rs">Rust</a> - <a href="">C#</a>
 
 
-- **Initialize:**
-   - Start with an empty `stack`.
+1. **Initialize:**
    - Assign a unique integer index to each node, initially undefined.
    - Define a low-link value for each node, initially set to its index.
-- **DFS Loop:**
-   - Perform a DFS from an arbitrary start node.
-   - On visiting a node, assign it an index and a low-link value, and push it onto the `stack`.
-   - Consider successors of the node; if a successor has not been visited, recursively apply the DFS on it.
-- **Low-Link Update:**
-   - After visiting all successors of a node, if any of them are still in the stack, update the node's low-link value to the minimum of its current low-link value and the low-link values of these successors.
-- **Identify SCCs:**
-   - If the node's index is equal to its low-link value, pop nodes from the stack and add them to a new SCC until the current node is popped.
-- **Repeat:**
+2. Graph Traversal
+   - Increment discovery time for each visited node.
+   - Store discovery time and initial low-link value for each node.
+3. **DFS Loop:**
+   - For each node, count its children and track its parent.
+   - Apply DFS recursively to unvisited successors.
+   - Update the node's low-link value based on children's low-link values.
+4. **Handling Back Edges**
+   - Update the low-link value of the current node based on the discovery time of previously visited nodes that are not the parent.
+5. **Repeat:**
    - Repeat this process for all nodes in the graph.
-- **Complete:**
-   - The algorithm terminates when all nodes have been processed, yielding all the strongly connected components of the graph.
+6. **Complete:**
+   - The algorithm terminates when all nodes have been processed.
 
 <br>
 
