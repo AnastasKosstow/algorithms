@@ -397,11 +397,10 @@ Graph Algorithms
 - 𝙲𝚘𝚗𝚌𝚎𝚙𝚝: Understand the <a href="https://emre.me/algorithms/tarjans-algorithm/#articulation-point">Tarjan's SCCs Algorithm (emre.me)</a>
 - 𝙸𝚖𝚙𝚕𝚎𝚖𝚎𝚗𝚝𝚊𝚝𝚒𝚘𝚗𝚜: <a href="https://github.com/AnastasKosstow/algorithms/blob/main/rust/src/graphs/tarjan.rs">Rust</a> - <a href="">C#</a>
 
-
 1. **Initialize:**
    - Assign a unique integer index to each node, initially undefined.
    - Define a low-link value for each node, initially set to its index.
-2. Graph Traversal
+2. **Graph Traversal**
    - Increment discovery time for each visited node.
    - Store discovery time and initial low-link value for each node.
 3. **DFS Loop:**
@@ -416,6 +415,34 @@ Graph Algorithms
    - The algorithm terminates when all nodes have been processed.
 
 <br>
+
+<table>
+  <thead>
+    <tr align="left">
+      <th><details>
+<summary>
+
+#### `Open section` -> *Tarjan's* algorithm use cases
+
+</summary>
+
+  ### Articulation Points
+  To find articulation points using Tarjan's algorithm, an additional step of identifying vertices that, if removed, increase the number of connected components is needed. 
+  
+  - 𝙴𝚡𝚝𝚎𝚗𝚍𝚎𝚍 𝚂𝚝𝚎𝚙: After completing the DFS loop, check each node. If it's a root node with two or more children, it's an articulation point. For other nodes, if the low-link value of a child is greater than       or equal to the index of the node, then this node is an articulation point.
+  - 𝙸𝚖𝚙𝚕𝚎𝚖𝚎𝚗𝚝𝚊𝚝𝚒𝚘𝚗𝚜: [Rust](https://github.com/AnastasKosstow/algorithms/blob/main/rust/src/graphs/tarjan_articulation_points.rs) | C#
+  
+  ### Subgraph Components
+  To find subgraph components using Tarjan's algorithm, it's essential to focus on grouping nodes into their respective SCCs.
+  
+  - 𝙴𝚡𝚝𝚎𝚗𝚍𝚎𝚍 𝚂𝚝𝚎𝚙: Upon finishing the DFS for a node, if the node's low-link value equals its index, it indicates the start of a new SCC. Collect all nodes explored since then into a separate SCC group.
+  - 𝙸𝚖𝚙𝚕𝚎𝚖𝚎𝚗𝚝𝚊𝚝𝚒𝚘𝚗𝚜: [Rust](https://github.com/AnastasKosstow/algorithms/blob/main/rust/src/graphs/tarjan_subgraph_components.rs) | C#
+
+</details></th>
+    </tr>
+  </thead>
+</table>
+
 
 Data Structures
 ==========================
