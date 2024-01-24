@@ -302,6 +302,8 @@ Graph Algorithms
 - 𝙲𝚘𝚗𝚌𝚎𝚙𝚝: Understand the <a href="https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm">Dijkstra's Algorithm</a>
 - 𝙸𝚖𝚙𝚕𝚎𝚖𝚎𝚗𝚝𝚊𝚝𝚒𝚘𝚗𝚜: <a href="https://github.com/AnastasKosstow/algorithms/blob/main/rust/src/graphs/dijkstra.rs">Rust</a> - <a href="https://github.com/AnastasKosstow/algorithms/blob/main/csharp/Dijkstra/GraphExtensions.cs">C#</a>
 
+> 𝙲𝚘𝚖𝚙𝚞𝚝𝚎𝚛𝚙𝚑𝚒𝚕𝚎 - <a href="https://www.youtube.com/watch?v=GazC3A4OQTE">Dijkstra's Algorithm by Dr Michael Pound</a>
+
 1. **Initialize:**
    - Set initial distances to all nodes as infinity, except the start node which should be zero.
    - Create a `priority queue` and add the start node with distance 0.
