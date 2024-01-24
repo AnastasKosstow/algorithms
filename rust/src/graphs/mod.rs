@@ -3,6 +3,7 @@ mod bfs;
 mod dfs;
 mod dijkstra;
 mod bellman_ford;
+mod floyd_warshall;
 mod kruskal;
 mod prim;
 mod tarjan_articulation_points;
