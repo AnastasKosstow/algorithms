@@ -31,6 +31,7 @@
   * [Breadth-First Search (graph traversal)](#bfs-breadth-first-search)
   * [Dijkstra (shortest path)](#dijkstras-algorithm)
   * [Bellman-Ford (shortest path)](#bellman-ford-algorithm)
+  * [Floyd-Warshall (shortest path)](#floyd-warshall-algorithm)
   * [Kruskal (minimum spanning tree)](#kruskal-algorithm)
   * [Prim (minimum spanning tree)](#prims-algorithm)
   * [Tarjan (strongly connected components)](#tarjans-algorithm)
@@ -338,7 +339,7 @@ Graph Algorithms
 > The Floyd-Warshall algorithm is used for finding shortest paths in a weighted graph with positive or negative edge weights (but with no negative cycles).
 
 - 𝙲𝚘𝚗𝚌𝚎𝚙𝚝: Understand the <a href="https://en.wikipedia.org/wiki/Floyd%E2%80%93Warshall_algorithm">Floyd Warshall Algorithm</a>
-- 𝙸𝚖𝚙𝚕𝚎𝚖𝚎𝚗𝚝𝚊𝚝𝚒𝚘𝚗𝚜: <a href="">Rust</a> - <a href="">C#</a>
+- 𝙸𝚖𝚙𝚕𝚎𝚖𝚎𝚗𝚝𝚊𝚝𝚒𝚘𝚗𝚜: <a href="https://github.com/AnastasKosstow/algorithms/blob/main/rust/src/graphs/floyd_warshall.rs">Rust</a> - <a href="https://github.com/AnastasKosstow/algorithms/blob/main/csharp/Floyd%E2%80%93Warshall/GraphExtensions.cs">C#</a>
 
 1. **Matrix Setup:**
    - Initialize a matrix with distances between all pairs of vertices. Set 0 for self-loops and infinity for no direct path.
