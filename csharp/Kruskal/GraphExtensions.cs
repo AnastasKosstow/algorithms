@@ -5,8 +5,13 @@ namespace Kruskal;
 
 public static class GraphExtensions
 {
-    public static IEnumerable<NodeEdge<T>> KruskalMst<T>(this Graph<T> graph, Node<T> from)
+    public static IEnumerable<NodeEdge<T>> KruskalMst<T>(this Graph<T> graph)
     {
+        if (graph.Nodes.Count == 0)
+        {
+            return Enumerable.Empty<NodeEdge<T>>();
+        }
+
         // Map each node to a unique integer index for use in the union-find data structure
         var nodeIndexMap = new Dictionary<Node<T>, int>();
         int index = 0;

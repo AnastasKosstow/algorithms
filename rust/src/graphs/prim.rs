@@ -1,51 +1,42 @@
 use std::cmp::Reverse;
 use std::collections::{ BinaryHeap, HashSet };
 
-use crate::data_structures::DisjointSet;
 use crate::graphs::graph::{ Graph, NodeIndex };
 
 impl<N: Ord + Eq + PartialEq + std::hash::Hash + Clone> Graph<N> {
-    pub fn prim_mst<'a>(&'a self, root: &'a NodeIndex) -> Vec<(&NodeIndex, isize)> {
+    pub fn prim_mst(&self) -> Vec<(&NodeIndex, isize)> {
+        if self.nodes.len() == 0 {
+            return vec![];
+        }
 
-        let mut heap: BinaryHeap<Reverse<(isize, &NodeIndex)>> = BinaryHeap::new(); 
-        let mut nodes: Vec<&NodeIndex> = Vec::new();
-        nodes.push(root);
+        let mut heap = BinaryHeap::new(); 
+        let mut visited = HashSet::new();
+        let mut mst = Vec::new();
 
-        let mut mst: Vec<(&NodeIndex, isize)> = Vec::new();
-        mst.push((root, 0));
-        
-        let mut union_find = DisjointSet::new(self.nodes.len());
-        let mut visited: HashSet<&NodeIndex> = HashSet::new();
-        
-        while let Some(node_index) = nodes.pop() {
-            visited.insert(root);
+        let root = self.nodes.first().unwrap();
+        heap.push(Reverse((0, &root.index)));
 
-            let edges = match self.edges.get(node_index) {
-                Some(edges) => edges,
-                None => continue
-            };
-
-            for edge in edges {
-                if !visited.contains(&edge.node_index) {
-                    heap.push(Reverse((edge.cost, &edge.node_index)));
-                }
+        while let Some(Reverse((cost, node_ix))) = heap.pop() {
+            if visited.contains(node_ix) {
+                continue;
             }
 
-            while let Some(Reverse((cost, next_node_index))) = heap.pop() {
-                let x_index = union_find.find(node_index.ix);
-                let y_index = union_find.find(next_node_index.ix);
-            
-                if x_index != y_index {
-                    union_find.union(x_index, y_index);
-                    nodes.push(next_node_index);
-                    mst.push((next_node_index, cost));
-                    break;
+            visited.insert(node_ix);
+            mst.push((node_ix, cost));
+
+            if let Some(edges) = self.edges.get(node_ix) {
+                for edge in edges {
+                    let next = &edge.node_index;
+                    if !visited.contains(next) {
+                        heap.push(Reverse((edge.cost, next)));
+                    }
                 }
             }
         }
         mst
     }
 }
+
 
 #[cfg(test)]
 mod tests {
@@ -56,8 +47,8 @@ mod tests {
     #[test]
     fn prim_single_node() {
         let mut graph = Graph::new(GraphType::Undirected);
-        let n1 = graph.add_node(1);
-        let mst = graph.prim_mst(&n1);
+        graph.add_node(1);
+        let mst = graph.prim_mst();
         assert_eq!(mst.len(), 1);
     }
 
@@ -70,7 +61,7 @@ mod tests {
 
         graph.add_node(3); // Disconnected node
 
-        let mst = graph.prim_mst(&n1);
+        let mst = graph.prim_mst();
         assert_eq!(mst.len(), 2); 
     }
 
@@ -86,7 +77,7 @@ mod tests {
         graph.add_edge(n2, n4, 10);
         graph.add_edge(n3, n4, 5);
 
-        let mst = graph.prim_mst(&n1);
+        let mst = graph.prim_mst();
         let total_cost: isize = mst.iter()
             .map(|x| x.1)
             .sum();

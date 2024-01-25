@@ -1,14 +1,17 @@
 use std::collections::HashMap;
 
-use crate::graphs::graph::{ Graph, Node, NodeIndex };
+use crate::graphs::graph::{ Graph, Node };
 
 impl<N: Ord + Eq + PartialEq + std::hash::Hash> Graph<N> {
     pub fn bellman_ford_shortest_path(&self, from_node: &Node<N>, to_node: &Node<N>) -> Option<isize> {
-
-        let mut distances: HashMap<NodeIndex, isize> = self.nodes
+        if self.nodes.len() == 0 {
+            return Some(0);
+        }
+        
+        let mut distances = self.nodes
             .iter()
             .map(|node| (node.index, isize::MAX))
-            .collect();
+            .collect::<HashMap<_, _>>();
 
         distances.insert(from_node.index, 0);
 

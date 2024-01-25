@@ -1,18 +1,23 @@
-use std::collections::{ BinaryHeap, HashMap };
+use std::collections::{ BinaryHeap, HashMap, HashSet };
 use std::cmp::Reverse;
 
-use crate::graphs::graph::{ Graph, Edge, Node, NodeIndex };
+use crate::graphs::graph::{ Graph, Edge, Node };
+
+use super::NodeIndex;
 
 impl<N: Ord + Eq + PartialEq + std::hash::Hash> Graph<N> {
     pub fn dijkstra_shortest_path(&self, from_node: &Node<N>, to_node: &Node<N>) -> Option<isize> {
-        
-        let mut distances: HashMap<&NodeIndex, isize> = self.nodes.iter()
+        if self.nodes.len() == 0 {
+            return Some(0);
+        }
+
+        let mut distances = self.nodes.iter()
             .map(|node| {
                 return if node == from_node { (&node.index, 0) } else { (&node.index, isize::MAX) };
             })
-            .collect();
+            .collect::<HashMap<_, _>>();
 
-        let mut visited: Vec<&NodeIndex> = vec![];
+        let mut visited: HashSet<&NodeIndex> = HashSet::new();
         let mut heap: BinaryHeap<Reverse<(isize, &NodeIndex)>> = BinaryHeap::new();
         heap.push(Reverse((0, &from_node.index)));
 
@@ -30,12 +35,12 @@ impl<N: Ord + Eq + PartialEq + std::hash::Hash> Graph<N> {
                 if cost + edge.cost < *distances.get(&edge.node_index).unwrap_or(&isize::MAX) {
 
                     distances.insert(&edge.node_index, cost + edge.cost);
-                    if !visited.contains(&&edge.node_index) {
+                    if !visited.contains(&edge.node_index) {
                         heap.push(Reverse((cost + edge.cost, &edge.node_index)));
                     }
                 }
             }
-            visited.push(&node_ix);
+            visited.insert(&node_ix);
         }
 
         distances.get(&to_node.index)

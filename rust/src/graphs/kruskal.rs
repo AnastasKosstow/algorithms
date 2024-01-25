@@ -3,32 +3,31 @@ use crate::graphs::graph::{ Graph, Edge, NodeIndex };
 
 impl<N: Ord + Eq + PartialEq + std::hash::Hash + Clone> Graph<N> {
     pub fn kruskal_mst(&self) -> Vec<(&NodeIndex, &Edge)> {
-
-        let mut edges: Vec<(&NodeIndex, &Edge)> = self.edges
+        if self.nodes.len() == 0 {
+            return vec![];
+        }
+        
+        let mut edges = self.edges
             .iter()
             .flat_map(|node_edge| {
                 node_edge.1.iter().map(move |edge| (node_edge.0, edge))
             })
-            .collect();
+            .collect::<Vec<_>>();
 
-        edges.sort_by_key(|key| key.1.cost);
+        edges.sort_by_key(|(_, edge)| edge.cost);
 
         let mut union_find = DisjointSet::new(self.nodes.len());
-        let mut mst: Vec<(&NodeIndex, &Edge)> = Vec::new();
+        let mut mst = Vec::new();
 
-        for edge in edges {
-            let x = self.nodes[edge.0.ix].index.ix;
-            let y = edge.1.node_index.ix;
-
-            let x_root = union_find.find(x);
-            let y_root = union_find.find(y);
+        for (node_ix, edge) in edges {
+            let x_root = union_find.find(node_ix.ix);
+            let y_root = union_find.find(edge.node_index.ix);
 
             if x_root != y_root {
-                mst.push(edge);
+                mst.push((node_ix, edge));
                 union_find.union(x_root, y_root);
             }
         }
-
         mst
     }
 }

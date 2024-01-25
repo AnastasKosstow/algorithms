@@ -13,7 +13,7 @@ public class UnionFindSet
     {
         if (parent[index] != index) 
         {
-            this.Find(index - 1);
+            parent[index] = this.Find(parent[index]);
         }
 
         return parent[index];
