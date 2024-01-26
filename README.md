@@ -14,14 +14,14 @@
     <td>
       <a href="https://cooervo.github.io/Algorithms-DataStructures-BigONotation/big-O-notation.html">
         <div>
-          <img src="https://github.com/AnastasKosstow/algorithms/blob/main/assets/logo-algos.svg" width="250" alt="visualgo" />
+          <img src="https://github.com/AnastasKosstow/algorithms/blob/main/assets/logo-algos.svg" width="230" alt="visualgo" />
         </div>
       </a>
     </td>
     <td>
       <a href="https://algorithms.discrete.ma.tum.de">
         <div>
-          <img src="https://github.com/AnastasKosstow/algorithms/blob/main/assets/TUM.png" width="250" alt="visualgo" />
+          <img src="https://github.com/AnastasKosstow/algorithms/blob/main/assets/TUM.png" width="230" alt="visualgo" />
         </div>
       </a>
     </td>
