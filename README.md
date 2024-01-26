@@ -34,6 +34,7 @@
   * [Floyd-Warshall (shortest path)](#floyd-warshall-algorithm)
   * [Kruskal (minimum spanning tree)](#kruskal-algorithm)
   * [Prim (minimum spanning tree)](#prims-algorithm)
+  * [Kosaraju (strongly connected components)](#Kosarajus-algorithm)
   * [Tarjan (strongly connected components)](#tarjans-algorithm)
 * [Data Structures](#data-structures)
   * [LinkedList](#linkedlist)
@@ -388,6 +389,31 @@ Graph Algorithms
    - Add the selected edge and vertex to the `spanning tree`.
 5. **Repeat:**
    - Continue the process until all vertices are included in the `spanning tree`.
+
+---
+
+### Kosaraju's algorithm
+> [!NOTE]
+> Kosaraju's algorithm is a depth-first search based method used to find strongly connected components in a directed graph.
+> The algorithm involves two passes of depth-first search.
+> The first pass is used to calculate finishing times of vertices, and the second pass identifies the strongly connected components based on these times.
+
+- 𝙲𝚘𝚗𝚌𝚎𝚙𝚝: Understand the <a href="https://en.wikipedia.org/wiki/Kosaraju%27s_algorithm">Kosaraju's Algorithm</a>
+- 𝙸𝚖𝚙𝚕𝚎𝚖𝚎𝚗𝚝𝚊𝚝𝚒𝚘𝚗𝚜: <a href="">Rust</a> - <a href="https://github.com/AnastasKosstow/algorithms/blob/main/csharp/Kosaraju/GraphExtensions.cs">C#</a>
+
+1. **First DFS Pass:**
+   - Perform a `depth-first search (DFS)` on the original graph.
+   - Track the completion order of vertices and push them onto a `stack`.
+2. **Prepare for Second DFS Pass:**
+   - Create a mapping of incoming edges for each node.
+3. **Second DFS Pass:**
+   - Pop nodes from the `stack` in the order they were completed in the first `DFS`.
+   - Perform `DFS` on the transposed graph (using the incoming edges map) starting from each popped node, if it hasn't been visited.
+4. **Identify Strongly Connected Components:**
+   - Each `DFS` call in the second pass identifies a strongly connected component.
+   - Collect the nodes visited in each `DFS` call as a single SCC.
+5. **Complete:**
+   - The algorithm finishes when all vertices have been popped and processed in the second DFS pass. At this point, all SCCs in the graph have been identified.
 
 ---
 
