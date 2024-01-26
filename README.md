@@ -421,7 +421,7 @@ Graph Algorithms
 > The first pass is used to calculate finishing times of vertices, and the second pass identifies the strongly connected components based on these times.
 
 - 𝙲𝚘𝚗𝚌𝚎𝚙𝚝: Understand the <a href="https://en.wikipedia.org/wiki/Kosaraju%27s_algorithm">Kosaraju's Algorithm</a>
-- 𝙸𝚖𝚙𝚕𝚎𝚖𝚎𝚗𝚝𝚊𝚝𝚒𝚘𝚗𝚜: <a href="">Rust</a> - <a href="https://github.com/AnastasKosstow/algorithms/blob/main/csharp/Kosaraju/GraphExtensions.cs">C#</a>
+- 𝙸𝚖𝚙𝚕𝚎𝚖𝚎𝚗𝚝𝚊𝚝𝚒𝚘𝚗𝚜: <a href="https://github.com/AnastasKosstow/algorithms/blob/main/rust/src/graphs/kosaraju.rs">Rust</a> - <a href="https://github.com/AnastasKosstow/algorithms/blob/main/csharp/Kosaraju/GraphExtensions.cs">C#</a>
 
 1. **First DFS Pass:**
    - Perform a `depth-first search (DFS)` on the original graph.
