@@ -37,21 +37,6 @@ impl<N: Ord + Eq + PartialEq + std::hash::Hash + Clone> Graph<N> {
 mod tests {
     use crate::graphs::graph::{ Graph, GraphType };
 
-    fn create_test_graph() -> Graph<i32> {
-        let mut graph = Graph::new(GraphType::Undirected);
-        let n1 = graph.add_node(1);
-        let n2 = graph.add_node(2);
-        let n3 = graph.add_node(3);
-        let n4 = graph.add_node(4);
-
-        graph.add_edge(n1, n2, 1); // edge with cost 1
-        graph.add_edge(n2, n3, 2); // edge with cost 2
-        graph.add_edge(n3, n4, 3); // edge with cost 3
-        graph.add_edge(n1, n4, 4); // edge with cost 4
-
-        graph
-    }
-
     #[test]
     fn kruskal_empty_graph() {
         let graph: Graph<i32> = Graph::new(GraphType::Undirected);

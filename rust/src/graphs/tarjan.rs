@@ -4,6 +4,10 @@ use crate::graphs::graph::{ Graph, NodeIndex };
 
 use super::{tarjan_state::State, Node};
 
+/*
+    NOT READY!
+*/
+
 impl<N: Ord + Eq + PartialEq + std::hash::Hash + Clone> Graph<N> {
     pub fn find_low_link_values(&self) -> HashMap<NodeIndex, i32> {
         if self.length == 0 {
