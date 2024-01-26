@@ -65,12 +65,7 @@ mod tests {
     use crate::graphs::graph::{Graph, GraphType, Node, NodeIndex, Edge};
 
     fn create_test_graph(edges: Vec<(usize, usize)>) -> Graph<i32> {
-        let mut graph = Graph {
-            nodes: vec![],
-            edges: HashMap::new(),
-            ty: GraphType::Directed,
-            length: edges.len(),
-        };
+        let mut graph = Graph::new(GraphType::Directed);
 
         for (from, to) in edges {
             graph.nodes.push(Node {
