@@ -1,15 +1,37 @@
-<div align="center">
+<div>
 
-<sup>Special thanks to:</sup>
+# 𝚁𝚎𝚜𝚘𝚞𝚛𝚌𝚎𝚜
 
-<a href="https://visualgo.net/en">
-  <div>
-    <img src="https://github.com/AnastasKosstow/algorithms/blob/main/assets/VisuAlgo.png" width="230" alt="visualgo" />
-  </div>
-  <b>
-    Visit visualgo.net
-  </b>
-</a>
+<table>
+  <tr align="center">
+    <td>
+      <a href="https://visualgo.net/en">
+        <div>
+          <img src="https://github.com/AnastasKosstow/algorithms/blob/main/assets/VisuAlgo.png" width="250" alt="visualgo" />
+        </div>
+      </a>
+    </td>
+    <td>
+      <a href="https://cooervo.github.io/Algorithms-DataStructures-BigONotation/big-O-notation.html">
+        <div>
+          <img src="https://github.com/AnastasKosstow/algorithms/blob/main/assets/logo-algos.svg" width="250" alt="visualgo" />
+        </div>
+      </a>
+    </td>
+    <td>
+      <a href="https://algorithms.discrete.ma.tum.de">
+        <div>
+          <img src="https://github.com/AnastasKosstow/algorithms/blob/main/assets/TUM.png" width="250" alt="visualgo" />
+        </div>
+      </a>
+    </td>
+  </tr>
+  <tr>
+    <td><b><a href="https://visualgo.net/en">ᴠɪꜱᴜᴀʟɢᴏ.ɴᴇᴛ</a></td>
+    <td><b><a href="https://cooervo.github.io/Algorithms-DataStructures-BigONotation/big-O-notation.html">ᴄᴏᴏᴇʀᴠᴏ.ɢɪᴛʜᴜʙ.ɪᴏ</a></td>
+    <td><b><a href="https://algorithms.discrete.ma.tum.de">ᴀʟɢᴏʀɪᴛʜᴍꜱ.ᴅɪꜱᴄʀᴇᴛᴇ.ᴍᴀ.ᴛᴜᴍ.ᴅᴇ</a></td>
+  </tr>
+</table>
 
 <hr />
 </div>
