@@ -1,6 +1,6 @@
-use std::collections::{HashMap, HashSet};
+use std::collections::HashSet;
 
-use crate::graphs::graph::{ Graph, Edge, NodeIndex };
+use crate::graphs::graph::{ Graph, NodeIndex };
 
 impl<N: Ord + Eq + PartialEq + std::hash::Hash + Clone> Graph<N> {
     pub fn kosaraju_scc(&self) -> Vec<Vec<NodeIndex>> {
@@ -8,60 +8,65 @@ impl<N: Ord + Eq + PartialEq + std::hash::Hash + Clone> Graph<N> {
             return vec![];
         }
 
-        let mut reverse_edges: HashMap<NodeIndex, Vec<Edge>> = HashMap::new();
-        for (from_index, edges) in self.edges.iter() {
-            for edge in edges.iter() {
-                reverse_edges
-                    .entry(edge.node_index)
-                    .or_insert(Vec::new())
-                    .push(Edge {
-                        cost: edge.cost,
-                        node_index: *from_index,
-                    });
+        let mut visited: HashSet<NodeIndex> = HashSet::new();
+        let mut stack: Vec<NodeIndex> = Vec::new();
+
+        for node in self.nodes.iter() {
+            if !visited.contains(&node.index) {
+                self.initial_dfs(&node.index, &mut visited, &mut stack);
             }
         }
 
-        let mut visited: HashSet<NodeIndex> = HashSet::new();
+        visited.clear();
         let mut components: Vec<Vec<NodeIndex>> = Vec::new();
 
-        for (node_index, _) in reverse_edges.iter() {
-            if visited.contains(&node_index) {
-                continue;
+        while let Some(node_index) = stack.pop() {
+            if !visited.contains(&node_index) {
+                let mut component = Vec::new();
+                self.dfs_scc(&node_index, &mut visited, &mut component);
+                components.push(component);
             }
-            let mut component = Vec::new();
-            find_component_dfs(&reverse_edges, node_index, &mut visited, &mut component);
-            components.push(component);
-        }
-
-        fn find_component_dfs(
-            graph_edges: &HashMap<NodeIndex, Vec<Edge>>, 
-            node_index: &NodeIndex, 
-            visited: &mut HashSet<NodeIndex>,
-            component: &mut Vec<NodeIndex>)
-        {
-            if visited.contains(&node_index) {
-                return;
-            }
-    
-            visited.insert(*node_index);
-            
-            if let Some(edges) = graph_edges.get(&node_index) {
-                for edge in edges {
-                    find_component_dfs(graph_edges, &edge.node_index, visited, component);
-                }
-            }
-            
-            component.push(*node_index);
         }
 
         components
+    }
+
+    fn initial_dfs(&self, node_index: &NodeIndex, visited: &mut HashSet<NodeIndex>, stack: &mut Vec<NodeIndex>) {
+        if visited.contains(&node_index) {
+            return;
+        }
+
+        visited.insert(*node_index);
+        
+        if let Some(edges) = self.edges.get(&node_index) {
+            for edge in edges {
+                self.initial_dfs(&edge.node_index, visited, stack);
+            }
+        }
+        
+        stack.push(*node_index);
+    }
+
+    fn dfs_scc(&self, node_index: &NodeIndex, visited: &mut HashSet<NodeIndex>, component: &mut Vec<NodeIndex>) {
+        if visited.contains(&node_index) {
+            return;
+        }
+
+        visited.insert(*node_index);
+        
+        if let Some(edges) = self.edges.get(&node_index) {
+            for edge in edges {
+                self.dfs_scc(&edge.node_index, visited, component);
+            }
+        }
+        
+        component.push(*node_index);
     }
 }
 
 
 #[cfg(test)]
 mod tests {
-    use super::*;
     use crate::graphs::graph::{Graph, GraphType, Node, NodeIndex, Edge};
 
     fn create_test_graph(edges: Vec<(usize, usize)>) -> Graph<i32> {
