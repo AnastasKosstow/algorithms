@@ -426,15 +426,13 @@ Graph Algorithms
 1. **First DFS Pass:**
    - Perform a `depth-first search (DFS)` on the original graph.
    - Track the completion order of vertices and push them onto a `stack`.
-2. **Prepare for Second DFS Pass:**
-   - Create a mapping of incoming edges for each node.
-3. **Second DFS Pass:**
+2. **Second DFS Pass:**
    - Pop nodes from the `stack` in the order they were completed in the first `DFS`.
-   - Perform `DFS` on the transposed graph (using the incoming edges map) starting from each popped node, if it hasn't been visited.
-4. **Identify Strongly Connected Components:**
+   - Perform `DFS` on the transposed graph starting from each popped node, if it hasn't been visited.
+3. **Identify Strongly Connected Components:**
    - Each `DFS` call in the second pass identifies a strongly connected component.
    - Collect the nodes visited in each `DFS` call as a single SCC.
-5. **Complete:**
+4. **Complete:**
    - The algorithm finishes when all vertices have been popped and processed in the second DFS pass. At this point, all SCCs in the graph have been identified.
 
 ---
