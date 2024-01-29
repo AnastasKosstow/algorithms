@@ -511,7 +511,7 @@ Data Structures
 ### Implementations (for singly linked list):
 <a href="https://github.com/AnastasKosstow/algorithms/blob/main/rust/src/data_structures/linked_list.rs">LinkedList Implementation in Rust</a>
 <br>
-<a href="">LinkedList Implementation in C#</a>
+<a href="https://github.com/AnastasKosstow/algorithms/blob/main/csharp/LinkedList/SinglyLinkedList.cs">LinkedList Implementation in C#</a>
 
 <br>
 
