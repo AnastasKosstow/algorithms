@@ -41,9 +41,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Floydâ€“Warshall", "Floydâ€
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kosaraju", "Kosaraju\Kosaraju.csproj", "{3684C351-FC85-45D8-9AEB-BB4EC5C2C838}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RadixSort", "RadixSort\RadixSort.csproj", "{A53DC5EE-70C7-48D6-B9E0-252F08CED569}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RadixSort", "RadixSort\RadixSort.csproj", "{A53DC5EE-70C7-48D6-B9E0-252F08CED569}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinkedList", "LinkedList\LinkedList.csproj", "{5AA57ED8-1B0D-457C-B98C-46CC01590629}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LinkedList", "LinkedList\LinkedList.csproj", "{5AA57ED8-1B0D-457C-B98C-46CC01590629}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
