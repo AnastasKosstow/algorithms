@@ -78,7 +78,6 @@ impl<T: Ord + PartialOrd + Copy> BinarySearchTree<T> {
 
 
 unsafe fn insert_value<T: Ord + PartialOrd>(node: &mut TreeNode<T>, value: T) {
-
     let target_node = 
         if value < node.value { 
             &mut node.left 
@@ -97,7 +96,6 @@ unsafe fn insert_value<T: Ord + PartialOrd>(node: &mut TreeNode<T>, value: T) {
 }
 
 unsafe fn get_all_in_order<T: Copy>(node: &NonNull<TreeNode<T>>, all: &mut Vec<T>) {
-
     let tree_node = &(*node.as_ptr());
 
     if let Some(left_node) = tree_node.left {
