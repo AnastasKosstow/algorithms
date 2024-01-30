@@ -46,6 +46,10 @@
   * [Shell sort](#sorting-algorithms)
   * [Merge sort](#sorting-algorithms)
   * [Quicksort](#sorting-algorithms)
+* [Data Structures](#data-structures)
+  * [Binary Search Tree](#binary-search-tree) 
+  * [LinkedList](#linkedlist)
+  * [Disjoint-set](#disjoint-set)
 * [Graph Theory](#graph-theory)
 * [Graph Algorithms](#graph-algorithms)
   * [Graph Implementation](#graph-implementations)
@@ -58,9 +62,6 @@
   * [Prim (minimum spanning tree)](#prims-algorithm)
   * [Kosaraju (strongly connected components)](#Kosarajus-algorithm)
   * [Tarjan (strongly connected components)](#tarjans-algorithm)
-* [Data Structures](#data-structures)
-  * [LinkedList](#linkedlist)
-  * [Disjoint-set](#disjoint-set)
 
 <br />
 
@@ -74,11 +75,11 @@
   <img src="https://github.com/AnastasKosstow/algorithms/blob/main/assets/logo/csharp-logo.png" alt="csharp" width="55" height="55"/>
 </p>
 
-<h4 align="left">For visual representation of the flow of each algorithm or data structure use  <a href="https://visualgo.net/en">𝚅𝚒𝚜𝚞𝙰𝚕𝚐𝚘.𝚗𝚎𝚝</a></h4>
+<h4 align="left">For visual representation of the flow of each algorithm or data structure use  <a href="https://visualgo.net/en">𝚅𝚒𝚜𝚞𝙰𝚕𝚐𝚘.𝚗𝚎𝚝</a> & <a href="https://algorithms.discrete.ma.tum.de">ᴀʟɢᴏʀɪᴛʜᴍꜱ.ᴅɪꜱᴄʀᴇᴛᴇ.ᴍᴀ.ᴛᴜᴍ.ᴅᴇ</a></h4>
 
 
 # Sorting
-<img src="https://github.com/AnastasKosstow/algorithms/blob/main/assets/sorting.gif" width="230" alt="sorting" />
+<img src="https://github.com/AnastasKosstow/algorithms/blob/main/assets/sorting.gif" width="270" alt="sorting" />
 
 ### Big O Notation
 In a nutshell, we use Big O to describe the efficiency of algorithms.
@@ -171,6 +172,64 @@ There are three main mathematical notations used to describe the upper, tight, a
     </tr>
   </tbody>
 </table>
+
+<br>
+
+Data Structures
+==========================
+
+### Binary Search Tree
+
+<img src="" width="270" alt="bst" />
+
+> [!NOTE]
+> 𝖠 𝖡𝗂𝗇𝖺𝗋𝗒 𝖲𝖾𝖺𝗋𝖼𝗁 𝖳𝗋𝖾𝖾 𝗂𝗌 𝖺 𝗇𝗈𝖽𝖾-𝖻𝖺𝗌𝖾𝖽 𝖽𝖺𝗍𝖺 𝗌𝗍𝗋𝗎𝖼𝗍𝗎𝗋𝖾 𝗐𝗁𝖾𝗋𝖾 𝖾𝖺𝖼𝗁 𝗇𝗈𝖽𝖾 𝖼𝗈𝗇𝗍𝖺𝗂𝗇𝗌 𝖺 𝗄𝖾𝗒 𝖺𝗇𝖽 𝗍𝗐𝗈 𝗌𝗎𝖻𝗍𝗋𝖾𝖾𝗌, 𝗅𝖾𝖿𝗍 𝖺𝗇𝖽 𝗋𝗂𝗀𝗁𝗍.
+> <br>
+> 𝖳𝗁𝖾 𝗅𝖾𝖿𝗍 𝗌𝗎𝖻𝗍𝗋𝖾𝖾 𝗈𝖿 𝖺 𝗇𝗈𝖽𝖾 𝖼𝗈𝗇𝗍𝖺𝗂𝗇𝗌 𝗈𝗇𝗅𝗒 𝗇𝗈𝖽𝖾𝗌 𝗐𝗂𝗍𝗁 𝗄𝖾𝗒𝗌 𝗅𝖾𝗌𝗌𝖾𝗋 𝗍𝗁𝖺𝗇 𝗍𝗁𝖾 𝗇𝗈𝖽𝖾’𝗌 𝗄𝖾𝗒. 𝖳𝗁𝖾 𝗋𝗂𝗀𝗁𝗍 𝗌𝗎𝖻𝗍𝗋𝖾𝖾 𝗈𝖿 𝖺 𝗇𝗈𝖽𝖾 𝖼𝗈𝗇𝗍𝖺𝗂𝗇𝗌 𝗈𝗇𝗅𝗒 𝗇𝗈𝖽𝖾𝗌 𝗐𝗂𝗍𝗁 𝗄𝖾𝗒𝗌 𝗀𝗋𝖾𝖺𝗍𝖾𝗋 𝗍𝗁𝖺𝗇 𝗍𝗁𝖾 𝗇𝗈𝖽𝖾’𝗌 𝗄𝖾𝗒.
+
+#### Operations
+ - 𝖲𝖾𝖺𝗋𝖼𝗁: 𝖡𝖾𝖼𝖺𝗎𝗌𝖾 𝗈𝖿 𝗂𝗍𝗌 𝗈𝗋𝖽𝖾𝗋𝖾𝖽 𝗇𝖺𝗍𝗎𝗋𝖾, 𝗌𝖾𝖺𝗋𝖼𝗁𝗂𝗇𝗀 𝖿𝗈𝗋 𝖺𝗇 𝖾𝗅𝖾𝗆𝖾𝗇𝗍 𝗂𝗇 𝖺 𝖡𝖲𝖳 𝗂𝗌 𝗍𝗒𝗉𝗂𝖼𝖺𝗅𝗅𝗒 `Θ(𝗅𝗈𝗀 𝗇)` 𝗈𝗋 `𝖮(𝗇)` 𝗐𝗁𝖾𝗇 𝗍𝗁𝖾 𝗍𝗋𝖾𝖾 𝗋𝖾𝗌𝖾𝗆𝖻𝗅𝖾𝗌 𝖺 𝗅𝗂𝗇𝗄𝖾𝖽 𝗅𝗂𝗌𝗍
+ - 𝖨𝗇𝗌𝖾𝗋𝗍: 𝖳𝗒𝗉𝗂𝖼𝖺𝗅𝗅𝗒 `Θ(𝗅𝗈𝗀 𝗇)` 𝗐𝗁𝖾𝗇 𝗍𝗁𝖾 𝗍𝗋𝖾𝖾 𝗋𝖾𝗆𝖺𝗂𝗇𝗌 𝗋𝖾𝖺𝗌𝗈𝗇𝖺𝖻𝗅𝗒 𝖻𝖺𝗅𝖺𝗇𝖼𝖾𝖽 𝗈𝗋 `𝖮(𝗇)` 𝗂𝖿 𝗍𝗁𝖾 𝗍𝗋𝖾𝖾 𝗂𝗌 𝗁𝗂𝗀𝗁𝗅𝗒 𝗎𝗇𝖻𝖺𝗅𝖺𝗇𝖼𝖾𝖽
+ - 𝖣𝖾𝗅𝖾𝗍𝖾: 𝖲𝗂𝗆𝗂𝗅𝖺𝗋 𝗍𝗈 𝗌𝖾𝖺𝗋𝖼𝗁 𝖺𝗇𝖽 𝗂𝗇𝗌𝖾𝗋𝗍 - `Θ(𝗅𝗈𝗀 𝗇)` 𝗈𝗋 `𝖮(𝗇)` 𝖿𝗈𝗋 𝗁𝗂𝗀𝗁𝗅𝗒 𝗎𝗇𝖻𝖺𝗅𝖺𝗇𝖼𝖾𝖽 𝗍𝗋𝖾𝖾
+
+𝙸𝚖𝚙𝚕𝚎𝚖𝚎𝚗𝚝𝚊𝚝𝚒𝚘𝚗𝚜: <a href="">Rust</a> - <a href="">C#</a>
+
+---
+
+### LinkedList
+
+<img src="https://github.com/AnastasKosstow/algorithms/blob/main/assets/list.gif" width="270" alt="list" />
+
+### Key Concepts
+ - 𝙽𝚘𝚍𝚎𝚜: *The individual item or entity in a linked list. Nodes are linked using pointers, making the structure flexible for insertions and deletions.*
+
+### Types of LinkedLists
+ - 𝚂𝚒𝚗𝚐𝚕𝚢 𝙻𝚒𝚗𝚔𝚎𝚍 𝙻𝚒𝚜𝚝: *Each node has only one pointer to the next node*
+ - 𝙳𝚘𝚞𝚋𝚕𝚢 𝙻𝚒𝚗𝚔𝚎𝚍 𝙻𝚒𝚜𝚝: *Each node has two pointers, one to the next node and one to the previous node*
+ - 𝙲𝚒𝚛𝚌𝚞𝚕𝚊𝚛 𝙻𝚒𝚗𝚔𝚎𝚍 𝙻𝚒𝚜𝚝: *The last node points back to the first node, forming a circle (it can be singly or doubly)*
+
+### Implementations (for singly linked list):
+<a href="https://github.com/AnastasKosstow/algorithms/blob/main/rust/src/data_structures/linked_list.rs">LinkedList Implementation in Rust</a>
+<br>
+<a href="https://github.com/AnastasKosstow/algorithms/blob/main/csharp/LinkedList/SinglyLinkedList.cs">LinkedList Implementation in C#</a>
+
+---
+
+### Disjoint-set
+
+<img src="https://github.com/AnastasKosstow/algorithms/blob/main/assets/ufds.gif" width="270" alt="djs" />
+
+Disjoint-set Data Structure also known as a union-find, keeps track of a set of elements partitioned into several non-overlapping subsets. 
+
+### Key Concepts
+It provides two primary operations:
+ - Fɪɴᴅ: *Determines which subset a particular element is in. This can be used for determining if two elements are in the same subset*
+ - Uɴɪᴏɴ: *Joins two subsets into a single subset*
+
+### Implementations
+<a href="https://github.com/AnastasKosstow/algorithms/blob/main/rust/src/data_structures/disjoint_set.rs">Disjoint-set(Union-Find) Implementation in Rust</a>
+<br>
+<a href="https://github.com/AnastasKosstow/algorithms/blob/main/csharp/UnionFind/UnionFindSet.cs">Disjoint-set(Union-Find) Implementation in C#</a>
 
 <br>
  
@@ -491,43 +550,4 @@ Graph Algorithms
     </tr>
   </thead>
 </table>
-
-
-Data Structures
-==========================
-
-### LinkedList
-
-<img src="https://github.com/AnastasKosstow/algorithms/blob/main/assets/list.gif" width="270" alt="list" />
-
-### Key Concepts
- - 𝙽𝚘𝚍𝚎𝚜: *The individual item or entity in a linked list. Nodes are linked using pointers, making the structure flexible for insertions and deletions.*
-
-### Types of LinkedLists
- - 𝚂𝚒𝚗𝚐𝚕𝚢 𝙻𝚒𝚗𝚔𝚎𝚍 𝙻𝚒𝚜𝚝: *Each node has only one pointer to the next node*
- - 𝙳𝚘𝚞𝚋𝚕𝚢 𝙻𝚒𝚗𝚔𝚎𝚍 𝙻𝚒𝚜𝚝: *Each node has two pointers, one to the next node and one to the previous node*
- - 𝙲𝚒𝚛𝚌𝚞𝚕𝚊𝚛 𝙻𝚒𝚗𝚔𝚎𝚍 𝙻𝚒𝚜𝚝: *The last node points back to the first node, forming a circle (it can be singly or doubly)*
-
-### Implementations (for singly linked list):
-<a href="https://github.com/AnastasKosstow/algorithms/blob/main/rust/src/data_structures/linked_list.rs">LinkedList Implementation in Rust</a>
-<br>
-<a href="https://github.com/AnastasKosstow/algorithms/blob/main/csharp/LinkedList/SinglyLinkedList.cs">LinkedList Implementation in C#</a>
-
-<br>
-
-### Disjoint-set
-
-<img src="https://github.com/AnastasKosstow/algorithms/blob/main/assets/ufds.gif" width="270" alt="list" />
-
-Disjoint-set Data Structure also known as a union-find, keeps track of a set of elements partitioned into several non-overlapping subsets. 
-
-### Key Concepts
-It provides two primary operations:
- - Fɪɴᴅ: *Determines which subset a particular element is in. This can be used for determining if two elements are in the same subset*
- - Uɴɪᴏɴ: *Joins two subsets into a single subset*
-
-### Implementations
-<a href="https://github.com/AnastasKosstow/algorithms/blob/main/rust/src/data_structures/disjoint_set.rs">Disjoint-set(Union-Find) Implementation in Rust</a>
-<br>
-<a href="https://github.com/AnastasKosstow/algorithms/blob/main/csharp/UnionFind/UnionFindSet.cs">Disjoint-set(Union-Find) Implementation in C#</a>
 
