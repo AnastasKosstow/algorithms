@@ -154,3 +154,49 @@ unsafe fn min_value_node<T>(node: NonNull<TreeNode<T>>) -> NonNull<TreeNode<T>> 
     }
     current
 }
+
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_insert() {
+        let mut bst = BinarySearchTree::new();
+        bst.insert(5);
+        bst.insert(3);
+        bst.insert(7);
+        assert_eq!(bst.length, 3);
+    }
+
+    #[test]
+    fn test_get_all() {
+        let mut bst = BinarySearchTree::new();
+        bst.insert(5);
+        bst.insert(3);
+        bst.insert(7);
+        assert_eq!(bst.get_all(), vec![3, 5, 7]);
+    }
+
+    #[test]
+    fn test_delete() {
+        let mut bst = BinarySearchTree::new();
+        bst.insert(5);
+        bst.insert(3);
+        bst.insert(7);
+        bst.delete(7);
+        assert_eq!(bst.get_all(), vec![3, 5]);
+        assert_eq!(bst.length, 2);
+    }
+
+    #[test]
+    fn test_clear() {
+        let mut bst = BinarySearchTree::new();
+        bst.insert(5);
+        bst.insert(3);
+        bst.insert(7);
+        bst.clear();
+        assert_eq!(bst.get_all(), Vec::<i32>::new());
+        assert_eq!(bst.length, 0);
+    }
+}
