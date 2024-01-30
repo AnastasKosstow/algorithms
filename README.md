@@ -183,19 +183,16 @@ Data Structures
 <img src="" width="270" alt="bst" />
 
 > [!NOTE]
-> A Binary Search Tree is a node-based data structure where each node contains a key and two subtrees, left and right.
+> 𝖠 𝖡𝗂𝗇𝖺𝗋𝗒 𝖲𝖾𝖺𝗋𝖼𝗁 𝖳𝗋𝖾𝖾 𝗂𝗌 𝖺 𝗇𝗈𝖽𝖾-𝖻𝖺𝗌𝖾𝖽 𝖽𝖺𝗍𝖺 𝗌𝗍𝗋𝗎𝖼𝗍𝗎𝗋𝖾 𝗐𝗁𝖾𝗋𝖾 𝖾𝖺𝖼𝗁 𝗇𝗈𝖽𝖾 𝖼𝗈𝗇𝗍𝖺𝗂𝗇𝗌 𝖺 𝗄𝖾𝗒 𝖺𝗇𝖽 𝗍𝗐𝗈 𝗌𝗎𝖻𝗍𝗋𝖾𝖾𝗌, 𝗅𝖾𝖿𝗍 𝖺𝗇𝖽 𝗋𝗂𝗀𝗁𝗍.
 > <br>
-> The left subtree of a node contains only nodes with keys lesser than the node’s key. The right subtree of a node contains only nodes with keys greater than the node’s key.
+> 𝖳𝗁𝖾 𝗅𝖾𝖿𝗍 𝗌𝗎𝖻𝗍𝗋𝖾𝖾 𝗈𝖿 𝖺 𝗇𝗈𝖽𝖾 𝖼𝗈𝗇𝗍𝖺𝗂𝗇𝗌 𝗈𝗇𝗅𝗒 𝗇𝗈𝖽𝖾𝗌 𝗐𝗂𝗍𝗁 𝗄𝖾𝗒𝗌 𝗅𝖾𝗌𝗌𝖾𝗋 𝗍𝗁𝖺𝗇 𝗍𝗁𝖾 𝗇𝗈𝖽𝖾’𝗌 𝗄𝖾𝗒. 𝖳𝗁𝖾 𝗋𝗂𝗀𝗁𝗍 𝗌𝗎𝖻𝗍𝗋𝖾𝖾 𝗈𝖿 𝖺 𝗇𝗈𝖽𝖾 𝖼𝗈𝗇𝗍𝖺𝗂𝗇𝗌 𝗈𝗇𝗅𝗒 𝗇𝗈𝖽𝖾𝗌 𝗐𝗂𝗍𝗁 𝗄𝖾𝗒𝗌 𝗀𝗋𝖾𝖺𝗍𝖾𝗋 𝗍𝗁𝖺𝗇 𝗍𝗁𝖾 𝗇𝗈𝖽𝖾’𝗌 𝗄𝖾𝗒.
 
-### Operations
- - Search: *Because of its ordered nature, searching for an element in a BST is typically `Θ(log n)` or `O(n)` when the tree resembles a linked list*
- - Insert: *Typically `Θ(log n)` when the tree remains reasonably balanced or `O(n)` if the tree is highly unbalanced*
- - Delete: *Similar to search and insert - `Θ(log n)` or `O(n)` for highly unbalanced tree*
+#### Operations
+ - 𝖲𝖾𝖺𝗋𝖼𝗁: 𝖡𝖾𝖼𝖺𝗎𝗌𝖾 𝗈𝖿 𝗂𝗍𝗌 𝗈𝗋𝖽𝖾𝗋𝖾𝖽 𝗇𝖺𝗍𝗎𝗋𝖾, 𝗌𝖾𝖺𝗋𝖼𝗁𝗂𝗇𝗀 𝖿𝗈𝗋 𝖺𝗇 𝖾𝗅𝖾𝗆𝖾𝗇𝗍 𝗂𝗇 𝖺 𝖡𝖲𝖳 𝗂𝗌 𝗍𝗒𝗉𝗂𝖼𝖺𝗅𝗅𝗒 `Θ(𝗅𝗈𝗀 𝗇)` 𝗈𝗋 `𝖮(𝗇)` 𝗐𝗁𝖾𝗇 𝗍𝗁𝖾 𝗍𝗋𝖾𝖾 𝗋𝖾𝗌𝖾𝗆𝖻𝗅𝖾𝗌 𝖺 𝗅𝗂𝗇𝗄𝖾𝖽 𝗅𝗂𝗌𝗍
+ - 𝖨𝗇𝗌𝖾𝗋𝗍: 𝖳𝗒𝗉𝗂𝖼𝖺𝗅𝗅𝗒 `Θ(𝗅𝗈𝗀 𝗇)` 𝗐𝗁𝖾𝗇 𝗍𝗁𝖾 𝗍𝗋𝖾𝖾 𝗋𝖾𝗆𝖺𝗂𝗇𝗌 𝗋𝖾𝖺𝗌𝗈𝗇𝖺𝖻𝗅𝗒 𝖻𝖺𝗅𝖺𝗇𝖼𝖾𝖽 𝗈𝗋 `𝖮(𝗇)` 𝗂𝖿 𝗍𝗁𝖾 𝗍𝗋𝖾𝖾 𝗂𝗌 𝗁𝗂𝗀𝗁𝗅𝗒 𝗎𝗇𝖻𝖺𝗅𝖺𝗇𝖼𝖾𝖽
+ - 𝖣𝖾𝗅𝖾𝗍𝖾: 𝖲𝗂𝗆𝗂𝗅𝖺𝗋 𝗍𝗈 𝗌𝖾𝖺𝗋𝖼𝗁 𝖺𝗇𝖽 𝗂𝗇𝗌𝖾𝗋𝗍 - `Θ(𝗅𝗈𝗀 𝗇)` 𝗈𝗋 `𝖮(𝗇)` 𝖿𝗈𝗋 𝗁𝗂𝗀𝗁𝗅𝗒 𝗎𝗇𝖻𝖺𝗅𝖺𝗇𝖼𝖾𝖽 𝗍𝗋𝖾𝖾
 
-### Implementations
-<a href="https://github.com/AnastasKosstow/algorithms/blob/main/rust/src/data_structures/disjoint_set.rs">Binary-search Tree Implementation in Rust</a>
-<br>
-<a href="https://github.com/AnastasKosstow/algorithms/blob/main/csharp/UnionFind/UnionFindSet.cs">Binary-search Tree Implementation in C#</a>
+𝙸𝚖𝚙𝚕𝚎𝚖𝚎𝚗𝚝𝚊𝚝𝚒𝚘𝚗𝚜: <a href="">Rust</a> - <a href="">C#</a>
 
 ---
 
