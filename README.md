@@ -192,7 +192,7 @@ Data Structures
  - 𝖨𝗇𝗌𝖾𝗋𝗍: 𝖳𝗒𝗉𝗂𝖼𝖺𝗅𝗅𝗒 `Θ(𝗅𝗈𝗀 𝗇)` 𝗐𝗁𝖾𝗇 𝗍𝗁𝖾 𝗍𝗋𝖾𝖾 𝗋𝖾𝗆𝖺𝗂𝗇𝗌 𝗋𝖾𝖺𝗌𝗈𝗇𝖺𝖻𝗅𝗒 𝖻𝖺𝗅𝖺𝗇𝖼𝖾𝖽 𝗈𝗋 `𝖮(𝗇)` 𝗂𝖿 𝗍𝗁𝖾 𝗍𝗋𝖾𝖾 𝗂𝗌 𝗁𝗂𝗀𝗁𝗅𝗒 𝗎𝗇𝖻𝖺𝗅𝖺𝗇𝖼𝖾𝖽
  - 𝖣𝖾𝗅𝖾𝗍𝖾: 𝖲𝗂𝗆𝗂𝗅𝖺𝗋 𝗍𝗈 𝗌𝖾𝖺𝗋𝖼𝗁 𝖺𝗇𝖽 𝗂𝗇𝗌𝖾𝗋𝗍 - `Θ(𝗅𝗈𝗀 𝗇)` 𝗈𝗋 `𝖮(𝗇)` 𝖿𝗈𝗋 𝗁𝗂𝗀𝗁𝗅𝗒 𝗎𝗇𝖻𝖺𝗅𝖺𝗇𝖼𝖾𝖽 𝗍𝗋𝖾𝖾
 
-𝙸𝚖𝚙𝚕𝚎𝚖𝚎𝚗𝚝𝚊𝚝𝚒𝚘𝚗𝚜: <a href="https://github.com/AnastasKosstow/algorithms/blob/main/rust/src/data_structures/binary_search_tree.rs">Rust</a> - <a href="">C#</a>
+<b>𝙸𝚖𝚙𝚕𝚎𝚖𝚎𝚗𝚝𝚊𝚝𝚒𝚘𝚗𝚜:</b> <a href="https://github.com/AnastasKosstow/algorithms/blob/main/rust/src/data_structures/binary_search_tree.rs">Rust</a> - <a href="">C#</a>
 
 ---
 
@@ -200,18 +200,18 @@ Data Structures
 
 <img src="https://github.com/AnastasKosstow/algorithms/blob/main/assets/list.gif" width="270" alt="list" />
 
-### Key Concepts
- - 𝙽𝚘𝚍𝚎𝚜: *The individual item or entity in a linked list. Nodes are linked using pointers, making the structure flexible for insertions and deletions.*
+> [!NOTE]
+> 𝖫𝗂𝗇𝗄𝖾𝖽𝖫𝗂𝗌𝗍𝗌 𝖺𝗋𝖾 𝖺 𝗌𝖾𝗊𝗎𝖾𝗇𝖼𝖾 𝗈𝖿 𝗇𝗈𝖽𝖾𝗌, 𝖾𝖺𝖼𝗁 𝖼𝗈𝗇𝗍𝖺𝗂𝗇𝗂𝗇𝗀 𝖽𝖺𝗍𝖺 𝖺𝗇𝖽 𝖺 𝗋𝖾𝖿𝖾𝗋𝖾𝗇𝖼𝖾 (𝗅𝗂𝗇𝗄) 𝗍𝗈 𝗍𝗁𝖾 𝗇𝖾𝗑𝗍 𝗇𝗈𝖽𝖾.
+> 𝖤𝖺𝖼𝗁 𝗇𝗈𝖽𝖾 𝗍𝗒𝗉𝗂𝖼𝖺𝗅𝗅𝗒 𝖼𝗈𝗇𝗍𝖺𝗂𝗇𝗌 𝗍𝗐𝗈 𝗉𝖺𝗋𝗍𝗌:
+> - *Data:* 𝖳𝗁𝖾 𝖺𝖼𝗍𝗎𝖺𝗅 𝗏𝖺𝗅𝗎𝖾 𝗈𝗋 𝗂𝗇𝖿𝗈𝗋𝗆𝖺𝗍𝗂𝗈𝗇 𝗍𝗁𝖺𝗍 𝗍𝗁𝖾 𝗇𝗈𝖽𝖾 𝗋𝖾𝗉𝗋𝖾𝗌𝖾𝗇𝗍𝗌.
+> - *Pointer (or Link):* 𝖠 𝗋𝖾𝖿𝖾𝗋𝖾𝗇𝖼𝖾 𝗍𝗈 𝗍𝗁𝖾 𝗇𝖾𝗑𝗍 𝗇𝗈𝖽𝖾 𝗂𝗇 𝗍𝗁𝖾 𝗌𝖾𝗊𝗎𝖾𝗇𝖼𝖾. 𝖨𝗇 𝖺 𝗌𝗂𝗇𝗀𝗅𝗒 𝗅𝗂𝗇𝗄𝖾𝖽 𝗅𝗂𝗌𝗍, 𝖾𝖺𝖼𝗁 𝗇𝗈𝖽𝖾 𝗉𝗈𝗂𝗇𝗍𝗌 𝗍𝗈 𝗂𝗍𝗌 𝗌𝗎𝖼𝖼𝖾𝗌𝗌𝗈𝗋, 𝗐𝗁𝗂𝗅𝖾 𝗂𝗇 𝖺 𝖽𝗈𝗎𝖻𝗅𝗒 𝗅𝗂𝗇𝗄𝖾𝖽 𝗅𝗂𝗌𝗍, 𝖾𝖺𝖼𝗁 𝗇𝗈𝖽𝖾 𝗁𝖺𝗌 𝗉𝗈𝗂𝗇𝗍𝖾𝗋𝗌 𝗍𝗈 𝖻𝗈𝗍𝗁 𝗂𝗍𝗌 𝗉𝗋𝖾𝗏𝗂𝗈𝗎𝗌 𝖺𝗇𝖽 𝗇𝖾𝗑𝗍 𝗇𝗈𝖽𝖾.
 
 ### Types of LinkedLists
- - 𝚂𝚒𝚗𝚐𝚕𝚢 𝙻𝚒𝚗𝚔𝚎𝚍 𝙻𝚒𝚜𝚝: *Each node has only one pointer to the next node*
- - 𝙳𝚘𝚞𝚋𝚕𝚢 𝙻𝚒𝚗𝚔𝚎𝚍 𝙻𝚒𝚜𝚝: *Each node has two pointers, one to the next node and one to the previous node*
- - 𝙲𝚒𝚛𝚌𝚞𝚕𝚊𝚛 𝙻𝚒𝚗𝚔𝚎𝚍 𝙻𝚒𝚜𝚝: *The last node points back to the first node, forming a circle (it can be singly or doubly)*
+ - *Singly Linked List*: 𝖤𝖺𝖼𝗁 𝗇𝗈𝖽𝖾 𝗁𝖺𝗌 𝗈𝗇𝗅𝗒 𝗈𝗇𝖾 𝗉𝗈𝗂𝗇𝗍𝖾𝗋 𝗍𝗈 𝗍𝗁𝖾 𝗇𝖾𝗑𝗍 𝗇𝗈𝖽𝖾
+ - *Doubly Linked List*: 𝖤𝖺𝖼𝗁 𝗇𝗈𝖽𝖾 𝗁𝖺𝗌 𝗍𝗐𝗈 𝗉𝗈𝗂𝗇𝗍𝖾𝗋𝗌, 𝗈𝗇𝖾 𝗍𝗈 𝗍𝗁𝖾 𝗇𝖾𝗑𝗍 𝗇𝗈𝖽𝖾 𝖺𝗇𝖽 𝗈𝗇𝖾 𝗍𝗈 𝗍𝗁𝖾 𝗉𝗋𝖾𝗏𝗂𝗈𝗎𝗌 𝗇𝗈𝖽𝖾
+ - *Circular Linked List*: 𝖳𝗁𝖾 𝗅𝖺𝗌𝗍 𝗇𝗈𝖽𝖾 𝗉𝗈𝗂𝗇𝗍𝗌 𝖻𝖺𝖼𝗄 𝗍𝗈 𝗍𝗁𝖾 𝖿𝗂𝗋𝗌𝗍 𝗇𝗈𝖽𝖾, 𝖿𝗈𝗋𝗆𝗂𝗇𝗀 𝖺 𝖼𝗂𝗋𝖼𝗅𝖾 (𝗂𝗍 𝖼𝖺𝗇 𝖻𝖾 𝗌𝗂𝗇𝗀𝗅𝗒 𝗈𝗋 𝖽𝗈𝗎𝖻𝗅𝗒)
 
-### Implementations (for singly linked list):
-<a href="https://github.com/AnastasKosstow/algorithms/blob/main/rust/src/data_structures/linked_list.rs">LinkedList Implementation in Rust</a>
-<br>
-<a href="https://github.com/AnastasKosstow/algorithms/blob/main/csharp/LinkedList/SinglyLinkedList.cs">LinkedList Implementation in C#</a>
+<b>𝙸𝚖𝚙𝚕𝚎𝚖𝚎𝚗𝚝𝚊𝚝𝚒𝚘𝚗𝚜:</b> <a href="https://github.com/AnastasKosstow/algorithms/blob/main/rust/src/data_structures/linked_list.rs">Rust</a> - <a href="https://github.com/AnastasKosstow/algorithms/blob/main/csharp/LinkedList/SinglyLinkedList.cs">C#</a>
 
 ---
 
@@ -219,18 +219,23 @@ Data Structures
 
 <img src="https://github.com/AnastasKosstow/algorithms/blob/main/assets/ufds.gif" width="270" alt="djs" />
 
-Disjoint-set Data Structure also known as a union-find, keeps track of a set of elements partitioned into several non-overlapping subsets. 
+> [!NOTE]
+> 𝖣𝗂𝗌𝗃𝗈𝗂𝗇𝗍-𝗌𝖾𝗍 𝖣𝖺𝗍𝖺 𝖲𝗍𝗋𝗎𝖼𝗍𝗎𝗋𝖾 𝖺𝗅𝗌𝗈 𝗄𝗇𝗈𝗐𝗇 𝖺𝗌 𝖺 𝗎𝗇𝗂𝗈𝗇-𝖿𝗂𝗇𝖽, 𝗄𝖾𝖾𝗉𝗌 𝗍𝗋𝖺𝖼𝗄 𝗈𝖿 𝖺 𝗌𝖾𝗍 𝗈𝖿 𝖾𝗅𝖾𝗆𝖾𝗇𝗍𝗌 𝗉𝖺𝗋𝗍𝗂𝗍𝗂𝗈𝗇𝖾𝖽 𝗂𝗇𝗍𝗈 𝗌𝖾𝗏𝖾𝗋𝖺𝗅 𝗇𝗈𝗇-𝗈𝗏𝖾𝗋𝗅𝖺𝗉𝗉𝗂𝗇𝗀 𝗌𝗎𝖻𝗌𝖾𝗍𝗌. 
 
-### Key Concepts
-It provides two primary operations:
- - Fɪɴᴅ: *Determines which subset a particular element is in. This can be used for determining if two elements are in the same subset*
- - Uɴɪᴏɴ: *Joins two subsets into a single subset*
+#### Characteristics
+ - 𝖤𝖿𝖿𝗂𝖼𝗂𝖾𝗇𝗍 𝖿𝗈𝗋 𝗁𝖺𝗇𝖽𝗅𝗂𝗇𝗀 𝖾𝗊𝗎𝗂𝗏𝖺𝗅𝖾𝗇𝖼𝖾 𝗋𝖾𝗅𝖺𝗍𝗂𝗈𝗇𝗌 𝖺𝗇𝖽 𝖼𝗈𝗇𝗇𝖾𝖼𝗍𝖾𝖽 𝖼𝗈𝗆𝗉𝗈𝗇𝖾𝗇𝗍𝗌 𝗂𝗇 𝖺 𝗇𝖾𝗍𝗐𝗈𝗋𝗄.
+ - 𝖢𝗈𝗆𝗆𝗈𝗇𝗅𝗒 𝗎𝗌𝖾𝖽 𝗂𝗇 𝖺𝗅𝗀𝗈𝗋𝗂𝗍𝗁𝗆𝗌 𝗍𝗁𝖺𝗍 𝗋𝖾𝗊𝗎𝗂𝗋𝖾 𝖿𝗋𝖾𝗊𝗎𝖾𝗇𝗍 𝖼𝗁𝖾𝖼𝗄𝗌 𝗈𝖿 𝗐𝗁𝖾𝗍𝗁𝖾𝗋 𝗍𝗐𝗈 𝖾𝗅𝖾𝗆𝖾𝗇𝗍𝗌 𝖺𝗋𝖾 𝗂𝗇 𝗍𝗁𝖾 𝗌𝖺𝗆𝖾 𝗌𝗎𝖻𝗌𝖾𝗍.
 
-### Implementations
-<a href="https://github.com/AnastasKosstow/algorithms/blob/main/rust/src/data_structures/disjoint_set.rs">Disjoint-set(Union-Find) Implementation in Rust</a>
-<br>
-<a href="https://github.com/AnastasKosstow/algorithms/blob/main/csharp/UnionFind/UnionFindSet.cs">Disjoint-set(Union-Find) Implementation in C#</a>
+#### Operations
+ - *Find*: 𝖣𝖾𝗍𝖾𝗋𝗆𝗂𝗇𝖾𝗌 𝗐𝗁𝗂𝖼𝗁 𝗌𝗎𝖻𝗌𝖾𝗍 𝖺 𝗉𝖺𝗋𝗍𝗂𝖼𝗎𝗅𝖺𝗋 𝖾𝗅𝖾𝗆𝖾𝗇𝗍 𝗂𝗌 𝗂𝗇. 𝖳𝗁𝗂𝗌 𝖼𝖺𝗇 𝖻𝖾 𝗎𝗌𝖾𝖽 𝖿𝗈𝗋 𝖽𝖾𝗍𝖾𝗋𝗆𝗂𝗇𝗂𝗇𝗀 𝗂𝖿 𝗍𝗐𝗈 𝖾𝗅𝖾𝗆𝖾𝗇𝗍𝗌 𝖺𝗋𝖾 𝗂𝗇 𝗍𝗁𝖾 𝗌𝖺𝗆𝖾 𝗌𝗎𝖻𝗌𝖾𝗍
+ - *Union*: 𝖩𝗈𝗂𝗇𝗌 𝗍𝗐𝗈 𝗌𝗎𝖻𝗌𝖾𝗍𝗌 𝗂𝗇𝗍𝗈 𝖺 𝗌𝗂𝗇𝗀𝗅𝖾 𝗌𝗎𝖻𝗌𝖾𝗍
 
+#### Efficiency
+ - 𝖶𝗂𝗍𝗁 𝗈𝗉𝗍𝗂𝗆𝗂𝗓𝖺𝗍𝗂𝗈𝗇𝗌 𝗅𝗂𝗄𝖾 *𝗎𝗇𝗂𝗈𝗇 𝖻𝗒 𝗋𝖺𝗇𝗄* 𝖺𝗇𝖽 *𝗉𝖺𝗍𝗁 𝖼𝗈𝗆𝗉𝗋𝖾𝗌𝗌𝗂𝗈𝗇*, 𝗍𝗁𝖾 𝗍𝗂𝗆𝖾 𝖼𝗈𝗆𝗉𝗅𝖾𝗑𝗂𝗍𝗒 𝗈𝖿 𝖻𝗈𝗍𝗁 𝖥𝗂𝗇𝖽 𝖺𝗇𝖽 𝖴𝗇𝗂𝗈𝗇 𝗈𝗉𝖾𝗋𝖺𝗍𝗂𝗈𝗇𝗌 𝖼𝖺𝗇 𝖻𝖾 𝖻𝗋𝗈𝗎𝗀𝗁𝗍 𝖽𝗈𝗐𝗇 𝖼𝗅𝗈𝗌𝖾 𝗍𝗈 𝖼𝗈𝗇𝗌𝗍𝖺𝗇𝗍 𝗍𝗂𝗆𝖾, `O(α(n))`, where `α` 𝗂𝗌 𝗍𝗁𝖾 𝗂𝗇𝗏𝖾𝗋𝗌𝖾 𝖠𝖼𝗄𝖾𝗋𝗆𝖺𝗇𝗇 𝖿𝗎𝗇𝖼𝗍𝗂𝗈𝗇, 𝗐𝗁𝗂𝖼𝗁 𝗀𝗋𝗈𝗐𝗌 𝗏𝖾𝗋𝗒 𝗌𝗅𝗈𝗐𝗅𝗒 𝖺𝗇𝖽 𝗂𝗌 𝗉𝗋𝖺𝖼𝗍𝗂𝖼𝖺𝗅𝗅𝗒 𝖼𝗈𝗇𝗌𝗍𝖺𝗇𝗍 𝖿𝗈𝗋 𝖺𝗅𝗅 𝗋𝖾𝖺𝗌𝗈𝗇𝖺𝖻𝗅𝖾 𝗂𝗇𝗉𝗎𝗍 𝗌𝗂𝗓𝖾𝗌. 
+
+<b>𝙸𝚖𝚙𝚕𝚎𝚖𝚎𝚗𝚝𝚊𝚝𝚒𝚘𝚗𝚜:</b> <a href="https://github.com/AnastasKosstow/algorithms/blob/main/rust/src/data_structures/disjoint_set.rs">Rust</a> - <a href="https://github.com/AnastasKosstow/algorithms/blob/main/csharp/UnionFind/UnionFindSet.cs">C#</a>
+
+---
 <br>
  
 Graph Theory
