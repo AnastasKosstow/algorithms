@@ -32,16 +32,13 @@ impl<T: Ord + Clone + Copy> Heap<T> {
             return None;
         }
 
-        if self.data.len() == 1 {
-            let max = self.data.remove(self.data.len() - 1);
-            return Some(max);
-        }
-        
         let max = self.data[0];
         let last = self.data.remove(self.data.len() - 1);
-        self.data[0] = last;
-        
-        self.sift_down(0);
+
+        if self.data.len() > 0 {
+            self.data[0] = last;
+            self.sift_down(0);
+        }
         Some(max)
     }
 
