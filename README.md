@@ -200,11 +200,11 @@ Data Structures
 
  - S𝗈 𝗁𝖾𝖺𝗉 𝗍𝗁𝖺𝗍 𝗅𝗈𝗈𝗄𝗌 𝗅𝗂𝗄𝖾 𝗍𝗁𝗂𝗌:
 
-<img src="https://github.com/AnastasKosstow/algorithms/blob/main/assets/heap_tree_dark.png" width="500" alt="heap" />
+<img src="https://github.com/AnastasKosstow/algorithms/blob/main/assets/heap_tree_light.png" width="500" alt="heap" />
 
  - I𝗌 𝗋𝖾𝗉𝗋𝖾𝗌𝖾𝗇𝗍𝖾𝖽 𝗅𝗂𝗄𝖾 𝗍𝗁𝗂𝗌:
  
-<img src="https://github.com/AnastasKosstow/algorithms/blob/main/assets/heap_arr_dark.png" width="500" alt="heap" />
+<img src="https://github.com/AnastasKosstow/algorithms/blob/main/assets/heap_arr_light.png" width="500" alt="heap" />
 
 𝖧𝖾𝖺𝗉 𝗋𝗈𝗈𝗍 is *index*=0 - 𝖿𝗂𝗋𝗌𝗍 𝗂𝗍𝖾𝗆 𝗈𝖿 𝗍𝗁𝖾 𝖺𝗋𝗋𝖺𝗒. 𝖣𝖾𝗉𝖾𝗇𝖽𝗂𝗇𝗀 𝗈𝗇 𝗍𝗁𝖾 𝗂𝗆𝗉𝗅𝖾𝗆𝖾𝗇𝗍𝖺𝗍𝗂𝗈𝗇 𝖬𝗂𝗇/𝖬𝖺𝗑, 𝗋𝗈𝗈𝗍 𝗂𝗌 𝖺𝗅𝗐𝖺𝗒𝗌 𝗍𝗁𝖾 𝗌𝗆𝖺𝗅𝗅𝖾𝗌𝗍/𝗅𝖺𝗋𝗀𝖾𝗌𝗍 𝗂𝗍𝖾𝗆 𝗈𝖿 𝗍𝗁𝖾 𝖺𝗋𝗋𝖺𝗒
 <br>
