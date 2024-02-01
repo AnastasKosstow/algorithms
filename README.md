@@ -202,6 +202,11 @@ Data Structures
 
 <img src="https://github.com/AnastasKosstow/algorithms/blob/main/assets/heap_tree_light.png" width="500" alt="heap" />
 
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://github.com/AnastasKosstow/algorithms/blob/main/assets/heap_tree_dark.png">
+  <img idth="500" alt="heap" src="https://github.com/AnastasKosstow/algorithms/blob/main/assets/heap_tree_light.png">
+</picture>
+
  - I𝗌 𝗋𝖾𝗉𝗋𝖾𝗌𝖾𝗇𝗍𝖾𝖽 𝗅𝗂𝗄𝖾 𝗍𝗁𝗂𝗌:
  
 <img src="https://github.com/AnastasKosstow/algorithms/blob/main/assets/heap_arr_light.png" width="500" alt="heap" />
