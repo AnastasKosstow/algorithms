@@ -44,6 +44,7 @@
   * [Selection sort](#sorting-algorithms)
   * [Insertions sort](#sorting-algorithms)
   * [Shell sort](#sorting-algorithms)
+  * [Heap sort](#sorting-algorithms)
   * [Merge sort](#sorting-algorithms)
   * [Quicksort](#sorting-algorithms)
 * [Data Structures](#data-structures)
@@ -152,6 +153,15 @@ There are three main mathematical notations used to describe the upper, tight, a
       <td>
         <a href="https://github.com/AnastasKosstow/algorithms/blob/main/rust/src/sorting/shell_sort.rs">Rust</a> -
         <a href="https://github.com/AnastasKosstow/algorithms/blob/main/csharp/ShellSort/Program.cs">C#</a></td>
+    </tr>
+    <tr>
+      <td><b>Hᴇᴀᴘ ꜱᴏʀᴛ</b></td>
+      <td>O(<i>n</i> log(<i>n</i>))</td>
+      <td>Θ(<i>n</i> log(<i>n</i>))</td>
+      <td>Ω(<i>n</i> log(<i>n</i>))</td>
+      <td>
+        <a href="https://github.com/AnastasKosstow/algorithms/blob/main/rust/src/sorting/heap_sort.rs">Rust</a> - 
+        <a href="https://github.com/AnastasKosstow/algorithms/blob/main/csharp/HeapSort/Program.cs">C#</a></td>
     </tr>
     <tr>
       <td><b>Mᴇʀɢᴇ ꜱᴏʀᴛ</b></td>
