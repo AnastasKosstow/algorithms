@@ -4,7 +4,7 @@ pub fn heap_sort<T: Ord + Clone + Copy>(arr: &mut [T]) {
     if arr.is_empty() {
         return;
     }
-    
+
     let mut heap: Heap<T> = Heap::<T>::new(HeapType::Min);
     let length = arr.len();
 
