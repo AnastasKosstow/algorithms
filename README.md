@@ -67,7 +67,7 @@
   * [Spanning tree](#kruskal-algorithm)
     * [Kruskal](#kruskal-algorithm)
     * [Prim](#prims-algorithm)
-  * [Strongly connected components)](#Kosarajus-algorithm)
+  * [Connected components](#Kosarajus-algorithm)
     * [Kosaraju](#Kosarajus-algorithm)
     * [Tarjan](#tarjans-algorithm)
 
