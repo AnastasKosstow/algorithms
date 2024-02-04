@@ -352,10 +352,15 @@ fn post_order_traversal(node: TreeNode) {
 ```
 
 𝖲𝗈 𝖿𝗈𝗋 𝗍𝗁𝖾 𝖿𝗈𝗅𝗅𝗈𝗐𝗂𝗇𝗀 𝗍𝗋𝖾𝖾:
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://github.com/AnastasKosstow/algorithms/blob/main/assets/trees/btorder-dark.png">
-  <img width="200" alt="heap" src="https://github.com/AnastasKosstow/algorithms/blob/main/assets/trees/btorder.png">
-</picture>
+<table>
+  <tr>
+    <td>
+      <picture>
+        <source media="(prefers-color-scheme: dark)" srcset="https://github.com/AnastasKosstow/algorithms/blob/main/assets/trees/btorder-dark.png">
+        <img width="200" alt="heap" src="https://github.com/AnastasKosstow/algorithms/blob/main/assets/trees/btorder.png">
+      </picture>
+    </td>
+</table>
 
 𝖳𝗁𝖾 𝗋𝖾𝗌𝗎𝗅𝗍 𝗐𝗂𝗅𝗅:
 - 𝖨𝗇-𝗈𝗋𝖽𝖾𝗋 - [𝟣, 𝟧, 𝟩, 𝟣𝟢, 𝟤𝟢]
