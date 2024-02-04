@@ -48,22 +48,28 @@
   * [Merge sort](#sorting-algorithms)
   * [Quicksort](#sorting-algorithms)
 * [Data Structures](#data-structures)
-  * [Binary Heap](#heap) 
-  * [Binary Search Tree](#binary-search-tree) 
+  * [Trees](#tree-theory)
+    * [Tree Theory](#tree-theory)
+    * [Binary Heap](#heap) 
+    * [Binary Search Tree](#binary-search-tree) 
   * [LinkedList](#linkedlist)
   * [Disjoint-set](#disjoint-set)
 * [Graph Theory](#graph-theory)
+* [Graph Implementation](#graph-implementations)
 * [Graph Algorithms](#graph-algorithms)
-  * [Graph Implementation](#graph-implementations)
-  * [Depth-First Search (graph traversal)](#dfs-depth-first-search)
-  * [Breadth-First Search (graph traversal)](#bfs-breadth-first-search)
-  * [Dijkstra (shortest path)](#dijkstras-algorithm)
-  * [Bellman-Ford (shortest path)](#bellman-ford-algorithm)
-  * [Floyd-Warshall (shortest path)](#floyd-warshall-algorithm)
-  * [Kruskal (minimum spanning tree)](#kruskal-algorithm)
-  * [Prim (minimum spanning tree)](#prims-algorithm)
-  * [Kosaraju (strongly connected components)](#Kosarajus-algorithm)
-  * [Tarjan (strongly connected components)](#tarjans-algorithm)
+  * [Traversal](#dfs-depth-first-search)
+    * [Depth-First Search](#dfs-depth-first-search)
+    * [Breadth-First Search](#bfs-breadth-first-search)
+  * [Shortest path](#dijkstras-algorithm)
+    * [Dijkstra](#dijkstras-algorithm)
+    * [Bellman-Ford](#bellman-ford-algorithm)
+    * [Floyd-Warshall](#floyd-warshall-algorithm)
+  * [Spanning tree](#kruskal-algorithm)
+    * [Kruskal](#kruskal-algorithm)
+    * [Prim](#prims-algorithm)
+  * [Connected components](#Kosarajus-algorithm)
+    * [Kosaraju](#Kosarajus-algorithm)
+    * [Tarjan](#tarjans-algorithm)
 
 <br />
 
@@ -188,6 +194,45 @@ There are three main mathematical notations used to describe the upper, tight, a
 
 Data Structures
 ==========================
+
+### Tree Theory
+
+𝖠 𝗍𝗋𝖾𝖾 𝗂𝗌 𝖺 𝖽𝖺𝗍𝖺 𝗌𝗍𝗋𝗎𝖼𝗍𝗎𝗋𝖾 𝖼𝗈𝗆𝗉𝗈𝗌𝖾𝖽 𝗈𝖿 𝗇𝗈𝖽𝖾𝗌.
+ * 𝖤𝖺𝖼𝗁 𝗍𝗋𝖾𝖾 𝗁𝖺𝗌 𝖺 𝗋𝗈𝗈𝗍 𝗇𝗈𝖽𝖾.
+ * 𝖳𝗁𝖾 𝗋𝗈𝗈𝗍 𝗇𝗈𝖽𝖾 𝗁𝖺𝗌 𝗓𝖾𝗋𝗈 𝗈𝗋 𝗆𝗈𝗋𝖾 𝖼𝗁𝗂𝗅𝖽 𝗇𝗈𝖽𝖾𝗌.
+ * 𝖤𝖺𝖼𝗁 𝖼𝗁𝗂𝗅𝖽 𝗇𝗈𝖽𝖾 𝗁𝖺𝗌 𝗓𝖾𝗋𝗈 𝗈𝗋 𝗆𝗈𝗋𝖾 𝖼𝗁𝗂𝗅𝖽 𝗇𝗈𝖽𝖾𝗌, 𝖺𝗇𝖽 𝗌𝗈 𝗈𝗇.
+
+𝖳𝗁𝖾 𝗍𝗋𝖾𝖾 𝖼𝖺𝗇𝗇𝗈𝗍 𝖼𝗈𝗇𝗍𝖺𝗂𝗇 𝖼𝗒𝖼𝗅𝖾𝗌. 𝖳𝗁𝖾 𝗇𝗈𝖽𝖾𝗌 𝗆𝖺𝗒 𝗈𝗋 𝗆𝖺𝗒 𝗇𝗈𝗍 𝖻𝖾 𝗂𝗇 𝖺 𝗉𝖺𝗋𝗍𝗂𝖼𝗎𝗅𝖺𝗋 𝗈𝗋𝖽𝖾𝗋 𝖺𝗇𝖽 𝗍𝗁𝖾𝗒 𝖼𝗈𝗎𝗅𝖽 𝗁𝖺𝗏𝖾 𝖺𝗇𝗒 𝖽𝖺𝗍𝖺
+𝗍𝗒𝗉𝖾 𝖺𝗌 𝗏𝖺𝗅𝗎𝖾𝗌.
+
+#### Binary Tree vs. Binary Search Tree
+𝖠 `𝖻𝗂𝗇𝖺𝗋𝗒 𝗌𝖾𝖺𝗋𝖼𝗁 𝗍𝗋𝖾𝖾` 𝗂𝗌 𝖺 𝖻𝗂𝗇𝖺𝗋𝗒 𝗍𝗋𝖾𝖾 𝗂𝗇 𝗐𝗁𝗂𝖼𝗁 𝖾𝗏𝖾𝗋𝗒 𝗇𝗈𝖽𝖾 𝖿𝗂𝗍𝗌 𝖺 𝗌𝗉𝖾𝖼𝗂𝖿𝗂𝖼 𝗈𝗋𝖽𝖾𝗋𝗂𝗇𝗀 𝗉𝗋𝗈𝗉𝖾𝗋𝗍𝗒.
+𝖳𝗁𝗂𝗌 𝗆𝗎𝗌𝗍 𝖻𝖾 𝗍𝗋𝗎𝖾 𝖿𝗈𝗋 𝖾𝖺𝖼𝗁 𝗇𝗈𝖽𝖾 *𝗇*.
+
+> 𝖡𝗂𝗇𝖺𝗋𝗒 𝖲𝖾𝖺𝗋𝖼𝗁 𝖯𝗋𝗈𝗉𝖾𝗋𝗍𝗒:
+> - 𝖥𝗈𝗋 𝖾𝗏𝖾𝗋𝗒 𝗇𝗈𝖽𝖾, 𝖺𝗅𝗅 𝖾𝗅𝖾𝗆𝖾𝗇𝗍𝗌 𝗂𝗇 𝗍𝗁𝖾 𝗅𝖾𝖿𝗍 𝗌𝗎𝖻𝗍𝗋𝖾𝖾 𝖺𝗋𝖾 𝗅𝖾𝗌𝗌 𝗍𝗁𝖺𝗇 𝗍𝗁𝖾 𝗇𝗈𝖽𝖾'𝗌 𝗏𝖺𝗅𝗎𝖾, 𝖺𝗇𝖽 𝖺𝗅𝗅 𝖾𝗅𝖾𝗆𝖾𝗇𝗍𝗌 𝗂𝗇 𝗍𝗁𝖾 𝗋𝗂𝗀𝗁𝗍 𝗌𝗎𝖻𝗍𝗋𝖾𝖾 𝖺𝗋𝖾 𝗀𝗋𝖾𝖺𝗍𝖾𝗋 𝗍𝗁𝖺𝗇 𝗍𝗁𝖾 𝗇𝗈𝖽𝖾'𝗌 𝗏𝖺𝗅𝗎𝖾.
+
+𝖳𝗁𝗂𝗌 𝗂𝗇𝖾𝗊𝗎𝖺𝗅𝗂𝗍𝗒 𝗆𝗎𝗌𝗍 𝖻𝖾 𝗍𝗋𝗎𝖾 𝖿𝗈𝗋 𝖺𝗅𝗅 𝗈𝖿 𝖺 𝗇𝗈𝖽𝖾'𝗌 𝖽𝖾𝗌𝖼𝖾𝗇𝖽𝖾𝗇𝗍𝗌, 𝗇𝗈𝗍 𝗃𝗎𝗌𝗍 𝗂𝗍𝗌 𝗂𝗆𝗆𝖾𝖽𝗂𝖺𝗍𝖾 𝖼𝗁𝗂𝗅𝖽𝗋𝖾𝗇. 𝖳𝗁𝖾
+𝖿𝗈𝗅𝗅𝗈𝗐𝗂𝗇𝗀 𝗍𝗋𝖾𝖾 𝗈𝗇 𝗍𝗁𝖾 𝗅𝖾𝖿𝗍 𝖻𝖾𝗅𝗈𝗐 𝗂𝗌 𝖺 𝖻𝗂𝗇𝖺𝗋𝗒 𝗌𝖾𝖺𝗋𝖼𝗁 𝗍𝗋𝖾𝖾. 𝖳𝗁𝖾 𝗍𝗋𝖾𝖾 𝗈𝗇 𝗍𝗁𝖾 𝗋𝗂𝗀𝗁𝗍 𝗂𝗌 𝗇𝗈𝗍, 𝗌𝗂𝗇𝖼𝖾 𝟣𝟤 𝗂𝗌 𝗍𝗈 𝗍𝗁𝖾 𝗅𝖾𝖿𝗍 𝗈𝖿 𝟪.
+
+<table>
+  <tr>
+    <td>
+      <picture>
+        <source media="(prefers-color-scheme: dark)" srcset="https://github.com/AnastasKosstow/algorithms/blob/main/assets/trees/bst-dark.png">
+        <img width="350" alt="heap" src="https://github.com/AnastasKosstow/algorithms/blob/main/assets/trees/bst.png">
+      </picture>
+    </td>
+    <td>
+      <picture>
+        <source media="(prefers-color-scheme: dark)" srcset="https://github.com/AnastasKosstow/algorithms/blob/main/assets/trees/nbst-dark.png">
+        <img width="350" alt="heap" src="https://github.com/AnastasKosstow/algorithms/blob/main/assets/trees/nbst.png">
+      </picture>
+    </td>
+  </tr>
+</table>
+
+---
 
 ### Heap
 
