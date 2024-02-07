@@ -39,7 +39,7 @@ impl<T> TreeNode<T> {
             left: None,
             right: None,
             parent: parent,
-            height: 0
+            height: 1
         }
     }
 
@@ -62,10 +62,10 @@ impl<T> TreeNode<T> {
 
     fn balance_factor(&mut self) -> i8 {
         let (left, right) = (self.height(Side::Left), self.height(Side::Right));
-        if left < right {
-            (self.height) as i8
+        if left > right {
+            (left - right) as i8
         } else {
-            -((self.height) as i8)
+            -((right - left) as i8)
         }
     }
 
@@ -79,15 +79,6 @@ impl<T: std::fmt::Debug + Ord + PartialOrd + Copy> AvlTree<T> {
         AvlTree {
             root: None,
             length: 0
-        }
-    }
-
-    pub fn print(&self) {
-        let mut vec: Vec<String> = vec![];
-        print_tree(self.root.unwrap(), &mut vec, 0);
-
-        while let Some(item) = vec.pop() {
-            println!("{:?}", item);
         }
     }
 
@@ -116,24 +107,6 @@ impl<T: std::fmt::Debug + Ord + PartialOrd + Copy> AvlTree<T> {
         }
 
         inserted
-    }
-}
-
-fn print_tree<T: std::fmt::Debug>(node: NonNull<TreeNode<T>>, stack: &mut Vec<String>, mut level: i32) {
-    unsafe {
-        let node_ptr = node.as_ref();
-        if let Some(left) = node_ptr.left {
-            level += 1;
-            print_tree(left, stack, level);
-            level -= 1;
-        }
-        if let Some(right) = node_ptr.right {
-            level += 1;
-            print_tree(right, stack, level);
-            level -= 1;
-        }
-        let line: String = format!("item: {:?} - level: {}", node_ptr.value, level);
-        stack.push(line);
     }
 }
 
@@ -174,8 +147,8 @@ unsafe fn rebalance<T: Copy>(node: &mut NonNull<TreeNode<T>>) {
     node_ptr.update_height();
 
     let side = match node_ptr.balance_factor() {
-        -2 => Side::Left,
-        2 => Side::Right,
+        2 => Side::Left,
+        -2 => Side::Right,
         _ => return,
     };
 
@@ -190,6 +163,7 @@ unsafe fn rebalance<T: Copy>(node: &mut NonNull<TreeNode<T>>) {
     }
 }
 
+
 unsafe fn rotate<T>(node: &mut NonNull<TreeNode<T>>, side: Side) {
     let node_ptr = node.as_mut();
     let mut subtree = node_ptr.child(!side).take().unwrap();
@@ -200,4 +174,105 @@ unsafe fn rotate<T>(node: &mut NonNull<TreeNode<T>>, side: Side) {
     
     *node_ptr.child(side) = Some(subtree);
     node_ptr.update_height();
+}
+
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn empty_tree() {
+        let tree: AvlTree<i32> = AvlTree::new();
+        assert!(tree.is_empty());
+        assert_eq!(tree.len(), 0);
+    }
+
+    #[test]
+    fn single_element() {
+        let mut tree = AvlTree::new();
+        assert!(tree.insert(10));
+        assert!(!tree.is_empty());
+        assert_eq!(tree.len(), 1);
+    }
+
+    #[test]
+    fn left_left_rotation() {
+        let mut tree = AvlTree::new();
+        tree.insert(30);
+        tree.insert(20);
+
+        unsafe {
+            assert_eq!(tree.root.unwrap().as_ref().value, 30);
+        }
+
+        tree.insert(10);
+
+        unsafe {
+            let root = tree.root.unwrap();
+            assert_eq!(root.as_ref().value, 20);
+            assert_eq!(root.as_ref().left.unwrap().as_ref().value, 10);
+            assert_eq!(root.as_ref().right.unwrap().as_ref().value, 30);
+        }
+    }
+
+    #[test]
+    fn left_right_rotation() {
+        let mut tree = AvlTree::new();
+        tree.insert(30);
+        tree.insert(20);
+
+        unsafe {
+            assert_eq!(tree.root.unwrap().as_ref().value, 30);
+        }
+
+        tree.insert(25);
+
+        unsafe {
+            let root = tree.root.unwrap();
+            assert_eq!(root.as_ref().value, 25);
+            assert_eq!(root.as_ref().left.unwrap().as_ref().value, 20);
+            assert_eq!(root.as_ref().right.unwrap().as_ref().value, 30);
+        }
+    }
+
+    #[test]
+    fn right_right_rotation() {
+        let mut tree = AvlTree::new();
+        tree.insert(10);
+        tree.insert(20);
+
+        unsafe {
+            assert_eq!(tree.root.unwrap().as_ref().value, 10);
+        }
+
+        tree.insert(30);
+
+        unsafe {
+            let root = tree.root.unwrap();
+            assert_eq!(root.as_ref().value, 20);
+            assert_eq!(root.as_ref().left.unwrap().as_ref().value, 10);
+            assert_eq!(root.as_ref().right.unwrap().as_ref().value, 30);
+        }
+    }
+
+    #[test]
+    fn right_left_rotation() {
+        let mut tree = AvlTree::new();
+        tree.insert(10);
+        tree.insert(20);
+
+        unsafe {
+            assert_eq!(tree.root.unwrap().as_ref().value, 10);
+        }
+
+        tree.insert(15);
+
+        unsafe {
+            let root = tree.root.unwrap();
+            assert_eq!(root.as_ref().value, 15);
+            assert_eq!(root.as_ref().left.unwrap().as_ref().value, 10);
+            assert_eq!(root.as_ref().right.unwrap().as_ref().value, 20);
+        }
+    }
 }
