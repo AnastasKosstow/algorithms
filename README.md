@@ -50,8 +50,9 @@
 * [Data Structures](#data-structures)
   * [Trees](#tree-theory)
     * [Tree Theory](#tree-theory)
-    * [Binary Heap](#heap) 
-    * [Binary Search Tree](#binary-search-tree) 
+    * [Binary Heap](#heap)
+    * [Binary Search Tree](#binary-search-tree)
+    * [AVL Tree](#avl-tree)
   * [LinkedList](#linkedlist)
   * [Disjoint-set](#disjoint-set)
 * [Graph Theory](#graph-theory)
@@ -469,6 +470,52 @@ F𝗈r𝗆𝗎𝗅𝖺𝗌 𝖿𝗈𝗋 𝖿𝗂𝗇𝖽𝗂𝗇𝗀 parent and 
 <b>𝙸𝚖𝚙𝚕𝚎𝚖𝚎𝚗𝚝𝚊𝚝𝚒𝚘𝚗𝚜:</b> <a href="https://github.com/AnastasKosstow/algorithms/blob/main/rust/src/data_structures/binary_search_tree.rs">Rust</a> - <a href="https://github.com/AnastasKosstow/algorithms/blob/main/csharp/BinarySearchTree/BinarySearchTree.cs">C#</a>
 
 ---
+
+
+
+
+
+
+### AVL Tree
+
+> [!NOTE]
+> AVL tree is a self-balancing Binary Search Tree (BST) where the difference between heights of left and right subtrees cannot be more than one for all nodes.
+> It maintains the balancing as each node contains extra information called a balance factor whose value is either -1, 0 or +1
+
+AVL Tree Properties:
+ - The height of the tree is at most O(log n), where n is the number of nodes in the tree.
+ - For every node in the tree, the heights of the left and right subtrees differ by at most one.
+ - The left and right subtrees of every node are themselves AVL trees.
+
+An AVL tree stores in each node the height of the subtrees rooted at this node. 
+Then, for any node, we can check if it is height balanced: that the height of the left subtree and the height of the right subtree differ by no more than one.
+
+![avl bf](https://quicklatex.com/cache3/7c/ql_318fce07cfbcd61081ed7e9dea01417c_l3.png)
+
+#### Balance Factor
+Balance factor of a node in an AVL tree is the difference between the height of the left subtree and that of the right subtree of that node.
+Balance Factor = (Height of Left Subtree - Height of Right Subtree) or (Height of Right Subtree - Height of Left Subtree).
+The self balancing property of an avl tree is maintained by the balance factor. The value of balance factor should always be -1, 0 or +1.
+ - For a given node
+   - If left subtree is higher: 1 (posivite integer)
+   - If right subtree is higher: -1 (negative integer)
+
+#### Insert
+When a node is inserted, the balance of some nodes might change to -2 or 2. Therefore, when we "unwind" the recursive stack, we check and fix the balance at each node. 
+We do this through a series of rotations.
+Rotations can be either left or right rotations. The right rotation is an inverse of the left rotation.
+- Depending on the balance and where the imbalance occurs, we fix it in a different way.
+  - Balance is 2:
+  - Balance is -2:
+
+---
+
+
+
+
+
+
+
 
 ### LinkedList
 
