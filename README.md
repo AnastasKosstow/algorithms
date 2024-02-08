@@ -578,7 +578,7 @@ AVL Tree Properties:
     </td>
     <td>
       <kbd>
-      <a href="https://github.com/AnastasKosstow/algorithms/blob/main/rust/src/data_structures/avl_tree.rs">
+      <a href="https://github.com/AnastasKosstow/algorithms/blob/main/csharp/AVLTree/AVLTree.cs">
         <div>
           <img src="https://github.com/AnastasKosstow/algorithms/blob/main/assets/logo/csharp-logo.png" width="40" alt="csharp" />
         </div>
