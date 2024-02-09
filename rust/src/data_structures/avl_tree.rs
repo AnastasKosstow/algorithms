@@ -11,7 +11,6 @@ struct TreeNode<T> {
     value: T,
     left: Option<NonNull<TreeNode<T>>>,
     right: Option<NonNull<TreeNode<T>>>,
-    parent: Option<NonNull<TreeNode<T>>>,
     height: usize
 }
 
@@ -33,12 +32,11 @@ impl Not for Side {
 }
 
 impl<T> TreeNode<T> {
-    fn new(value: T, parent: Option<NonNull<TreeNode<T>>>) -> Self {
+    fn new(value: T) -> Self {
         TreeNode {
             value,
             left: None,
             right: None,
-            parent: parent,
             height: 1
         }
     }
@@ -97,7 +95,7 @@ impl<T: std::fmt::Debug + Ord + PartialOrd + Copy> AvlTree<T> {
                 inserted = insert_node(&mut root, value);
             }
         } else {
-            let root_box = Box::new(TreeNode::<T>::new(value, None));
+            let root_box = Box::new(TreeNode::<T>::new(value));
             let root_ptr = NonNull::new(Box::into_raw(root_box));
             self.root = root_ptr;
         }
@@ -128,7 +126,7 @@ unsafe fn insert_node<T: Ord + PartialOrd + Copy>(node: &mut NonNull<TreeNode<T>
             insert_node(ptr, value)
         },
         None => {
-            let node_box = Box::new(TreeNode::<T>::new(value, Some(*node)));
+            let node_box = Box::new(TreeNode::<T>::new(value));
             let node_ptr = NonNull::new(Box::into_raw(node_box));
             *target_node = node_ptr;
             true
@@ -148,7 +146,7 @@ unsafe fn rebalance<T: Copy>(node: &mut NonNull<TreeNode<T>>) {
 
     let side = match node_ptr.balance_factor() {
         2 => Side::Left,
-        -2 => Side::Right,
+       -2 => Side::Right,
         _ => return,
     };
 
