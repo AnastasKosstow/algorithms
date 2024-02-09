@@ -86,7 +86,7 @@ public class AVLTree<T> where T : IComparable<T>
         bool inserted = true;
         if (Root != null)
         {
-            inserted = InsertValue(Root, value);
+            inserted = InsertNode(Root, value);
         }
         else
         {
@@ -100,7 +100,20 @@ public class AVLTree<T> where T : IComparable<T>
         return inserted;
     }
 
-    private bool InsertValue(TreeNode<T> node, T value)
+    public bool Delete(T value)
+    {
+        bool deleted = false;
+        var deletedNode = DeleteNode(Root, value);
+        if (deletedNode != null)
+        {
+            Length--;
+            deleted = true;
+        }
+
+        return deleted;
+    }
+
+    private bool InsertNode(TreeNode<T> node, T value)
     {
         if (node.Value.CompareTo(value) == 0)
         {
@@ -110,20 +123,64 @@ public class AVLTree<T> where T : IComparable<T>
         if (value.CompareTo(node.Value) < 0)
         {
             if (node.Left != null)
-                InsertValue(node.Left, value);
+                InsertNode(node.Left, value);
             else
                 node.Left = new TreeNode<T>(value);
         }
         else
         {
             if (node.Right != null)
-                InsertValue(node.Right, value);
+                InsertNode(node.Right, value);
             else
                 node.Right = new TreeNode<T>(value);
         }
 
         Rebalance(node);
         return true;
+    }
+
+    private TreeNode<T> DeleteNode(TreeNode<T> node, T value)
+    {
+        if (node == null)
+            return null;
+
+        int compare = value.CompareTo(node.Value);
+        if (compare < 0)
+        {
+            node.Left = DeleteNode(node.Left, value);
+        }
+        else if (compare > 0)
+        {
+            node.Right = DeleteNode(node.Right, value);
+        }
+        else
+        {
+            if (node.Left == null)
+            {
+                return node.Right;
+            }
+            else if (node.Right == null)
+            {
+                return node.Left;
+            }
+
+            TreeNode<T> minNode = FindMin(node.Right);
+            node.Value = minNode.Value;
+            node.Right = DeleteNode(node.Right, minNode.Value);
+        }
+
+        Rebalance(node);
+        return node;
+    }
+
+    private TreeNode<T> FindMin(TreeNode<T> node)
+    {
+        TreeNode<T> current = node;
+        while (current.Left != null)
+        {
+            current = current.Left;
+        }
+        return current;
     }
 
     private void Rebalance(TreeNode<T> node)
