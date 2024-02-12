@@ -106,6 +106,15 @@ impl<T: std::fmt::Debug + Ord + PartialOrd + Copy> AvlTree<T> {
 
         inserted
     }
+
+    pub fn delete(&mut self, value: T) {
+        if let Some(mut root) = self.root {
+            unsafe {
+                self.root = delete_node(&mut root, value);
+                self.length -= 1;
+            }
+        }
+    }
 }
 
 
@@ -137,6 +146,43 @@ unsafe fn insert_node<T: Ord + PartialOrd + Copy>(node: &mut NonNull<TreeNode<T>
         rebalance(node);
     }
     inserted
+}
+
+
+unsafe fn delete_node<T: Ord + PartialOrd + Copy>(node: &mut NonNull<TreeNode<T>>, value: T) -> Option<NonNull<TreeNode<T>>> {
+    let tree_node = &mut *node.as_ptr();
+
+    if value < tree_node.value {
+        if let Some(mut left_node) = tree_node.left {
+            tree_node.left = delete_node(&mut left_node, value);
+        }
+    } else if value > tree_node.value {
+        if let Some(mut right_node) = tree_node.right {
+            tree_node.right = delete_node(&mut right_node, value);
+        }
+    } else {
+        if tree_node.left.is_none() {
+            return tree_node.right;
+        } else if tree_node.right.is_none() {
+            return tree_node.left;
+        }
+
+        let mut successor = min_value_node(tree_node.right.unwrap());
+        tree_node.value = (*successor.as_ptr()).value;
+        tree_node.right = delete_node(&mut successor, tree_node.value);
+    }
+
+    rebalance(node);
+    Some(*node)
+}
+
+
+unsafe fn min_value_node<T>(node: NonNull<TreeNode<T>>) -> NonNull<TreeNode<T>> {
+    let mut current = node;
+    while let Some(left) = (*current.as_ptr()).left {
+        current = left;
+    }
+    current
 }
 
 
@@ -271,6 +317,28 @@ mod tests {
             assert_eq!(root.as_ref().value, 15);
             assert_eq!(root.as_ref().left.unwrap().as_ref().value, 10);
             assert_eq!(root.as_ref().right.unwrap().as_ref().value, 20);
+        }
+    }
+
+    #[test]
+    fn delete_node() {
+        let mut tree = AvlTree::new();
+        tree.insert(20);
+        tree.insert(10);
+        tree.insert(30);
+        tree.insert(40);
+
+        unsafe {
+            assert_eq!(tree.root.unwrap().as_ref().value, 20);
+        }
+
+        tree.delete(10);
+
+        unsafe {
+            let root = tree.root.unwrap();
+            assert_eq!(root.as_ref().value, 30);
+            assert_eq!(root.as_ref().left.unwrap().as_ref().value, 20);
+            assert_eq!(root.as_ref().right.unwrap().as_ref().value, 40);
         }
     }
 }

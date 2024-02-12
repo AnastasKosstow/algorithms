@@ -64,7 +64,8 @@ public class BinarySearchTree<T> where T : IComparable<T>
 
     private TreeNode<T> DeleteNode(TreeNode<T> node, T value)
     {
-        if (node == null) return null;
+        if (node == null) 
+            return null;
 
         int compare = value.CompareTo(node.Value);
         if (compare < 0)

@@ -19,9 +19,9 @@ public static class SideExtensions
 public class TreeNode<T> where T : IComparable<T>
 {
     public T Value;
-    internal int Height;
-    internal TreeNode<T> Left;
-    internal TreeNode<T> Right;
+    public int Height;
+    public TreeNode<T> Left;
+    public TreeNode<T> Right;
 
     internal TreeNode(T value)
     {
@@ -31,13 +31,14 @@ public class TreeNode<T> where T : IComparable<T>
 
     internal TreeNode<T> GetChildNode(Side side)
     {
-        return 
-           side switch
-           {
-               Side.Left => this.Left,
-               Side.Right => this.Right,
-               _ => throw new ArgumentException(null, nameof(side)),
-           };
+        var node = side switch
+        {
+            Side.Left => this.Left,
+            Side.Right => this.Right,
+            _ => throw new ArgumentException(null, nameof(side)),
+        };
+
+        return node;
     }
 
     internal int GetHeight(Side side)
@@ -85,7 +86,7 @@ public class AVLTree<T> where T : IComparable<T>
         bool inserted = true;
         if (Root != null)
         {
-            inserted = InsertValue(Root, value);
+            inserted = InsertNode(Root, value);
         }
         else
         {
@@ -99,7 +100,20 @@ public class AVLTree<T> where T : IComparable<T>
         return inserted;
     }
 
-    private bool InsertValue(TreeNode<T> node, T value)
+    public bool Delete(T value)
+    {
+        bool deleted = false;
+        var deletedNode = DeleteNode(Root, value);
+        if (deletedNode != null)
+        {
+            Length--;
+            deleted = true;
+        }
+
+        return deleted;
+    }
+
+    private bool InsertNode(TreeNode<T> node, T value)
     {
         if (node.Value.CompareTo(value) == 0)
         {
@@ -109,20 +123,64 @@ public class AVLTree<T> where T : IComparable<T>
         if (value.CompareTo(node.Value) < 0)
         {
             if (node.Left != null)
-                InsertValue(node.Left, value);
+                InsertNode(node.Left, value);
             else
                 node.Left = new TreeNode<T>(value);
         }
         else
         {
             if (node.Right != null)
-                InsertValue(node.Right, value);
+                InsertNode(node.Right, value);
             else
                 node.Right = new TreeNode<T>(value);
         }
 
         Rebalance(node);
         return true;
+    }
+
+    private TreeNode<T> DeleteNode(TreeNode<T> node, T value)
+    {
+        if (node == null)
+            return null;
+
+        int compare = value.CompareTo(node.Value);
+        if (compare < 0)
+        {
+            node.Left = DeleteNode(node.Left, value);
+        }
+        else if (compare > 0)
+        {
+            node.Right = DeleteNode(node.Right, value);
+        }
+        else
+        {
+            if (node.Left == null)
+            {
+                return node.Right;
+            }
+            else if (node.Right == null)
+            {
+                return node.Left;
+            }
+
+            TreeNode<T> minNode = FindMin(node.Right);
+            node.Value = minNode.Value;
+            node.Right = DeleteNode(node.Right, minNode.Value);
+        }
+
+        Rebalance(node);
+        return node;
+    }
+
+    private TreeNode<T> FindMin(TreeNode<T> node)
+    {
+        TreeNode<T> current = node;
+        while (current.Left != null)
+        {
+            current = current.Left;
+        }
+        return current;
     }
 
     private void Rebalance(TreeNode<T> node)
@@ -149,34 +207,48 @@ public class AVLTree<T> where T : IComparable<T>
         var subtreeBalanceFactor = subtree.GetBalanceFactor();
         if ((side == Side.Left && subtreeBalanceFactor == -1) || (side == Side.Right && subtreeBalanceFactor == 1))
         {
-            Rotate(subtree, side.Switch());
+            Rotate(side.Switch(), subtree, node);
         }
-        Rotate(node, side);
+        Rotate(side, node);
     }
 
-    private void Rotate(TreeNode<T> node, Side side)
+    private void Rotate(Side side, TreeNode<T> node, TreeNode<T> parent = null)
     {
         var childNode = node.GetChildNode(side);
-        if (childNode == null) 
+        if (childNode == null)
             throw new InvalidOperationException(nameof(childNode));
 
         if (side == Side.Left)
         {
-            var temp = childNode.Right;
+            var rightChildNode = childNode.Right;
             childNode.Right = node;
-            node.Left = temp;
+            node.Left = rightChildNode;
         }
         else
         {
-            node.Right = childNode;
+            var leftChildNode = childNode.Left;
+            childNode.Left = node;
+            node.Right = leftChildNode;
         }
 
-        if (childNode.GetChildNode(side) != null)
+        if (parent != null)
         {
-            childNode.GetChildNode(side).UpdateHeight();
+            if (side.Switch() == Side.Left)
+            {
+                parent.Left = childNode;
+            }
+            else
+            {
+                parent.Right = childNode;
+            }
         }
 
-        childNode.UpdateHeight();
+        if (this.Root.Value.CompareTo(node.Value) == 0)
+        {
+            this.Root = childNode;
+        }
+
         node.UpdateHeight();
+        childNode.UpdateHeight();
     }
 }
