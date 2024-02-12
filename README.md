@@ -610,7 +610,7 @@ Example calculating balance factor is C#
    - updateHeightOfChildren(current)
    - updateHeightOfChildren(newRoot)
 
-   <img src="https://github.com/AnastasKosstow/algorithms/blob/main/assets/trees/avl/left.jpeg" width="600" alt="avl" />
+<img src="https://github.com/AnastasKosstow/algorithms/blob/main/assets/trees/avl/left.jpeg" width="600" alt="avl" />
 
  - Right-Right rotation:
    - newRoot = current → left
