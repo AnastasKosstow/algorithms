@@ -601,41 +601,37 @@ Example calculating balance factor is C#
    - 𝖲𝗂𝗇𝗀𝗅𝖾 𝖫𝖾𝖿𝗍 𝖱𝗈𝗍𝖺𝗍𝗂𝗈𝗇 (𝖱𝖱 𝖱𝗈𝗍𝖺𝗍𝗂𝗈𝗇): 𝖳𝗁𝗂𝗌 𝗋𝗈𝗍𝖺𝗍𝗂𝗈𝗇 𝗂𝗌 𝖺𝗉𝗉𝗅𝗂𝖾𝖽 𝗐𝗁𝖾𝗇 𝖺 𝗋𝗂𝗀𝗁𝗍-𝗋𝗂𝗀𝗁𝗍 𝖼𝖺𝗌𝖾 𝗈𝖼𝖼𝗎𝗋𝗌. 𝖳𝗁𝖾 𝗌𝗎𝖻𝗍𝗋𝖾𝖾'𝗌 𝗋𝗈𝗈𝗍 𝗂𝗌 𝗋𝗈𝗍𝖺𝗍𝖾𝖽 𝗍𝗈 𝗍𝗁𝖾 𝗅𝖾𝖿𝗍, 𝗆𝖺𝗄𝗂𝗇𝗀 𝗍𝗁𝖾 𝗋𝗂𝗀𝗁𝗍 𝖼𝗁𝗂𝗅𝖽 𝗍𝗁𝖾 𝗇𝖾𝗐 𝗋𝗈𝗈𝗍 𝗈𝖿 𝗍𝗁𝖾 𝗌𝗎𝖻𝗍𝗋𝖾𝖾.
    - 𝖣𝗈𝗎𝖻𝗅𝖾 𝖱𝗈𝗍𝖺𝗍𝗂𝗈𝗇 (𝖫𝖱 𝖱𝗈𝗍𝖺𝗍𝗂𝗈𝗇 𝖺𝗇𝖽 𝖱𝖫 𝖱𝗈𝗍𝖺𝗍𝗂𝗈𝗇): 𝖣𝗈𝗎𝖻𝗅𝖾 𝗋𝗈𝗍𝖺𝗍𝗂𝗈𝗇𝗌 𝖺𝗋𝖾 𝖺𝗉𝗉𝗅𝗂𝖾𝖽 𝗂𝗇 𝗍𝗁𝖾 𝖼𝖺𝗌𝖾 𝗈𝖿 𝖺𝗇 𝖫𝖱 𝗈𝗋 𝖱𝖫 𝗂𝗆𝖻𝖺𝗅𝖺𝗇𝖼𝖾. 𝖨𝗍 𝖼𝗈𝗇𝗌𝗂𝗌𝗍𝗌 𝗈𝖿 𝗍𝗐𝗈 𝗌𝗂𝗇𝗀𝗅𝖾 𝗋𝗈𝗍𝖺𝗍𝗂𝗈𝗇𝗌: 𝖿𝗂𝗋𝗌𝗍 𝗋𝗈𝗍𝖺𝗍𝗂𝗈𝗇 𝗈𝗇 𝗍𝗁𝖾 𝖼𝗁𝗂𝗅𝖽 (𝗅𝖾𝖿𝗍 𝗈𝗇 𝗍𝗁𝖾 𝗅𝖾𝖿𝗍 𝖼𝗁𝗂𝗅𝖽 𝖿𝗈𝗋 𝖫𝖱, 𝗋𝗂𝗀𝗁𝗍 𝗈𝗇 𝗍𝗁𝖾 𝗋𝗂𝗀𝗁𝗍 𝖼𝗁𝗂𝗅𝖽 𝖿𝗈𝗋 𝖱𝖫) 𝖺𝗇𝖽 𝗍𝗁𝖾𝗇 𝖺 𝗌𝖾𝖼𝗈𝗇𝖽 𝗋𝗈𝗍𝖺𝗍𝗂𝗈𝗇 𝗈𝗇 𝗍𝗁𝖾 𝗋𝗈𝗈𝗍 (𝗋𝗂𝗀𝗁𝗍 𝖿𝗈𝗋 𝖫𝖱, 𝗅𝖾𝖿𝗍 𝖿𝗈𝗋 𝖱𝖫).
 
-<br>
+#### Rotations visualization
 
  - Left-Left rotation:
-```yaml
-  newRoot = current → right
-  current → right = newRoot → left
-  newRoot → left = current
-  updateHeightOfChildren(current)
-  updateHeightOfChildren(newRoot)
-```
-   <img src="https://github.com/AnastasKosstow/algorithms/blob/main/assets/trees/avl/left.jpeg" width="550" alt="avl" />
+   - newRoot = current → right
+   - current → right = newRoot → left
+   - newRoot → left = current
+   - updateHeightOfChildren(current)
+   - updateHeightOfChildren(newRoot)
+
+   <img src="https://github.com/AnastasKosstow/algorithms/blob/main/assets/trees/avl/left.jpeg" width="600" alt="avl" />
 
  - Right-Right rotation:
-```yaml
-  newRoot = current → left
-  current → left = newRoot → right
-  newRoot → right = current
-  updateHeightOfChildren(current)
-  updateHeightOfChildren(newRoot)
-```
-   <img src="https://github.com/AnastasKosstow/algorithms/blob/main/assets/trees/avl/right.jpeg" width="550" alt="avl" />
+   - newRoot = current → left
+   - current → left = newRoot → right
+   - newRoot → right = current
+   - updateHeightOfChildren(current)
+   - updateHeightOfChildren(newRoot)
+
+<img src="https://github.com/AnastasKosstow/algorithms/blob/main/assets/trees/avl/right.jpeg" width="600" alt="avl" />
 
  - Left-Right rotation:
-```yaml
-  current → left = leftRotate(current → left) // Left-Left rotation for current → left
-  rightRotate(current) // Right-Right rotation for current
-```
-   <img src="https://github.com/AnastasKosstow/algorithms/blob/main/assets/trees/avl/left-right.jpeg" width="550" alt="avl" />
+   - current → left = leftRotate(current → left) // Left-Left rotation for current → left
+   - rightRotate(current) // Right-Right rotation for current
+
+<img src="https://github.com/AnastasKosstow/algorithms/blob/main/assets/trees/avl/left-right.jpeg" width="600" alt="avl" />
 
  - Right-Left rotation:
-```yaml
-  current → right = rightRotate(current → right) // Left-Left rotation for current → left
-  leftRotate(current) // Right-Right rotation for current
-```
-   <img src="https://github.com/AnastasKosstow/algorithms/blob/main/assets/trees/avl/right-left.jpeg" width="550" alt="avl" />
+   - current → right = rightRotate(current → right) // Left-Left rotation for current → left
+   - leftRotate(current) // Right-Right rotation for current
+
+<img src="https://github.com/AnastasKosstow/algorithms/blob/main/assets/trees/avl/right-left.jpeg" width="600" alt="avl" />
 
 <table>
   <tr>
