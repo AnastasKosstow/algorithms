@@ -1,16 +1,15 @@
-pub fn dijkstra_primes(up_to: usize) -> Vec<i32> {
-
+pub fn dijkstra_primes(up_to: usize) -> Vec<usize> {
     if up_to < 2 {
         return vec![];
     }
 
-    let mut primes: Vec<i32> = Vec::new();
+    let mut primes: Vec<usize> = Vec::new();
     let mut pool = Pool::new();
     
     primes.push(2);
     pool.insert(2);
     
-    for number in 3..(up_to as i32) {
+    for number in 3..up_to {
         if let Some(multiplier) = pool.get_smallest_multiplier() {
             if number < multiplier {
                 primes.push(number);
@@ -25,7 +24,7 @@ pub fn dijkstra_primes(up_to: usize) -> Vec<i32> {
 }
 
 struct Pool {
-    pairs: Vec<(i32, i32)>
+    pairs: Vec<(usize, usize)>
 }
 
 impl Pool {
@@ -33,40 +32,34 @@ impl Pool {
         Pool { pairs: vec![] }
     }
 
-    fn insert(&mut self, v: i32) {
+    fn insert(&mut self, v: usize) {
         self.pairs.push((v, v * v));
     }
 
-    fn update(&mut self, v: i32) {
+    fn update(&mut self, v: usize) {
         let mut index = 0;
-        while self.pairs[index].1 == v {
-            self.pairs[index].1 += self.pairs[index].0;
+        for pair in self.pairs.iter_mut().take_while(|pair| pair.1 == v) {
+            pair.1 += pair.0;
             index += 1;
         }
 
-        index -= 1;
-        let current = self.pairs[index];
-        loop {
-            let mut sorted = true;
-            while current.1 > self.pairs[index + 1].1 {
-                let temp = self.pairs[index + 1];
-                self.pairs[index + 1] = current;
-                self.pairs[index] = temp;
-                sorted = false;
-
+        if self.pairs.len() > 1 {
+            index -= 1;
+            loop {
+                let mut i = index;
+                while self.pairs[i].1 > self.pairs[i + 1].1 {
+                    self.pairs.swap(i, i + 1);
+                    i += 1;
+                }
                 if index == 0 {
                     break;
                 }
                 index -= 1;
             }
-
-            if sorted {
-                break;
-            }
         }
     }
 
-    fn get_smallest_multiplier(&self) -> Option<i32> {
+    fn get_smallest_multiplier(&self) -> Option<usize> {
         if let Some(pair) = self.pairs.first() {
             return Some(pair.1);
         }
@@ -81,10 +74,10 @@ mod tests {
 
     #[test]
     fn test_dijkstra_primes() {
-        let primes: Vec<i32> = dijkstra_primes(30);
+        let primes: Vec<usize> = dijkstra_primes(1000000);
         assert!(!primes.is_empty());
-        assert_eq!(primes.len(), 10);
+        assert_eq!(primes.len(), 78498);
         assert_eq!(primes.first().unwrap(), &2);
-        assert_eq!(primes.last().unwrap(), &29);
+        assert_eq!(primes.last().unwrap(), &999983);
     }
 }

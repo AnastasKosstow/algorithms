@@ -1,5 +1,8 @@
-pub fn sieve_of_eratosthenes(up_to: usize) -> Vec<i32> {
-
+pub fn sieve_of_eratosthenes(up_to: usize) -> Vec<usize> {
+    if up_to < 2 {
+        return vec![];
+    }
+    
     let mut sieve: Vec<bool> = vec![true; up_to];
     sieve[0] = false;
     sieve[1] = false;
@@ -15,7 +18,7 @@ pub fn sieve_of_eratosthenes(up_to: usize) -> Vec<i32> {
         }
     }
     sieve.iter().enumerate()
-        .filter_map(|(number, &is_prime)| if is_prime { Some(number as i32) } else { None })
+        .filter_map(|(number, &is_prime)| if is_prime { Some(number) } else { None })
         .collect()
 }
 
@@ -26,10 +29,10 @@ mod tests {
 
     #[test]
     fn test_sieve_of_eratosthenes() {
-        let primes: Vec<i32> = sieve_of_eratosthenes(30);
+        let primes: Vec<usize> = sieve_of_eratosthenes(1000000);
         assert!(!primes.is_empty());
-        assert_eq!(primes.len(), 10);
+        assert_eq!(primes.len(), 78498);
         assert_eq!(primes.first().unwrap(), &2);
-        assert_eq!(primes.last().unwrap(), &29);
+        assert_eq!(primes.last().unwrap(), &999983);
     }
 }
