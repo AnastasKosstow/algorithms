@@ -384,7 +384,7 @@ Here's how it works:
     </td>
     <td>
       <kbd>
-      <a href="https://github.com/AnastasKosstow/algorithms/blob/main/rust/src/primes/sieve_of_eratosthenes.rs">
+      <a href="https://github.com/AnastasKosstow/algorithms/blob/main/rust/src/primes/dijkstra_primes.rs">
         <div>
           <img src="https://github.com/AnastasKosstow/algorithms/blob/main/assets/logo/rust-logo.png" width="40" alt="rust" />
         </div>
