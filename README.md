@@ -198,7 +198,7 @@ There are three main mathematical notations used to describe the upper, tight, a
 
 # Primes
 
-<img src="" width="350" alt="primes" />
+<img src="https://github.com/AnastasKosstow/algorithms/blob/main/assets/primes.png" width="350" alt="primes" />
 
 #### What Are Prime Numbers?
 
@@ -367,13 +367,13 @@ Here's how it works:
 
 #### Comparing the `Dijkstra's Primes` algorithm to `Trial Division` and `Sieve of Eratosthenes`
 
-While `Trial Division` is very space efficient, it's not very time efficient. Actually it's the slowest of the three. <br>
-`Sieve of Eratosthenes` is the opposite. It's very time efficient, but very space inefficient. <br>
-`Dijkstra's Primes` is somewhere in the middle between the two. <br>
-In Dijkstra algorithm we just using a simple addition to keep track of the multiples of prime numbers, not division like we did in `Trial Division`. <br>
-Also we use smaller data structure to keep track of the multiples compare what we used in the `Sieve of Eratosthenes`. Instead of keeping track of all the multiples at once, Dijkstra's method only keeps track of the multiples it needs.
+𝖶𝗁𝗂𝗅𝖾 `𝖳𝗋𝗂𝖺𝗅 𝖣𝗂𝗏𝗂𝗌𝗂𝗈𝗇` 𝗂𝗌 𝗏𝖾𝗋𝗒 𝗌𝗉𝖺𝖼𝖾 𝖾𝖿𝖿𝗂𝖼𝗂𝖾𝗇𝗍, 𝗂𝗍'𝗌 𝗇𝗈𝗍 𝗏𝖾𝗋𝗒 𝗍𝗂𝗆𝖾 𝖾𝖿𝖿𝗂𝖼𝗂𝖾𝗇𝗍. 𝖠𝖼𝗍𝗎𝖺𝗅𝗅𝗒 𝗂𝗍'𝗌 𝗍𝗁𝖾 𝗌𝗅𝗈𝗐𝖾𝗌𝗍 𝗈𝖿 𝗍𝗁𝖾 𝗍𝗁𝗋𝖾𝖾. <br>
+`𝖲𝗂𝖾𝗏𝖾 𝗈𝖿 𝖤𝗋𝖺𝗍𝗈𝗌𝗍𝗁𝖾𝗇𝖾𝗌` 𝗂𝗌 𝗍𝗁𝖾 𝗈𝗉𝗉𝗈𝗌𝗂𝗍𝖾. 𝖨𝗍'𝗌 𝗏𝖾𝗋𝗒 𝗍𝗂𝗆𝖾 𝖾𝖿𝖿𝗂𝖼𝗂𝖾𝗇𝗍, 𝖻𝗎𝗍 𝗏𝖾𝗋𝗒 𝗌𝗉𝖺𝖼𝖾 𝗂𝗇𝖾𝖿𝖿𝗂𝖼𝗂𝖾𝗇𝗍. <br>
+`𝖣𝗂𝗃𝗄𝗌𝗍𝗋𝖺'𝗌 𝖯𝗋𝗂𝗆𝖾𝗌` 𝗂𝗌 𝗌𝗈𝗆𝖾𝗐𝗁𝖾𝗋𝖾 𝗂𝗇 𝗍𝗁𝖾 𝗆𝗂𝖽𝖽𝗅𝖾 𝖻𝖾𝗍𝗐𝖾𝖾𝗇 𝗍𝗁𝖾 𝗍𝗐𝗈. <br>
+𝖨𝗇 𝖣𝗂𝗃𝗄𝗌𝗍𝗋𝖺 𝖺𝗅𝗀𝗈𝗋𝗂𝗍𝗁𝗆 𝗐𝖾 𝗃𝗎𝗌𝗍 𝗎𝗌𝗂𝗇𝗀 𝖺 𝗌𝗂𝗆𝗉𝗅𝖾 𝖺𝖽𝖽𝗂𝗍𝗂𝗈𝗇 𝗍𝗈 𝗄𝖾𝖾𝗉 𝗍𝗋𝖺𝖼𝗄 𝗈𝖿 𝗍𝗁𝖾 𝗆𝗎𝗅𝗍𝗂𝗉𝗅𝖾𝗌 𝗈𝖿 𝗉𝗋𝗂𝗆𝖾 𝗇𝗎𝗆𝖻𝖾𝗋𝗌, 𝗇𝗈𝗍 𝖽𝗂𝗏𝗂𝗌𝗂𝗈𝗇 𝗅𝗂𝗄𝖾 𝗐𝖾 𝖽𝗂𝖽 𝗂𝗇 `𝖳𝗋𝗂𝖺𝗅 𝖣𝗂𝗏𝗂𝗌𝗂𝗈𝗇`. <br>
+𝖠𝗅𝗌𝗈 𝗐𝖾 𝗎𝗌𝖾 𝗌𝗆𝖺𝗅𝗅𝖾𝗋 𝖽𝖺𝗍𝖺 𝗌𝗍𝗋𝗎𝖼𝗍𝗎𝗋𝖾 𝗍𝗈 𝗄𝖾𝖾𝗉 𝗍𝗋𝖺𝖼𝗄 𝗈𝖿 𝗍𝗁𝖾 𝗆𝗎𝗅𝗍𝗂𝗉𝗅𝖾𝗌 𝖼𝗈𝗆𝗉𝖺𝗋𝖾 𝗐𝗁𝖺𝗍 𝗐𝖾 𝗎𝗌𝖾𝖽 𝗂𝗇 𝗍𝗁𝖾 `𝖲𝗂𝖾𝗏𝖾 𝗈𝖿 𝖤𝗋𝖺𝗍𝗈𝗌𝗍𝗁𝖾𝗇𝖾𝗌`. 𝖨𝗇𝗌𝗍𝖾𝖺𝖽 𝗈𝖿 𝗄𝖾𝖾𝗉𝗂𝗇𝗀 𝗍𝗋𝖺𝖼𝗄 𝗈𝖿 𝖺𝗅𝗅 𝗍𝗁𝖾 𝗆𝗎𝗅𝗍𝗂𝗉𝗅𝖾𝗌 𝖺𝗍 𝗈𝗇𝖼𝖾, 𝖣𝗂𝗃𝗄𝗌𝗍𝗋𝖺'𝗌 𝗆𝖾𝗍𝗁𝗈𝖽 𝗈𝗇𝗅𝗒 𝗄𝖾𝖾𝗉𝗌 𝗍𝗋𝖺𝖼𝗄 𝗈𝖿 𝗍𝗁𝖾 𝗆𝗎𝗅𝗍𝗂𝗉𝗅𝖾𝗌 𝗂𝗍 𝗇𝖾𝖾𝖽𝗌.
 
-<img src="" width="200" alt="primes" />
+<img src="https://github.com/AnastasKosstow/algorithms/blob/main/assets/primes_compare.png" width="950" alt="primes" />
 
 <br>
 
