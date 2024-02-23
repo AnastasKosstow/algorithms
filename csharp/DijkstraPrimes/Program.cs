@@ -1,0 +1,1 @@
+﻿const int PRIMES_UP_TO = 100;

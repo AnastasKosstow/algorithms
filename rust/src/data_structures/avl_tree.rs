@@ -7,17 +7,17 @@ enum Side {
 }
 
 #[derive(Eq, PartialEq, Ord, PartialOrd, Clone, Copy)]
-struct TreeNode<T> {
-    value: T,
-    left: Option<NonNull<TreeNode<T>>>,
-    right: Option<NonNull<TreeNode<T>>>,
+pub struct TreeNode<T> {
+    pub value: T,
+    pub left: Option<NonNull<TreeNode<T>>>,
+    pub right: Option<NonNull<TreeNode<T>>>,
     height: usize
 }
 
 #[derive(Eq, PartialEq, Ord, PartialOrd, Clone, Copy)]
 pub struct AvlTree<T> {
-    root: Option<NonNull<TreeNode<T>>>,
-    length: usize
+    pub root: Option<NonNull<TreeNode<T>>>,
+    pub length: usize
 }
 
 impl Not for Side {
@@ -72,7 +72,7 @@ impl<T> TreeNode<T> {
     }
 }
 
-impl<T: std::fmt::Debug + Ord + PartialOrd + Copy> AvlTree<T> {
+impl<T: Ord + PartialOrd + Copy> AvlTree<T> {
     pub fn new() -> Self {
         AvlTree {
             root: None,
