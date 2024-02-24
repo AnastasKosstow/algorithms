@@ -393,7 +393,7 @@ Here's how it works:
     </td>
     <td>
       <kbd>
-      <a href="https://github.com/AnastasKosstow/algorithms/blob/main/csharp/SieveOfEratosthenes/Program.cs">
+      <a href="https://github.com/AnastasKosstow/algorithms/blob/main/csharp/DijkstraPrimes/Program.cs">
         <div>
           <img src="https://github.com/AnastasKosstow/algorithms/blob/main/assets/logo/csharp-logo.png" width="40" alt="csharp" />
         </div>
