@@ -740,6 +740,51 @@ F𝗈r𝗆𝗎𝗅𝖺𝗌 𝖿𝗈𝗋 𝖿𝗂𝗇𝖽𝗂𝗇𝗀 parent and 
 
 ---
 
+### Red-Black Tree
+
+> [!NOTE]
+> A Red-Black Tree is a kind of self-balancing binary search tree where each node has an extra bit for denoting the color of the node, either red or black.
+
+A Red-Black Tree satisfies the following properties:
+ - Each node is either red or black.
+ - The root is always black.
+ - Red nodes cannot have red children (no two red nodes can be adjacent).
+ - Every path from a node to any of its descendant NULL nodes goes through the same number of black nodes.
+
+The operations and properties ensure that the tree maintains balance during insertions and deletions, preventing any path from root to leaf to be more than twice as long as any other.
+
+#### Insertion and Deletion Adjustments
+ - Insertion and deletion in a red-black tree require adjustments to maintain the red-black properties. These adjustments may include changing colors of nodes and performing rotations.
+ - Rotation: Rotations are used to maintain balance in the tree. There are two types of rotations, left rotate and right rotate, similar to the rotations in an AVL tree but with additional considerations for the coloring of nodes.
+
+<table>
+  <tr>
+    <td>
+      <b>𝙸𝚖𝚙𝚕𝚎𝚖𝚎𝚗𝚝𝚊𝚝𝚒𝚘𝚗𝚜:</b>
+    </td>
+    <td>
+      <kbd>
+      <a href="https://github.com/AnastasKosstow/algorithms/blob/main/rust/src/data_structures/red_black_tree.rs">
+        <div>
+          <img src="https://github.com/AnastasKosstow/algorithms/blob/main/assets/logo/rust-logo.png" width="40" alt="rust" />
+        </div>
+      </a>
+      </kbd>
+    </td>
+    <td>
+      <kbd>
+      <a href="">
+        <div>
+          <img src="https://github.com/AnastasKosstow/algorithms/blob/main/assets/logo/csharp-logo.png" width="40" alt="csharp" />
+        </div>
+      </a>
+      </kbd>
+    </td>
+  </tr>
+</table>
+
+---
+
 ### AVL Tree
 
 > [!NOTE]
