@@ -744,66 +744,92 @@ F𝗈r𝗆𝗎𝗅𝖺𝗌 𝖿𝗈𝗋 𝖿𝗂𝗇𝖽𝗂𝗇𝗀 parent and 
 ### Red-Black Tree
 
 > [!NOTE]
-> A Red-Black Tree is a kind of self-balancing binary search tree where each node has an extra bit for denoting the color of the node, either red or black.
+> 𝖠 𝖱𝖾𝖽-𝖡𝗅𝖺𝖼𝗄 𝖳𝗋𝖾𝖾 𝗂𝗌 𝖺 𝗄𝗂𝗇𝖽 𝗈𝖿 𝗌𝖾𝗅𝖿-𝖻𝖺𝗅𝖺𝗇𝖼𝗂𝗇𝗀 𝖻𝗂𝗇𝖺𝗋𝗒 𝗌𝖾𝖺𝗋𝖼𝗁 𝗍𝗋𝖾𝖾 𝗐𝗁𝖾𝗋𝖾 𝖾𝖺𝖼𝗁 𝗇𝗈𝖽𝖾 𝗁𝖺𝗌 𝖺𝗇 𝖾𝗑𝗍𝗋𝖺 𝖻𝗂𝗍 𝖿𝗈𝗋 𝖽𝖾𝗇𝗈𝗍𝗂𝗇𝗀 𝗍𝗁𝖾 𝖼𝗈𝗅𝗈𝗋 𝗈𝖿 𝗍𝗁𝖾 𝗇𝗈𝖽𝖾, 𝖾𝗂𝗍𝗁𝖾𝗋 𝗋𝖾𝖽 𝗈𝗋 𝖻𝗅𝖺𝖼𝗄.
 
-A Red-Black Tree satisfies the following properties:
- - Each node is either red or black.
- - The root is always black.
- - Every new node is add as red.
- - Red nodes cannot have red children (no two red nodes can be adjacent).
- - Every path from a node to any of its descendant NULL nodes goes through the same number of black nodes.
+𝖠 𝖱𝖾𝖽-𝖡𝗅𝖺𝖼𝗄 𝖳𝗋𝖾𝖾 𝗌𝖺𝗍𝗂𝗌𝖿𝗂𝖾𝗌 𝗍𝗁𝖾 𝖿𝗈𝗅𝗅𝗈𝗐𝗂𝗇𝗀 𝗉𝗋𝗈𝗉𝖾𝗋𝗍𝗂𝖾𝗌:
+ - 𝖤𝖺𝖼𝗁 𝗇𝗈𝖽𝖾 𝗂𝗌 𝖾𝗂𝗍𝗁𝖾𝗋 𝗋𝖾𝖽 𝗈𝗋 𝖻𝗅𝖺𝖼𝗄.
+ - 𝖳𝗁𝖾 𝗋𝗈𝗈𝗍 𝗂𝗌 𝖺𝗅𝗐𝖺𝗒𝗌 𝖻𝗅𝖺𝖼𝗄.
+ - 𝖤𝗏𝖾𝗋𝗒 𝗇𝖾𝗐 𝗇𝗈𝖽𝖾 𝗂𝗌 𝖺𝖽𝖽 𝖺𝗌 𝗋𝖾𝖽.
+ - 𝖱𝖾𝖽 𝗇𝗈𝖽𝖾𝗌 𝖼𝖺𝗇𝗇𝗈𝗍 𝗁𝖺𝗏𝖾 𝗋𝖾𝖽 𝖼𝗁𝗂𝗅𝖽𝗋𝖾𝗇 (𝗇𝗈 𝗍𝗐𝗈 𝗋𝖾𝖽 𝗇𝗈𝖽𝖾𝗌 𝖼𝖺𝗇 𝖻𝖾 𝖺𝖽𝗃𝖺𝖼𝖾𝗇𝗍).
+ - 𝖤𝗏𝖾𝗋𝗒 𝗉𝖺𝗍𝗁 𝖿𝗋𝗈𝗆 𝖺 𝗇𝗈𝖽𝖾 𝗍𝗈 𝖺𝗇𝗒 𝗈𝖿 𝗂𝗍𝗌 𝖽𝖾𝗌𝖼𝖾𝗇𝖽𝖺𝗇𝗍 𝖭𝖴𝖫𝖫 𝗇𝗈𝖽𝖾𝗌 𝗀𝗈𝖾𝗌 𝗍𝗁𝗋𝗈𝗎𝗀𝗁 𝗍𝗁𝖾 𝗌𝖺𝗆𝖾 𝗇𝗎𝗆𝖻𝖾𝗋 𝗈𝖿 𝖻𝗅𝖺𝖼𝗄 𝗇𝗈𝖽𝖾𝗌.
 
-After insertion and deletion, the red-black rules are reviewed. If they have been violated, they must be restored. That happens by recoloring nodes and by rotations.
+𝖠𝖿𝗍𝖾𝗋 𝗂𝗇𝗌𝖾𝗋𝗍𝗂𝗈𝗇 𝖺𝗇𝖽 𝖽𝖾𝗅𝖾𝗍𝗂𝗈𝗇, 𝗍𝗁𝖾 𝗋𝖾𝖽-𝖻𝗅𝖺𝖼𝗄 𝗋𝗎𝗅𝖾𝗌 𝖺𝗋𝖾 𝗋𝖾𝗏𝗂𝖾𝗐𝖾𝖽. 𝖨𝖿 𝗍𝗁𝖾𝗒 𝗁𝖺𝗏𝖾 𝖻𝖾𝖾𝗇 𝗏𝗂𝗈𝗅𝖺𝗍𝖾𝖽, 𝗍𝗁𝖾𝗒 𝗆𝗎𝗌𝗍 𝖻𝖾 𝗋𝖾𝗌𝗍𝗈𝗋𝖾𝖽. 𝖳𝗁𝖺𝗍 𝗁𝖺𝗉𝗉𝖾𝗇𝗌 𝖻𝗒 𝗋𝖾𝖼𝗈𝗅𝗈𝗋𝗂𝗇𝗀 𝗇𝗈𝖽𝖾𝗌 𝖺𝗇𝖽 𝖻𝗒 𝗋𝗈𝗍𝖺𝗍𝗂𝗈𝗇𝗌.
 
 #### Rotations
  - #### Left Rotation:
-   The right node R moves up to the top. The root N becomes the left child of R. The left child RL of the formerly right node R becomes the right child of the post-rotation left node N. L and RR do not change their relative position. <br>
-   <img src="https://github.com/AnastasKosstow/algorithms/blob/main/assets/logo/rust-logo.png" width="100" alt="rotation" />
+   𝖳𝗁𝖾 𝗋𝗂𝗀𝗁𝗍 𝗇𝗈𝖽𝖾 `𝖷` 𝗆𝗈𝗏𝖾𝗌 𝗎𝗉 𝗍𝗈 𝗍𝗁𝖾 𝗍𝗈𝗉. 𝖳𝗁𝖾 𝗋𝗈𝗈𝗍 `𝖸` 𝖻𝖾𝖼𝗈𝗆𝖾𝗌 𝗍𝗁𝖾 𝗅𝖾𝖿𝗍 𝖼𝗁𝗂𝗅𝖽 𝗈𝖿 `𝖷`. 𝖳𝗁𝖾 𝗅𝖾𝖿𝗍 𝖼𝗁𝗂𝗅𝖽 `𝖹` 𝗈𝖿 𝗍𝗁𝖾 𝖿𝗈𝗋𝗆𝖾𝗋𝗅𝗒 𝗋𝗂𝗀𝗁𝗍 𝗇𝗈𝖽𝖾 `𝖷` 𝖻𝖾𝖼𝗈𝗆𝖾𝗌 𝗍𝗁𝖾 𝗋𝗂𝗀𝗁𝗍 𝖼𝗁𝗂𝗅𝖽 𝗈𝖿 𝗍𝗁𝖾 𝗉𝗈𝗌𝗍-𝗋𝗈𝗍𝖺𝗍𝗂𝗈𝗇 𝗅𝖾𝖿𝗍 𝗇𝗈𝖽𝖾 `𝖸`. <br>
+   <table>
+      <tr>
+        <td>
+          <picture>
+            <source media="(prefers-color-scheme: dark)" srcset="https://github.com/AnastasKosstow/algorithms/blob/main/assets/rotations/left-before-dark.png">
+            <img width="300" alt="rb" src="https://github.com/AnastasKosstow/algorithms/blob/main/assets/rotations/left-before.png">
+          </picture>
+        </td>
+        <td>
+          <picture>
+            <source media="(prefers-color-scheme: dark)" srcset="https://github.com/AnastasKosstow/algorithms/blob/main/assets/rotations/left-after-dark.png">
+            <img width="300" alt="rb" src="https://github.com/AnastasKosstow/algorithms/blob/main/assets/rotations/left-after.png">
+          </picture>
+        </td>
+      </tr>
+      <tr>
+        <td align="center">Before</td>
+        <td align="center">After</td>
+      </tr>
+    </table>
  - #### Right Rotation:
-   The left node L becomes the new root; the root N becomes its right child. The right child LR of the pre-rotation left node L becomes the left child of the post-rotation right node N. The two white nodes LL and R do not change their relative position. <br>
-   <img src="https://github.com/AnastasKosstow/algorithms/blob/main/assets/logo/rust-logo.png" width="100" alt="rotation" />
+   𝖳𝗁𝖾 𝗅𝖾𝖿𝗍 𝗇𝗈𝖽𝖾 𝖫 𝖻𝖾𝖼𝗈𝗆𝖾𝗌 𝗍𝗁𝖾 𝗇𝖾𝗐 𝗋𝗈𝗈𝗍; 𝗍𝗁𝖾 𝗋𝗈𝗈𝗍 𝖭 𝖻𝖾𝖼𝗈𝗆𝖾𝗌 𝗂𝗍𝗌 𝗋𝗂𝗀𝗁𝗍 𝖼𝗁𝗂𝗅𝖽. 𝖳𝗁𝖾 𝗋𝗂𝗀𝗁𝗍 𝖼𝗁𝗂𝗅𝖽 𝖫𝖱 𝗈𝖿 𝗍𝗁𝖾 𝗉𝗋𝖾-𝗋𝗈𝗍𝖺𝗍𝗂𝗈𝗇 𝗅𝖾𝖿𝗍 𝗇𝗈𝖽𝖾 𝖫 𝖻𝖾𝖼𝗈𝗆𝖾𝗌 𝗍𝗁𝖾 𝗅𝖾𝖿𝗍 𝖼𝗁𝗂𝗅𝖽 𝗈𝖿 𝗍𝗁𝖾 𝗉𝗈𝗌𝗍-𝗋𝗈𝗍𝖺𝗍𝗂𝗈𝗇 𝗋𝗂𝗀𝗁𝗍 𝗇𝗈𝖽𝖾 𝖭. 𝖳𝗁𝖾 𝗍𝗐𝗈 𝗐𝗁𝗂𝗍𝖾 𝗇𝗈𝖽𝖾𝗌 𝖫𝖫 𝖺𝗇𝖽 𝖱 𝖽𝗈 𝗇𝗈𝗍 𝖼𝗁𝖺𝗇𝗀𝖾 𝗍𝗁𝖾𝗂𝗋 𝗋𝖾𝗅𝖺𝗍𝗂𝗏𝖾 𝗉𝗈𝗌𝗂𝗍𝗂𝗈𝗇. <br>
 
+
+     
 #### Red-Black Tree Adjustments
-In a Red-Black Tree, after insertion or deletion, the tree might violate the red-black properties. To fix these violations, two main operations are used: rotation and recoloring. The choice between these operations depends on the specific scenario encountered.
+𝖨𝗇 𝖺 𝖱𝖾𝖽-𝖡𝗅𝖺𝖼𝗄 𝖳𝗋𝖾𝖾, 𝖺𝖿𝗍𝖾𝗋 𝗂𝗇𝗌𝖾𝗋𝗍𝗂𝗈𝗇 𝗈𝗋 𝖽𝖾𝗅𝖾𝗍𝗂𝗈𝗇, 𝗍𝗁𝖾 𝗍𝗋𝖾𝖾 𝗆𝗂𝗀𝗁𝗍 𝗏𝗂𝗈𝗅𝖺𝗍𝖾 𝗍𝗁𝖾 𝗋𝖾𝖽-𝖻𝗅𝖺𝖼𝗄 𝗉𝗋𝗈𝗉𝖾𝗋𝗍𝗂𝖾𝗌. 𝖳𝗈 𝖿𝗂𝗑 𝗍𝗁𝖾𝗌𝖾 𝗏𝗂𝗈𝗅𝖺𝗍𝗂𝗈𝗇𝗌, 𝗍𝗐𝗈 𝗆𝖺𝗂𝗇 𝗈𝗉𝖾𝗋𝖺𝗍𝗂𝗈𝗇𝗌 𝖺𝗋𝖾 𝗎𝗌𝖾𝖽: 𝗋𝗈𝗍𝖺𝗍𝗂𝗈𝗇 𝖺𝗇𝖽 𝗋𝖾𝖼𝗈𝗅𝗈𝗋𝗂𝗇𝗀. 𝖳𝗁𝖾 𝖼𝗁𝗈𝗂𝖼𝖾 𝖻𝖾𝗍𝗐𝖾𝖾𝗇 𝗍𝗁𝖾𝗌𝖾 𝗈𝗉𝖾𝗋𝖺𝗍𝗂𝗈𝗇𝗌 𝖽𝖾𝗉𝖾𝗇𝖽𝗌 𝗈𝗇 𝗍𝗁𝖾 𝗌𝗉𝖾𝖼𝗂𝖿𝗂𝖼 𝗌𝖼𝖾𝗇𝖺𝗋𝗂𝗈 𝖾𝗇𝖼𝗈𝗎𝗇𝗍𝖾𝗋𝖾𝖽.
 
-Insertion Cases
- - The tree is empty.
-   - The newly inserted node is made the root and colored black.
+𝖨𝗇𝗌𝖾𝗋𝗍𝗂𝗈𝗇 𝖢𝖺𝗌𝖾𝗌
+ - 𝖳𝗁𝖾 𝗍𝗋𝖾𝖾 𝗂𝗌 𝖾𝗆𝗉𝗍𝗒.
+   - 𝖳𝗁𝖾 𝗇𝖾𝗐𝗅𝗒 𝗂𝗇𝗌𝖾𝗋𝗍𝖾𝖽 𝗇𝗈𝖽𝖾 𝗂𝗌 𝗆𝖺𝖽𝖾 𝗍𝗁𝖾 𝗋𝗈𝗈𝗍 𝖺𝗇𝖽 𝖼𝗈𝗅𝗈𝗋𝖾𝖽 𝖻𝗅𝖺𝖼𝗄.
 
- - The parent of the newly inserted node is black.
-   - No violations are introduced. No rotation or recoloring is needed.
-      <table>
-        <tr>
-          <td>
-            <picture>
-              <source media="(prefers-color-scheme: dark)" srcset="https://github.com/AnastasKosstow/algorithms/blob/main/assets/trees/fbt-dark.png">
-              <img width="300" alt="heap" src="https://github.com/AnastasKosstow/algorithms/blob/main/assets/trees/fbt.png">
-            </picture>
-          </td>
-          <td>
-            <picture>
-              <source media="(prefers-color-scheme: dark)" srcset="https://github.com/AnastasKosstow/algorithms/blob/main/assets/trees/nfbt-dark.png">
-              <img width="300" alt="heap" src="https://github.com/AnastasKosstow/algorithms/blob/main/assets/trees/nfbt.png">
-            </picture>
-          </td>
-        </tr>
-        <tr>
-          <td align="center">𝖥𝗎𝗅𝗅 𝖻𝗂𝗇𝖺𝗋𝗒 𝗍𝗋𝖾𝖾</td>
-          <td align="center">𝖭𝗈𝗍 𝖺 𝖿𝗎𝗅𝗅 𝖻𝗂𝗇𝖺𝗋𝗒 𝗍𝗋𝖾𝖾</td>
-        </tr>
-      </table>
+ - 𝖳𝗁𝖾 𝗉𝖺𝗋𝖾𝗇𝗍 𝗈𝖿 𝗍𝗁𝖾 𝗇𝖾𝗐𝗅𝗒 𝗂𝗇𝗌𝖾𝗋𝗍𝖾𝖽 𝗇𝗈𝖽𝖾 𝗂𝗌 𝖻𝗅𝖺𝖼𝗄.
+   - 𝖭𝗈 𝗏𝗂𝗈𝗅𝖺𝗍𝗂𝗈𝗇𝗌 𝖺𝗋𝖾 𝗂𝗇𝗍𝗋𝗈𝖽𝗎𝖼𝖾𝖽. 𝖭𝗈 𝗋𝗈𝗍𝖺𝗍𝗂𝗈𝗇 𝗈𝗋 𝗋𝖾𝖼𝗈𝗅𝗈𝗋𝗂𝗇𝗀 𝗂𝗌 𝗇𝖾𝖾𝖽𝖾𝖽. <br>
+     <picture>
+       <source media="(prefers-color-scheme: dark)" srcset="https://github.com/AnastasKosstow/algorithms/blob/main/assets/red-black/rb-case1-dark.png">
+       <img width="200" alt="rb" src="https://github.com/AnastasKosstow/algorithms/blob/main/assets/red-black/rb-case1.png">
+     </picture>
+     <br>
 
- - The parent and uncle are red (Parent-uncle red case).
-   - Action: Recolor the parent and uncle black, and the grandparent red.
-   - Next Step: If the grandparent is the root, it is recolored black. Otherwise, check for further violations up the tree.
+ - 𝖳𝗁𝖾 𝗉𝖺𝗋𝖾𝗇𝗍 𝖺𝗇𝖽 𝗎𝗇𝖼𝗅𝖾 𝖺𝗋𝖾 𝗋𝖾𝖽 (𝖯𝖺𝗋𝖾𝗇𝗍-𝗎𝗇𝖼𝗅𝖾 𝗋𝖾𝖽 𝖼𝖺𝗌𝖾).
+   - 𝖠𝖼𝗍𝗂𝗈𝗇: 𝖱𝖾𝖼𝗈𝗅𝗈𝗋 𝗍𝗁𝖾 𝗉𝖺𝗋𝖾𝗇𝗍 𝖺𝗇𝖽 𝗎𝗇𝖼𝗅𝖾 𝖻𝗅𝖺𝖼𝗄, 𝖺𝗇𝖽 𝗍𝗁𝖾 𝗀𝗋𝖺𝗇𝖽𝗉𝖺𝗋𝖾𝗇𝗍 𝗋𝖾𝖽.
+   - 𝖭𝖾𝗑𝗍 𝖲𝗍𝖾𝗉: 𝖨𝖿 𝗍𝗁𝖾 𝗀𝗋𝖺𝗇𝖽𝗉𝖺𝗋𝖾𝗇𝗍 𝗂𝗌 𝗍𝗁𝖾 𝗋𝗈𝗈𝗍, 𝗂𝗍 𝗂𝗌 𝗋𝖾𝖼𝗈𝗅𝗈𝗋𝖾𝖽 𝖻𝗅𝖺𝖼𝗄. 𝖮𝗍𝗁𝖾𝗋𝗐𝗂𝗌𝖾, 𝖼𝗁𝖾𝖼𝗄 𝖿𝗈𝗋 𝖿𝗎𝗋𝗍𝗁𝖾𝗋 𝗏𝗂𝗈𝗅𝖺𝗍𝗂𝗈𝗇𝗌 𝗎𝗉 𝗍𝗁𝖾 𝗍𝗋𝖾𝖾. <br>
+     <table>
+      <tr>
+        <td>
+          <picture>
+            <source media="(prefers-color-scheme: dark)" srcset="https://github.com/AnastasKosstow/algorithms/blob/main/assets/red-black/rb-case2-before-dark.png">
+            <img width="250" alt="rb" src="https://github.com/AnastasKosstow/algorithms/blob/main/assets/red-black/rb-case2-before.png">
+          </picture>
+        </td>
+        <td>
+          <picture>
+            <source media="(prefers-color-scheme: dark)" srcset="https://github.com/AnastasKosstow/algorithms/blob/main/assets/red-black/rb-case2-after-dark.png">
+            <img width="250" alt="rb" src="https://github.com/AnastasKosstow/algorithms/blob/main/assets/red-black/rb-case2-after.png">
+          </picture>
+        </td>
+      </tr>
+      <tr>
+        <td align="center">Before</td>
+        <td align="center">After</td>
+      </tr>
+    </table>
+    <br>
+      
+ - 𝖳𝗁𝖾 𝗉𝖺𝗋𝖾𝗇𝗍 𝗂𝗌 𝗋𝖾𝖽 𝖻𝗎𝗍 𝗍𝗁𝖾 𝗎𝗇𝖼𝗅𝖾 𝗂𝗌 𝖻𝗅𝖺𝖼𝗄, 𝖿𝗈𝗋𝗆𝗂𝗇𝗀 𝖺 𝗍𝗋𝗂𝖺𝗇𝗀𝗅𝖾 (𝖯𝖺𝗋𝖾𝗇𝗍 𝗋𝖾𝖽, 𝗎𝗇𝖼𝗅𝖾 𝖻𝗅𝖺𝖼𝗄, 𝗍𝗋𝗂𝖺𝗇𝗀𝗅𝖾 𝖿𝗈𝗋𝗆𝖺𝗍𝗂𝗈𝗇).
+   - 𝖠𝖼𝗍𝗂𝗈𝗇: 𝖯𝖾𝗋𝖿𝗈𝗋𝗆 𝖺 𝗋𝗈𝗍𝖺𝗍𝗂𝗈𝗇 𝗈𝗇 𝗍𝗁𝖾 𝗉𝖺𝗋𝖾𝗇𝗍 𝗍𝗈 𝗍𝗋𝖺𝗇𝗌𝖿𝗈𝗋𝗆 𝗍𝗁𝖾 𝖼𝖺𝗌𝖾 𝗂𝗇𝗍𝗈 𝖺 𝗅𝗂𝗇𝖾 𝖿𝗈𝗋𝗆𝖺𝗍𝗂𝗈𝗇 (𝖢𝖺𝗌𝖾 𝟧).
+   - 𝖱𝗈𝗍𝖺𝗍𝗂𝗈𝗇: 𝖫𝖾𝖿𝗍 𝗋𝗈𝗍𝖺𝗍𝗂𝗈𝗇 𝗂𝖿 𝗍𝗁𝖾 𝗍𝗋𝗂𝖺𝗇𝗀𝗅𝖾 𝗂𝗌 𝗋𝗂𝗀𝗁𝗍-𝗅𝖾𝖺𝗇𝗂𝗇𝗀, 𝗋𝗂𝗀𝗁𝗍 𝗋𝗈𝗍𝖺𝗍𝗂𝗈𝗇 𝗂𝖿 𝗅𝖾𝖿𝗍-𝗅𝖾𝖺𝗇𝗂𝗇𝗀.
 
- - The parent is red but the uncle is black, forming a triangle (Parent red, uncle black, triangle formation).
-   - Action: Perform a rotation on the parent to transform the case into a line formation (Case 5).
-   - Rotation: Left rotation if the triangle is right-leaning, right rotation if left-leaning.
- 
- - The parent is red, the uncle is black, and the nodes form a straight line (Parent red, uncle black, line formation).
-   - Action: Rotate the grandparent, then swap the colors of the grandparent and parent.
-   - Rotation: Right rotation if the line is left-leaning, left rotation if right-leaning.
+ - 𝖳𝗁𝖾 𝗉𝖺𝗋𝖾𝗇𝗍 𝗂𝗌 𝗋𝖾𝖽, 𝗍𝗁𝖾 𝗎𝗇𝖼𝗅𝖾 𝗂𝗌 𝖻𝗅𝖺𝖼𝗄, 𝖺𝗇𝖽 𝗍𝗁𝖾 𝗇𝗈𝖽𝖾𝗌 𝖿𝗈𝗋𝗆 𝖺 𝗌𝗍𝗋𝖺𝗂𝗀𝗁𝗍 𝗅𝗂𝗇𝖾 (𝖯𝖺𝗋𝖾𝗇𝗍 𝗋𝖾𝖽, 𝗎𝗇𝖼𝗅𝖾 𝖻𝗅𝖺𝖼𝗄, 𝗅𝗂𝗇𝖾 𝖿𝗈𝗋𝗆𝖺𝗍𝗂𝗈𝗇).
+   - 𝖠𝖼𝗍𝗂𝗈𝗇: 𝖱𝗈𝗍𝖺𝗍𝖾 𝗍𝗁𝖾 𝗀𝗋𝖺𝗇𝖽𝗉𝖺𝗋𝖾𝗇𝗍, 𝗍𝗁𝖾𝗇 𝗌𝗐𝖺𝗉 𝗍𝗁𝖾 𝖼𝗈𝗅𝗈𝗋𝗌 𝗈𝖿 𝗍𝗁𝖾 𝗀𝗋𝖺𝗇𝖽𝗉𝖺𝗋𝖾𝗇𝗍 𝖺𝗇𝖽 𝗉𝖺𝗋𝖾𝗇𝗍.
+   - 𝖱𝗈𝗍𝖺𝗍𝗂𝗈𝗇: 𝖱𝗂𝗀𝗁𝗍 𝗋𝗈𝗍𝖺𝗍𝗂𝗈𝗇 𝗂𝖿 𝗍𝗁𝖾 𝗅𝗂𝗇𝖾 𝗂𝗌 𝗅𝖾𝖿𝗍-𝗅𝖾𝖺𝗇𝗂𝗇𝗀, 𝗅𝖾𝖿𝗍 𝗋𝗈𝗍𝖺𝗍𝗂𝗈𝗇 𝗂𝖿 𝗋𝗂𝗀𝗁𝗍-𝗅𝖾𝖺𝗇𝗂𝗇𝗀.
 
 
 <table>
