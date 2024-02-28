@@ -56,6 +56,7 @@
     * [Tree Theory](#tree-theory)
     * [Binary Heap](#heap)
     * [Binary Search Tree](#binary-search-tree)
+    * [Red-Black Tree](#red-black-tree)
     * [AVL Tree](#avl-tree)
   * [LinkedList](#linkedlist)
   * [Disjoint-set](#disjoint-set)
