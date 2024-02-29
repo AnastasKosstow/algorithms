@@ -778,6 +778,7 @@ F𝗈r𝗆𝗎𝗅𝖺𝗌 𝖿𝗈𝗋 𝖿𝗂𝗇𝖽𝗂𝗇𝗀 parent and 
         <td align="center">After</td>
       </tr>
     </table>
+    
  - #### Right Rotation:
    𝖳𝗁𝖾 𝗅𝖾𝖿𝗍 𝗇𝗈𝖽𝖾 𝖫 𝖻𝖾𝖼𝗈𝗆𝖾𝗌 𝗍𝗁𝖾 𝗇𝖾𝗐 𝗋𝗈𝗈𝗍; 𝗍𝗁𝖾 𝗋𝗈𝗈𝗍 𝖭 𝖻𝖾𝖼𝗈𝗆𝖾𝗌 𝗂𝗍𝗌 𝗋𝗂𝗀𝗁𝗍 𝖼𝗁𝗂𝗅𝖽. 𝖳𝗁𝖾 𝗋𝗂𝗀𝗁𝗍 𝖼𝗁𝗂𝗅𝖽 𝖫𝖱 𝗈𝖿 𝗍𝗁𝖾 𝗉𝗋𝖾-𝗋𝗈𝗍𝖺𝗍𝗂𝗈𝗇 𝗅𝖾𝖿𝗍 𝗇𝗈𝖽𝖾 𝖫 𝖻𝖾𝖼𝗈𝗆𝖾𝗌 𝗍𝗁𝖾 𝗅𝖾𝖿𝗍 𝖼𝗁𝗂𝗅𝖽 𝗈𝖿 𝗍𝗁𝖾 𝗉𝗈𝗌𝗍-𝗋𝗈𝗍𝖺𝗍𝗂𝗈𝗇 𝗋𝗂𝗀𝗁𝗍 𝗇𝗈𝖽𝖾 𝖭. 𝖳𝗁𝖾 𝗍𝗐𝗈 𝗐𝗁𝗂𝗍𝖾 𝗇𝗈𝖽𝖾𝗌 𝖫𝖫 𝖺𝗇𝖽 𝖱 𝖽𝗈 𝗇𝗈𝗍 𝖼𝗁𝖺𝗇𝗀𝖾 𝗍𝗁𝖾𝗂𝗋 𝗋𝖾𝗅𝖺𝗍𝗂𝗏𝖾 𝗉𝗈𝗌𝗂𝗍𝗂𝗈𝗇. <br>
 
@@ -802,25 +803,25 @@ F𝗈r𝗆𝗎𝗅𝖺𝗌 𝖿𝗈𝗋 𝖿𝗂𝗇𝖽𝗂𝗇𝗀 parent and 
    - 𝖠𝖼𝗍𝗂𝗈𝗇: 𝖱𝖾𝖼𝗈𝗅𝗈𝗋 𝗍𝗁𝖾 𝗉𝖺𝗋𝖾𝗇𝗍 𝖺𝗇𝖽 𝗎𝗇𝖼𝗅𝖾 𝖻𝗅𝖺𝖼𝗄, 𝖺𝗇𝖽 𝗍𝗁𝖾 𝗀𝗋𝖺𝗇𝖽𝗉𝖺𝗋𝖾𝗇𝗍 𝗋𝖾𝖽.
    - 𝖭𝖾𝗑𝗍 𝖲𝗍𝖾𝗉: 𝖨𝖿 𝗍𝗁𝖾 𝗀𝗋𝖺𝗇𝖽𝗉𝖺𝗋𝖾𝗇𝗍 𝗂𝗌 𝗍𝗁𝖾 𝗋𝗈𝗈𝗍, 𝗂𝗍 𝗂𝗌 𝗋𝖾𝖼𝗈𝗅𝗈𝗋𝖾𝖽 𝖻𝗅𝖺𝖼𝗄. 𝖮𝗍𝗁𝖾𝗋𝗐𝗂𝗌𝖾, 𝖼𝗁𝖾𝖼𝗄 𝖿𝗈𝗋 𝖿𝗎𝗋𝗍𝗁𝖾𝗋 𝗏𝗂𝗈𝗅𝖺𝗍𝗂𝗈𝗇𝗌 𝗎𝗉 𝗍𝗁𝖾 𝗍𝗋𝖾𝖾. <br>
      <table>
-      <tr>
-        <td>
-          <picture>
-            <source media="(prefers-color-scheme: dark)" srcset="https://github.com/AnastasKosstow/algorithms/blob/main/assets/red-black/rb-case2-before-dark.png">
-            <img width="250" alt="rb" src="https://github.com/AnastasKosstow/algorithms/blob/main/assets/red-black/rb-case2-before.png">
-          </picture>
-        </td>
-        <td>
-          <picture>
-            <source media="(prefers-color-scheme: dark)" srcset="https://github.com/AnastasKosstow/algorithms/blob/main/assets/red-black/rb-case2-after-dark.png">
-            <img width="250" alt="rb" src="https://github.com/AnastasKosstow/algorithms/blob/main/assets/red-black/rb-case2-after.png">
-          </picture>
-        </td>
+       <tr>
+         <td>
+           <picture>
+             <source media="(prefers-color-scheme: dark)" srcset="https://github.com/AnastasKosstow/algorithms/blob/main/assets/red-black/rb-case2-before-dark.png">
+             <img width="250" alt="rb" src="https://github.com/AnastasKosstow/algorithms/blob/main/assets/red-black/rb-case2-before.png">
+           </picture>
+         </td>
+         <td>
+           <picture>
+             <source media="(prefers-color-scheme: dark)" srcset="https://github.com/AnastasKosstow/algorithms/blob/main/assets/red-black/rb-case2-after-dark.png">
+             <img width="250" alt="rb" src="https://github.com/AnastasKosstow/algorithms/blob/main/assets/red-black/rb-case2-after.png">
+           </picture>
+         </td>
       </tr>
-      <tr>
-        <td align="center">Before</td>
-        <td align="center">After</td>
-      </tr>
-    </table>
+       <tr>
+         <td align="center">Before</td>
+         <td align="center">After</td>
+       </tr>
+     </table>
     <br>
       
  - 𝖳𝗁𝖾 𝗉𝖺𝗋𝖾𝗇𝗍 𝗂𝗌 𝗋𝖾𝖽 𝖻𝗎𝗍 𝗍𝗁𝖾 𝗎𝗇𝖼𝗅𝖾 𝗂𝗌 𝖻𝗅𝖺𝖼𝗄, 𝖿𝗈𝗋𝗆𝗂𝗇𝗀 𝖺 𝗍𝗋𝗂𝖺𝗇𝗀𝗅𝖾 (𝖯𝖺𝗋𝖾𝗇𝗍 𝗋𝖾𝖽, 𝗎𝗇𝖼𝗅𝖾 𝖻𝗅𝖺𝖼𝗄, 𝗍𝗋𝗂𝖺𝗇𝗀𝗅𝖾 𝖿𝗈𝗋𝗆𝖺𝗍𝗂𝗈𝗇).
@@ -860,7 +861,10 @@ F𝗈r𝗆𝗎𝗅𝖺𝗌 𝖿𝗈𝗋 𝖿𝗂𝗇𝖽𝗂𝗇𝗀 parent and 
    - 𝖠𝖼𝗍𝗂𝗈𝗇: 𝖱𝗈𝗍𝖺𝗍𝖾 𝗍𝗁𝖾 𝗀𝗋𝖺𝗇𝖽𝗉𝖺𝗋𝖾𝗇𝗍, 𝗍𝗁𝖾𝗇 𝗌𝗐𝖺𝗉 𝗍𝗁𝖾 𝖼𝗈𝗅𝗈𝗋𝗌 𝗈𝖿 𝗍𝗁𝖾 𝗀𝗋𝖺𝗇𝖽𝗉𝖺𝗋𝖾𝗇𝗍 𝖺𝗇𝖽 𝗉𝖺𝗋𝖾𝗇𝗍.
    - 𝖱𝗈𝗍𝖺𝗍𝗂𝗈𝗇: 𝖱𝗂𝗀𝗁𝗍 𝗋𝗈𝗍𝖺𝗍𝗂𝗈𝗇 𝗂𝖿 𝗍𝗁𝖾 𝗅𝗂𝗇𝖾 𝗂𝗌 𝗅𝖾𝖿𝗍-𝗅𝖾𝖺𝗇𝗂𝗇𝗀, 𝗅𝖾𝖿𝗍 𝗋𝗈𝗍𝖺𝗍𝗂𝗈𝗇 𝗂𝖿 𝗋𝗂𝗀𝗁𝗍-𝗅𝖾𝖺𝗇𝗂𝗇𝗀.
 
-<br>
+asdasdasdasdasdasd
+
+asdasd
+
 
 <table>
   <tr>
