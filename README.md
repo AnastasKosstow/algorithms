@@ -888,10 +888,26 @@ F𝗈r𝗆𝗎𝗅𝖺𝗌 𝖿𝗈𝗋 𝖿𝗂𝗇𝖽𝗂𝗇𝗀 parent and 
  - 𝖳𝗁𝖾 𝗉𝖺𝗋𝖾𝗇𝗍 𝗂𝗌 𝗋𝖾𝖽, 𝗍𝗁𝖾 𝗎𝗇𝖼𝗅𝖾 𝗂𝗌 𝖻𝗅𝖺𝖼𝗄, 𝖺𝗇𝖽 𝗍𝗁𝖾 𝗇𝗈𝖽𝖾𝗌 𝖿𝗈𝗋𝗆 𝖺 𝗌𝗍𝗋𝖺𝗂𝗀𝗁𝗍 𝗅𝗂𝗇𝖾 (𝖯𝖺𝗋𝖾𝗇𝗍 𝗋𝖾𝖽, 𝗎𝗇𝖼𝗅𝖾 𝖻𝗅𝖺𝖼𝗄, 𝗅𝗂𝗇𝖾 𝖿𝗈𝗋𝗆𝖺𝗍𝗂𝗈𝗇).
    - 𝖠𝖼𝗍𝗂𝗈𝗇: 𝖱𝗈𝗍𝖺𝗍𝖾 𝗍𝗁𝖾 𝗀𝗋𝖺𝗇𝖽𝗉𝖺𝗋𝖾𝗇𝗍, 𝗍𝗁𝖾𝗇 𝗌𝗐𝖺𝗉 𝗍𝗁𝖾 𝖼𝗈𝗅𝗈𝗋𝗌 𝗈𝖿 𝗍𝗁𝖾 𝗀𝗋𝖺𝗇𝖽𝗉𝖺𝗋𝖾𝗇𝗍 𝖺𝗇𝖽 𝗉𝖺𝗋𝖾𝗇𝗍.
    - 𝖱𝗈𝗍𝖺𝗍𝗂𝗈𝗇: 𝖱𝗂𝗀𝗁𝗍 𝗋𝗈𝗍𝖺𝗍𝗂𝗈𝗇 𝗂𝖿 𝗍𝗁𝖾 𝗅𝗂𝗇𝖾 𝗂𝗌 𝗅𝖾𝖿𝗍-𝗅𝖾𝖺𝗇𝗂𝗇𝗀, 𝗅𝖾𝖿𝗍 𝗋𝗈𝗍𝖺𝗍𝗂𝗈𝗇 𝗂𝖿 𝗋𝗂𝗀𝗁𝗍-𝗅𝖾𝖺𝗇𝗂𝗇𝗀.
-
-asdasdasdasdasdasd
-
-asdasd
+      - "L𝗂𝗇𝖾 𝖿𝗈𝗋𝗆𝖺𝗍𝗂𝗈𝗇" means that the path from grandparent to inserted node forms a line, such as the `15`, `20`, and `25` in the example. <br>
+        In this case, we rotate at the grandparent (`15`) in the opposite direction of the parent and inserted node (after all, both go in the same direction in this case). <br>
+        In the example, the parent and inserted nodes are both right children, so we rotate left at the grandparent.
+        Then we recolor the former parent (`20` in the example) black and the former grandparent (`15`) red. <br>
+        <table>
+          <tr>
+            <td>
+              <picture>
+                <source media="(prefers-color-scheme: dark)" srcset="https://github.com/AnastasKosstow/algorithms/blob/main/assets/trees/red-black/rb-case4-before-dark.png">
+                <img width="250" alt="rb" src="https://github.com/AnastasKosstow/algorithms/blob/main/assets/trees/red-black/rb-case4-before.png">
+              </picture>
+            </td>
+            <td>
+              <picture>
+                <source media="(prefers-color-scheme: dark)" srcset="https://github.com/AnastasKosstow/algorithms/blob/main/assets/trees/red-black/rb-case4-after-dark.png">
+                <img width="250" alt="rb" src="https://github.com/AnastasKosstow/algorithms/blob/main/assets/trees/red-black/rb-case4-after.png">
+              </picture>
+            </td>
+          </tr>
+        </table>
 
 
 <table>
