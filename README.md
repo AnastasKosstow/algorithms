@@ -591,12 +591,10 @@ fn post_order_traversal(node: TreeNode) {
 - 𝖯𝗈𝗌𝗍-𝗈𝗋𝖽𝖾𝗋 - [𝟣, 𝟩, 𝟧, 𝟤𝟢, 𝟣𝟢]
 
 ### Balanced vs. Unbalanced Trees
-
- - #### Balanced Trees
+ - **Balanced Trees** <br>
    𝖠 𝖻𝖺𝗅𝖺𝗇𝖼𝖾𝖽 𝗍𝗋𝖾𝖾 𝗂𝗌 𝖺 𝗍𝗒𝗉𝖾 𝗈𝖿 𝖻𝗂𝗇𝖺𝗋𝗒 𝗍𝗋𝖾𝖾 𝗐𝗁𝖾𝗋𝖾 𝗍𝗁𝖾 𝖽𝗂𝖿𝖿𝖾𝗋𝖾𝗇𝖼𝖾 𝗂𝗇 𝗁𝖾𝗂𝗀𝗁𝗍 𝖻𝖾𝗍𝗐𝖾𝖾𝗇 𝗍𝗁𝖾 𝗅𝖾𝖿𝗍 𝖺𝗇𝖽 𝗋𝗂𝗀𝗁𝗍 𝗌𝗎𝖻𝗍𝗋𝖾𝖾𝗌 𝗈𝖿 𝖺𝗇𝗒 𝗇𝗈𝖽𝖾 𝗂𝗌 𝗆𝗂𝗇𝗂𝗆𝖺𝗅 — 𝗎𝗌𝗎𝖺𝗅𝗅𝗒 𝗇𝗈 𝗆𝗈𝗋𝖾 𝗍𝗁𝖺𝗇 𝗈𝗇𝖾. 𝖳𝗁𝗂𝗌 𝖻𝖺𝗅𝖺𝗇𝖼𝖾 𝖾𝗇𝗌𝗎𝗋𝖾𝗌 𝗍𝗁𝖺𝗍 𝗍𝗁𝖾 𝗍𝗋𝖾𝖾 𝗋𝖾𝗆𝖺𝗂𝗇𝗌 𝗋𝖾𝗅𝖺𝗍𝗂𝗏𝖾𝗅𝗒 𝗅𝗈𝗐 𝗂𝗇 𝗁𝖾𝗂𝗀𝗁𝗍, 𝗆𝖺𝗄𝗂𝗇𝗀 𝗈𝗉𝖾𝗋𝖺𝗍𝗂𝗈𝗇𝗌 𝗅𝗂𝗄𝖾 𝗌𝖾𝖺𝗋𝖼𝗁, 𝗂𝗇𝗌𝖾𝗋𝗍, 𝖺𝗇𝖽 𝖽𝖾𝗅𝖾𝗍𝖾 𝗆𝗈𝗋𝖾 𝖾𝖿𝖿𝗂𝖼𝗂𝖾𝗇𝗍, 𝗍𝗒𝗉𝗂𝖼𝖺𝗅𝗅𝗒 𝗂𝗇 𝗅𝗈𝗀𝖺𝗋𝗂𝗍𝗁𝗆𝗂𝖼 𝗍𝗂𝗆𝖾 𝖼𝗈𝗆𝗉𝗅𝖾𝗑𝗂𝗍𝗒 `(𝖮(𝗅𝗈𝗀 𝗇))`, 𝗐𝗁𝖾𝗋𝖾 𝗇 𝗂𝗌
    𝗍𝗁𝖾 𝗇𝗎𝗆𝖻𝖾𝗋 𝗈𝖿 𝗇𝗈𝖽𝖾𝗌 𝗂𝗇 𝗍𝗁𝖾 𝗍𝗋𝖾𝖾. 𝖤𝗑𝖺𝗆𝗉𝗅𝖾𝗌 𝗈𝖿 𝖻𝖺𝗅𝖺𝗇𝖼𝖾𝖽 𝗍𝗋𝖾𝖾𝗌 𝗂𝗇𝖼𝗅𝗎𝖽𝖾 𝖠𝖵𝖫 𝗍𝗋𝖾𝖾𝗌 𝖺𝗇𝖽 𝖱𝖾𝖽-𝖡𝗅𝖺𝖼𝗄 𝗍𝗋𝖾𝖾𝗌, 𝗐𝗁𝗂𝖼𝗁 𝗂𝗆𝗉𝗅𝖾𝗆𝖾𝗇𝗍 𝗌𝖾𝗅𝖿-𝖻𝖺𝗅𝖺𝗇𝖼𝗂𝗇𝗀 𝗆𝖾𝖼𝗁𝖺𝗇𝗂𝗌𝗆𝗌 𝗍𝗈 𝗆𝖺𝗂𝗇𝗍𝖺𝗂𝗇 𝗍𝗁𝗂𝗌 𝗉𝗋𝗈𝗉𝖾𝗋𝗍𝗒 𝖺𝖿𝗍𝖾𝗋 𝗈𝗉𝖾𝗋𝖺𝗍𝗂𝗈𝗇𝗌 𝗍𝗁𝖺𝗍 𝗆𝗈𝖽𝗂𝖿𝗒 𝗍𝗁𝖾 𝗍𝗋𝖾𝖾.
-
- - #### Unbalanced Trees
+ - **Unbalanced Trees** <br>
    𝖠𝗇 𝗎𝗇𝖻𝖺𝗅𝖺𝗇𝖼𝖾𝖽 𝗍𝗋𝖾𝖾, 𝗈𝗇 𝗍𝗁𝖾 𝗈𝗍𝗁𝖾𝗋 𝗁𝖺𝗇𝖽, 𝖽𝗈𝖾𝗌 𝗇𝗈𝗍 𝗁𝖺𝗏𝖾 𝗋𝖾𝗌𝗍𝗋𝗂𝖼𝗍𝗂𝗈𝗇𝗌 𝗈𝗇 𝗍𝗁𝖾 𝗁𝖾𝗂𝗀𝗁𝗍 𝖽𝗂𝖿𝖿𝖾𝗋𝖾𝗇𝖼𝖾𝗌 𝗈𝖿 𝗂𝗍𝗌 𝗌𝗎𝖻𝗍𝗋𝖾𝖾𝗌. 𝖨𝗇 𝖺𝗇 𝖾𝗑𝗍𝗋𝖾𝗆𝖾 𝖼𝖺𝗌𝖾, 𝗍𝗁𝗂𝗌 𝖼𝖺𝗇 𝗅𝖾𝖺𝖽 𝗍𝗈 𝖺 𝗌𝗂𝗍𝗎𝖺𝗍𝗂𝗈𝗇 𝗐𝗁𝖾𝗋𝖾 𝗍𝗁𝖾 𝗍𝗋𝖾𝖾 𝖻𝖾𝖼𝗈𝗆𝖾𝗌 𝖺 "𝗅𝗂𝗇𝖾𝖺𝗋 𝖼𝗁𝖺𝗂𝗇" 𝗈𝖿 𝗇𝗈𝖽𝖾𝗌, 𝗋𝖾𝗌𝖾𝗆𝖻𝗅𝗂𝗇𝗀 𝖺 𝗅𝗂𝗇𝗄𝖾𝖽 𝗅𝗂𝗌𝗍, 𝖾𝗌𝗉𝖾𝖼𝗂𝖺𝗅𝗅𝗒 𝗂𝖿 𝗇𝗈𝖽𝖾𝗌 𝖺𝗋𝖾 𝗂𝗇𝗌𝖾𝗋𝗍𝖾𝖽 𝗂𝗇 𝖺 𝗌𝗈𝗋𝗍𝖾𝖽 𝗈𝗋𝖽𝖾𝗋. 𝖨𝗇 𝗌𝗎𝖼𝗁 𝖼𝖺𝗌𝖾𝗌, 𝗍𝗁𝖾 𝗈𝗉𝖾𝗋𝖺𝗍𝗂𝗈𝗇𝗌 𝗅𝗂𝗄𝖾 𝗌𝖾𝖺𝗋𝖼𝗁, 𝗂𝗇𝗌𝖾𝗋𝗍, 𝖺𝗇𝖽 𝖽𝖾𝗅𝖾𝗍𝖾 𝖼𝖺𝗇 𝖽𝖾𝗀𝗋𝖺𝖽𝖾 𝗍𝗈
    𝗅𝗂𝗇𝖾𝖺𝗋 𝗍𝗂𝗆𝖾 𝖼𝗈𝗆𝗉𝗅𝖾𝗑𝗂𝗍𝗒 `(𝖮(𝗇))`, 𝗆𝖺𝗄𝗂𝗇𝗀 𝗍𝗁𝖾𝗆 𝗂𝗇𝖾𝖿𝖿𝗂𝖼𝗂𝖾𝗇𝗍 𝖺𝗌 𝗍𝗁𝖾 𝗌𝗂𝗓𝖾 𝗈𝖿 𝗍𝗁𝖾 𝗍𝗋𝖾𝖾 𝗀𝗋𝗈𝗐𝗌. 𝖴𝗇𝖻𝖺𝗅𝖺𝗇𝖼𝖾𝖽 𝗍𝗋𝖾𝖾𝗌 𝖽𝗈 𝗇𝗈𝗍 𝖺𝗎𝗍𝗈𝗆𝖺𝗍𝗂𝖼𝖺𝗅𝗅𝗒 𝖺𝖽𝗃𝗎𝗌𝗍 𝗈𝗋 𝗋𝖾𝖻𝖺𝗅𝖺𝗇𝖼𝖾 𝗍𝗁𝖾𝗆𝗌𝖾𝗅𝗏𝖾𝗌, 𝗐𝗁𝗂𝖼𝗁 𝖼𝖺𝗇 𝗅𝖾𝖺𝖽 𝗍𝗈 𝗌𝗎𝖻𝗈𝗉𝗍𝗂𝗆𝖺𝗅 𝗉𝖾𝗋𝖿𝗈𝗋𝗆𝖺𝗇𝖼𝖾 𝖿𝗈𝗋 𝖼𝖾𝗋𝗍𝖺𝗂𝗇 𝗌𝖾𝗊𝗎𝖾𝗇𝖼𝖾𝗌 𝗈𝖿 𝗈𝗉𝖾𝗋𝖺𝗍𝗂𝗈𝗇𝗌.
 
@@ -627,8 +625,28 @@ fn post_order_traversal(node: TreeNode) {
    </table>
     
  - #### Right Rotation:
-   𝖳𝗁𝖾 𝗅𝖾𝖿𝗍 𝗇𝗈𝖽𝖾 𝖫 𝖻𝖾𝖼𝗈𝗆𝖾𝗌 𝗍𝗁𝖾 𝗇𝖾𝗐 𝗋𝗈𝗈𝗍; 𝗍𝗁𝖾 𝗋𝗈𝗈𝗍 𝖭 𝖻𝖾𝖼𝗈𝗆𝖾𝗌 𝗂𝗍𝗌 𝗋𝗂𝗀𝗁𝗍 𝖼𝗁𝗂𝗅𝖽. 𝖳𝗁𝖾 𝗋𝗂𝗀𝗁𝗍 𝖼𝗁𝗂𝗅𝖽 𝖫𝖱 𝗈𝖿 𝗍𝗁𝖾 𝗉𝗋𝖾-𝗋𝗈𝗍𝖺𝗍𝗂𝗈𝗇 𝗅𝖾𝖿𝗍 𝗇𝗈𝖽𝖾 𝖫 𝖻𝖾𝖼𝗈𝗆𝖾𝗌 𝗍𝗁𝖾 𝗅𝖾𝖿𝗍 𝖼𝗁𝗂𝗅𝖽 𝗈𝖿 𝗍𝗁𝖾 𝗉𝗈𝗌𝗍-𝗋𝗈𝗍𝖺𝗍𝗂𝗈𝗇 𝗋𝗂𝗀𝗁𝗍 𝗇𝗈𝖽𝖾 𝖭. 𝖳𝗁𝖾 𝗍𝗐𝗈 𝗐𝗁𝗂𝗍𝖾 𝗇𝗈𝖽𝖾𝗌 𝖫𝖫 𝖺𝗇𝖽 𝖱 𝖽𝗈 𝗇𝗈𝗍 𝖼𝗁𝖺𝗇𝗀𝖾 𝗍𝗁𝖾𝗂𝗋 𝗋𝖾𝗅𝖺𝗍𝗂𝗏𝖾 𝗉𝗈𝗌𝗂𝗍𝗂𝗈𝗇. <br>
-
+   𝖳𝗁𝖾 𝗅𝖾𝖿𝗍 𝗇𝗈𝖽𝖾 `X` 𝖻𝖾𝖼𝗈𝗆𝖾𝗌 𝗍𝗁𝖾 𝗇𝖾𝗐 𝗋𝗈𝗈𝗍; 𝗍𝗁𝖾 𝗋𝗈𝗈𝗍 `Y` 𝖻𝖾𝖼𝗈𝗆𝖾𝗌 𝗂𝗍𝗌 𝗋𝗂𝗀𝗁𝗍 𝖼𝗁𝗂𝗅𝖽. 𝖳𝗁𝖾 𝗋𝗂𝗀𝗁𝗍 𝖼𝗁𝗂𝗅𝖽 `Z` 𝗈𝖿 𝗍𝗁𝖾 𝗉𝗋𝖾-𝗋𝗈𝗍𝖺𝗍𝗂𝗈𝗇 𝗅𝖾𝖿𝗍 𝗇𝗈𝖽𝖾 `X` 𝖻𝖾𝖼𝗈𝗆𝖾𝗌 𝗍𝗁𝖾 𝗅𝖾𝖿𝗍 𝖼𝗁𝗂𝗅𝖽 𝗈𝖿 𝗍𝗁𝖾 𝗉𝗈𝗌𝗍-𝗋𝗈𝗍𝖺𝗍𝗂𝗈𝗇 𝗋𝗂𝗀𝗁𝗍 𝗇𝗈𝖽𝖾 `Y`. <br>
+   <table>
+     <tr>
+       <td>
+         <picture>
+           <source media="(prefers-color-scheme: dark)" srcset="https://github.com/AnastasKosstow/algorithms/blob/main/assets/trees/rotations/right-before-dark.png">
+           <img width="300" alt="rb" src="https://github.com/AnastasKosstow/algorithms/blob/main/assets/trees/rotations/right-before.png">
+         </picture>
+       </td>
+       <td>
+         <picture>
+           <source media="(prefers-color-scheme: dark)" srcset="https://github.com/AnastasKosstow/algorithms/blob/main/assets/trees/rotations/right-after-dark.png">
+           <img width="300" alt="rb" src="https://github.com/AnastasKosstow/algorithms/blob/main/assets/trees/rotations/right-after.png">
+         </picture>
+        </td>
+     </tr>
+     <tr>
+        <td align="center">Before</td>
+        <td align="center">After</td>
+     </tr>
+   </table>
+   
 ---
 
 ### Heap
@@ -804,8 +822,8 @@ F𝗈r𝗆𝗎𝗅𝖺𝗌 𝖿𝗈𝗋 𝖿𝗂𝗇𝖽𝗂𝗇𝗀 parent and 
  - 𝖳𝗁𝖾 𝗉𝖺𝗋𝖾𝗇𝗍 𝗈𝖿 𝗍𝗁𝖾 𝗇𝖾𝗐𝗅𝗒 𝗂𝗇𝗌𝖾𝗋𝗍𝖾𝖽 𝗇𝗈𝖽𝖾 𝗂𝗌 𝖻𝗅𝖺𝖼𝗄.
    - 𝖭𝗈 𝗏𝗂𝗈𝗅𝖺𝗍𝗂𝗈𝗇𝗌 𝖺𝗋𝖾 𝗂𝗇𝗍𝗋𝗈𝖽𝗎𝖼𝖾𝖽. 𝖭𝗈 𝗋𝗈𝗍𝖺𝗍𝗂𝗈𝗇 𝗈𝗋 𝗋𝖾𝖼𝗈𝗅𝗈𝗋𝗂𝗇𝗀 𝗂𝗌 𝗇𝖾𝖾𝖽𝖾𝖽. <br>
      <picture>
-       <source media="(prefers-color-scheme: dark)" srcset="https://github.com/AnastasKosstow/algorithms/blob/main/assets/red-black/rb-case1-dark.png">
-       <img width="200" alt="rb" src="https://github.com/AnastasKosstow/algorithms/blob/main/assets/red-black/rb-case1.png">
+       <source media="(prefers-color-scheme: dark)" srcset="https://github.com/AnastasKosstow/algorithms/blob/main/assets/trees/red-black/rb-case1-dark.png">
+       <img width="200" alt="rb" src="https://github.com/AnastasKosstow/algorithms/blob/main/assets/trees/red-black/rb-case1.png">
      </picture>
      <br>
 
@@ -816,14 +834,14 @@ F𝗈r𝗆𝗎𝗅𝖺𝗌 𝖿𝗈𝗋 𝖿𝗂𝗇𝖽𝗂𝗇𝗀 parent and 
        <tr>
          <td>
            <picture>
-             <source media="(prefers-color-scheme: dark)" srcset="https://github.com/AnastasKosstow/algorithms/blob/main/assets/red-black/rb-case2-before-dark.png">
-             <img width="250" alt="rb" src="https://github.com/AnastasKosstow/algorithms/blob/main/assets/red-black/rb-case2-before.png">
+             <source media="(prefers-color-scheme: dark)" srcset="https://github.com/AnastasKosstow/algorithms/blob/main/assets/trees/red-black/rb-case2-before-dark.png">
+             <img width="250" alt="rb" src="https://github.com/AnastasKosstow/algorithms/blob/main/assets/trees/red-black/rb-case2-before.png">
            </picture>
          </td>
          <td>
            <picture>
-             <source media="(prefers-color-scheme: dark)" srcset="https://github.com/AnastasKosstow/algorithms/blob/main/assets/red-black/rb-case2-after-dark.png">
-             <img width="250" alt="rb" src="https://github.com/AnastasKosstow/algorithms/blob/main/assets/red-black/rb-case2-after.png">
+             <source media="(prefers-color-scheme: dark)" srcset="https://github.com/AnastasKosstow/algorithms/blob/main/assets/trees/red-black/rb-case2-after-dark.png">
+             <img width="250" alt="rb" src="https://github.com/AnastasKosstow/algorithms/blob/main/assets/trees/red-black/rb-case2-after.png">
            </picture>
          </td>
       </tr>
