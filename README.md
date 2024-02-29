@@ -826,6 +826,35 @@ F𝗈r𝗆𝗎𝗅𝖺𝗌 𝖿𝗈𝗋 𝖿𝗂𝗇𝖽𝗂𝗇𝗀 parent and 
  - 𝖳𝗁𝖾 𝗉𝖺𝗋𝖾𝗇𝗍 𝗂𝗌 𝗋𝖾𝖽 𝖻𝗎𝗍 𝗍𝗁𝖾 𝗎𝗇𝖼𝗅𝖾 𝗂𝗌 𝖻𝗅𝖺𝖼𝗄, 𝖿𝗈𝗋𝗆𝗂𝗇𝗀 𝖺 𝗍𝗋𝗂𝖺𝗇𝗀𝗅𝖾 (𝖯𝖺𝗋𝖾𝗇𝗍 𝗋𝖾𝖽, 𝗎𝗇𝖼𝗅𝖾 𝖻𝗅𝖺𝖼𝗄, 𝗍𝗋𝗂𝖺𝗇𝗀𝗅𝖾 𝖿𝗈𝗋𝗆𝖺𝗍𝗂𝗈𝗇).
    - 𝖠𝖼𝗍𝗂𝗈𝗇: 𝖯𝖾𝗋𝖿𝗈𝗋𝗆 𝖺 𝗋𝗈𝗍𝖺𝗍𝗂𝗈𝗇 𝗈𝗇 𝗍𝗁𝖾 𝗉𝖺𝗋𝖾𝗇𝗍 𝗍𝗈 𝗍𝗋𝖺𝗇𝗌𝖿𝗈𝗋𝗆 𝗍𝗁𝖾 𝖼𝖺𝗌𝖾 𝗂𝗇𝗍𝗈 𝖺 𝗅𝗂𝗇𝖾 𝖿𝗈𝗋𝗆𝖺𝗍𝗂𝗈𝗇 (𝖢𝖺𝗌𝖾 𝟧).
    - 𝖱𝗈𝗍𝖺𝗍𝗂𝗈𝗇: 𝖫𝖾𝖿𝗍 𝗋𝗈𝗍𝖺𝗍𝗂𝗈𝗇 𝗂𝖿 𝗍𝗁𝖾 𝗍𝗋𝗂𝖺𝗇𝗀𝗅𝖾 𝗂𝗌 𝗋𝗂𝗀𝗁𝗍-𝗅𝖾𝖺𝗇𝗂𝗇𝗀, 𝗋𝗂𝗀𝗁𝗍 𝗋𝗈𝗍𝖺𝗍𝗂𝗈𝗇 𝗂𝖿 𝗅𝖾𝖿𝗍-𝗅𝖾𝖺𝗇𝗂𝗇𝗀.
+      - In this case, we first rotate at the parent node in the opposite direction of the inserted node. <br>
+        What does that mean? <br>
+        If the inserted node is the left child of its parent node, we rotate to the right at the parent node. If the inserted node is the right child, we rotate to the left. <br>
+        In the example, the inserted node (`17`) is a left child, so we rotate to the right at the parent node (`20` in the example)
+             
+      - Second, we rotate at the grandparent node in the opposite direction to the previous rotation. In the example, we rotate left around the `15` <br>
+      - We color the node we just inserted (`17` in the example) black and the original grandparent (`15` in the example) red
+        <table>
+          <tr>
+            <td>
+              <picture>
+                <source media="(prefers-color-scheme: dark)" srcset="https://github.com/AnastasKosstow/algorithms/blob/main/assets/trees/red-black/rb-case3-before-dark.png">
+                <img width="250" alt="rb" src="https://github.com/AnastasKosstow/algorithms/blob/main/assets/trees/red-black/rb-case3-before.png">
+              </picture>
+            </td>
+            <td>
+              <picture>
+                <source media="(prefers-color-scheme: dark)" srcset="https://github.com/AnastasKosstow/algorithms/blob/main/assets/trees/red-black/rb-case3-rotate-dark.png">
+                <img width="250" alt="rb" src="https://github.com/AnastasKosstow/algorithms/blob/main/assets/trees/red-black/rb-case3-rotate.png">
+              </picture>
+            </td>
+            <td>
+              <picture>
+                <source media="(prefers-color-scheme: dark)" srcset="https://github.com/AnastasKosstow/algorithms/blob/main/assets/trees/red-black/rb-case3-after-dark.png">
+                <img width="250" alt="rb" src="https://github.com/AnastasKosstow/algorithms/blob/main/assets/trees/red-black/rb-case3-after.png">
+              </picture>
+            </td>
+          </tr>
+        </table>
 
  - 𝖳𝗁𝖾 𝗉𝖺𝗋𝖾𝗇𝗍 𝗂𝗌 𝗋𝖾𝖽, 𝗍𝗁𝖾 𝗎𝗇𝖼𝗅𝖾 𝗂𝗌 𝖻𝗅𝖺𝖼𝗄, 𝖺𝗇𝖽 𝗍𝗁𝖾 𝗇𝗈𝖽𝖾𝗌 𝖿𝗈𝗋𝗆 𝖺 𝗌𝗍𝗋𝖺𝗂𝗀𝗁𝗍 𝗅𝗂𝗇𝖾 (𝖯𝖺𝗋𝖾𝗇𝗍 𝗋𝖾𝖽, 𝗎𝗇𝖼𝗅𝖾 𝖻𝗅𝖺𝖼𝗄, 𝗅𝗂𝗇𝖾 𝖿𝗈𝗋𝗆𝖺𝗍𝗂𝗈𝗇).
    - 𝖠𝖼𝗍𝗂𝗈𝗇: 𝖱𝗈𝗍𝖺𝗍𝖾 𝗍𝗁𝖾 𝗀𝗋𝖺𝗇𝖽𝗉𝖺𝗋𝖾𝗇𝗍, 𝗍𝗁𝖾𝗇 𝗌𝗐𝖺𝗉 𝗍𝗁𝖾 𝖼𝗈𝗅𝗈𝗋𝗌 𝗈𝖿 𝗍𝗁𝖾 𝗀𝗋𝖺𝗇𝖽𝗉𝖺𝗋𝖾𝗇𝗍 𝖺𝗇𝖽 𝗉𝖺𝗋𝖾𝗇𝗍.
