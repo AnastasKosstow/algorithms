@@ -53,7 +53,7 @@ public class TreeNode<T> where T : IComparable<T>
         return node;
     }
 
-    public void ChangeColor()
+    internal void ChangeColor()
     {
         this.Color = this.Color switch
         {
@@ -63,7 +63,7 @@ public class TreeNode<T> where T : IComparable<T>
         };
     }
 
-    public Side? CheckColorMatch()
+    internal Side? CheckColorMatch()
     {
         if (Left != null && Color == Color.Red && Color == Left.Color)
             return Side.Left;
@@ -92,7 +92,6 @@ public class RedBlackTree<T> where T : IComparable<T>
         if (Root != null)
         {
             inserted = InsertNode(Root, value, inserted);
-            UpdateRoot();
         }
         else
         {
@@ -105,16 +104,6 @@ public class RedBlackTree<T> where T : IComparable<T>
             Length++;
         }
         return inserted;
-    }
-
-    private void UpdateRoot()
-    {
-        while (Root.Parent != null)
-        {
-            Root.IsRoot = false;
-            Root.Parent.IsRoot = true;
-            Root = Root.Parent;
-        }
     }
 
     private bool InsertNode(TreeNode<T> node, T value, bool inserted)
@@ -190,7 +179,23 @@ public class RedBlackTree<T> where T : IComparable<T>
             }
             else
             {
-                Rotate(side, node.Parent);
+                if (uncle == null || uncle.Color == Color.Black)
+                {
+                    if (grandParent != null)
+                    {
+                        if (node.Parent != grandParent.GetChildNode(side))
+                        {
+                            Rotate(side, node.Parent);
+                            side = side.Switch();
+                        }
+
+                        Rotate(side, grandParent);
+                        node.Parent?.ChangeColor();
+                        grandParent.ChangeColor();
+                    }
+                }
+
+                Root.Color = Color.Black; // Ensure root is always black
             }
         }
     }
@@ -214,12 +219,27 @@ public class RedBlackTree<T> where T : IComparable<T>
             node.Right = leftChildNode;
         }
 
-        if (this.Root.Value.CompareTo(node.Value) == 0)
+        var parent = node.Parent;
+        node.Parent = childNode;
+        childNode.Parent = parent;
+
+        if (parent != null)
         {
-            this.Root = childNode;
+            if (side.Switch() == Side.Left)
+            {
+                parent.Left = childNode;
+            }
+            else
+            {
+                parent.Right = childNode;
+            }
         }
 
-        node.ChangeColor();
-        childNode.ChangeColor();
+        if (this.Root.Value.CompareTo(node.Value) == 0)
+        {
+            node.IsRoot = false;
+            childNode.IsRoot = true;
+            this.Root = childNode;
+        }
     }
 }
