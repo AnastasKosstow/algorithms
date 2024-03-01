@@ -92,6 +92,7 @@ public class RedBlackTree<T> where T : IComparable<T>
         if (Root != null)
         {
             inserted = InsertNode(Root, value, inserted);
+            UpdateRoot();
         }
         else
         {
@@ -106,6 +107,16 @@ public class RedBlackTree<T> where T : IComparable<T>
         return inserted;
     }
 
+    private void UpdateRoot()
+    {
+        while (Root.Parent != null)
+        {
+            Root.IsRoot = false;
+            Root.Parent.IsRoot = true;
+            Root = Root.Parent;
+        }
+    }
+
     private bool InsertNode(TreeNode<T> node, T value, bool inserted)
     {
         TreeNode<T> insertedNode = null;
@@ -118,7 +129,7 @@ public class RedBlackTree<T> where T : IComparable<T>
         if (value.CompareTo(node.Value) < 0)
         {
             if (node.Left != null)
-                InsertNode(node.Left, value, inserted);
+                inserted = InsertNode(node.Left, value, inserted);
             else
             {
                 inserted = true;
@@ -129,7 +140,7 @@ public class RedBlackTree<T> where T : IComparable<T>
         else
         {
             if (node.Right != null)
-                InsertNode(node.Right, value, inserted);
+                inserted = InsertNode(node.Right, value, inserted);
             else
             {
                 inserted = true;
@@ -179,12 +190,12 @@ public class RedBlackTree<T> where T : IComparable<T>
             }
             else
             {
-                Rotate(side, node, node.Parent);
+                Rotate(side, node.Parent);
             }
         }
     }
 
-    private void Rotate(Side side, TreeNode<T> node, TreeNode<T> parent)
+    private void Rotate(Side side, TreeNode<T> node)
     {
         var childNode = node.GetChildNode(side);
         if (childNode == null)
@@ -201,18 +212,6 @@ public class RedBlackTree<T> where T : IComparable<T>
             var leftChildNode = childNode.Left;
             childNode.Left = node;
             node.Right = leftChildNode;
-        }
-
-        if (parent != null)
-        {
-            if (side.Switch() == Side.Left)
-            {
-                parent.Left = childNode;
-            }
-            else
-            {
-                parent.Right = childNode;
-            }
         }
 
         if (this.Root.Value.CompareTo(node.Value) == 0)
