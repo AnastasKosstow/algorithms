@@ -202,44 +202,42 @@ public class RedBlackTree<T> where T : IComparable<T>
 
     private void Rotate(Side side, TreeNode<T> node)
     {
-        var childNode = node.GetChildNode(side);
-        if (childNode == null)
-            throw new InvalidOperationException(nameof(childNode));
+        // Save child and grandchild nodes
+        TreeNode<T> child = node.GetChildNode(side);
+        TreeNode<T> grandChild = child?.GetChildNode(side.Switch());
 
-        if (side == Side.Left)
+        // Perform rotation
+        if (node.IsRoot)
         {
-            var rightChildNode = childNode.Right;
-            childNode.Right = node;
-            node.Left = rightChildNode;
+            Root = child;
+            child.Parent = null;
+            child.IsRoot = true;
         }
         else
         {
-            var leftChildNode = childNode.Left;
-            childNode.Left = node;
-            node.Right = leftChildNode;
-        }
-
-        var parent = node.Parent;
-        node.Parent = childNode;
-        childNode.Parent = parent;
-
-        if (parent != null)
-        {
+            TreeNode<T> parent = node.Parent;
             if (parent.Left == node)
-            {
-                parent.Left = childNode;
-            }
-            else // Side.Right
-            {
-                parent.Right = childNode;
-            }
+                parent.Left = child;
+            else
+                parent.Right = child;
+
+            child.Parent = parent;
         }
 
-        if (this.Root.Value.CompareTo(node.Value) == 0)
+        node.Parent = child;
+        if (side == Side.Left)
         {
-            node.IsRoot = false;
-            childNode.IsRoot = true;
-            this.Root = childNode;
+            child.Right = node;
+            node.Left = grandChild;
         }
+        else
+        {
+            child.Left = node;
+            node.Right = grandChild;
+        }
+
+        // Reassign grandchild
+        if (grandChild != null)
+            grandChild.Parent = node;
     }
 }
