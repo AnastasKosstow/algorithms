@@ -190,8 +190,8 @@ public class RedBlackTree<T> where T : IComparable<T>
                         }
 
                         Rotate(side, grandParent);
-                        node.Parent?.ChangeColor();
-                        grandParent.ChangeColor();
+                        node.ChangeColor();
+                        node.GetChildNode(side.Switch()).ChangeColor();
                     }
                 }
 
@@ -225,11 +225,11 @@ public class RedBlackTree<T> where T : IComparable<T>
 
         if (parent != null)
         {
-            if (side.Switch() == Side.Left)
+            if (parent.Left == node)
             {
                 parent.Left = childNode;
             }
-            else
+            else // Side.Right
             {
                 parent.Right = childNode;
             }

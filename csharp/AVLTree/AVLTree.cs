@@ -202,7 +202,6 @@ public class AVLTree<T> where T : IComparable<T>
             return;
         }
 
-
         var subtree = node.GetChildNode(side);
         var subtreeBalanceFactor = subtree.GetBalanceFactor();
         if ((side == Side.Left && subtreeBalanceFactor == -1) || (side == Side.Right && subtreeBalanceFactor == 1))
