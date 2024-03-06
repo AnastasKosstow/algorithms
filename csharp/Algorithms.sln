@@ -63,8 +63,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DijkstraPrimes", "DijkstraP
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RedBlackTree", "RedBlackTree\RedBlackTree.csproj", "{753FFFBD-C0D4-44DC-B6C2-363188A4CE87}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApp1", "ConsoleApp1\ConsoleApp1.csproj", "{BE228579-B6C8-46B0-B807-81700A52BD64}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -387,18 +385,6 @@ Global
 		{753FFFBD-C0D4-44DC-B6C2-363188A4CE87}.Release|x64.Build.0 = Release|Any CPU
 		{753FFFBD-C0D4-44DC-B6C2-363188A4CE87}.Release|x86.ActiveCfg = Release|Any CPU
 		{753FFFBD-C0D4-44DC-B6C2-363188A4CE87}.Release|x86.Build.0 = Release|Any CPU
-		{BE228579-B6C8-46B0-B807-81700A52BD64}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BE228579-B6C8-46B0-B807-81700A52BD64}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BE228579-B6C8-46B0-B807-81700A52BD64}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{BE228579-B6C8-46B0-B807-81700A52BD64}.Debug|x64.Build.0 = Debug|Any CPU
-		{BE228579-B6C8-46B0-B807-81700A52BD64}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{BE228579-B6C8-46B0-B807-81700A52BD64}.Debug|x86.Build.0 = Debug|Any CPU
-		{BE228579-B6C8-46B0-B807-81700A52BD64}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BE228579-B6C8-46B0-B807-81700A52BD64}.Release|Any CPU.Build.0 = Release|Any CPU
-		{BE228579-B6C8-46B0-B807-81700A52BD64}.Release|x64.ActiveCfg = Release|Any CPU
-		{BE228579-B6C8-46B0-B807-81700A52BD64}.Release|x64.Build.0 = Release|Any CPU
-		{BE228579-B6C8-46B0-B807-81700A52BD64}.Release|x86.ActiveCfg = Release|Any CPU
-		{BE228579-B6C8-46B0-B807-81700A52BD64}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
